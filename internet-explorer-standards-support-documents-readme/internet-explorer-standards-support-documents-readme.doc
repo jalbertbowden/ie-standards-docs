@@ -1,0 +1,934 @@
+{\rtf1\ansi\ansicpg1252\deff0\dntblnsbdb\viewkind1
+{\fonttbl{\f0\froman\fcharset0 Times New Roman;}{\f1\fswiss\fcharset0 Verdana;}{\f2\fswiss\fcharset0 Verdana;}{\f3\fnil\fcharset0 Verdana;}{\f4\fswiss\fcharset0 Verdana;}{\f5\fswiss\fcharset0 Verdana;}{\f6\fnil\fcharset2 Wingdings;}{\f7\fnil\fcharset0 Verdana;}{\f8\fswiss\fcharset0 Verdana;}{\f9\fswiss\fcharset0 Verdana;}{\f10\fswiss\fcharset0 Verdana;}{\f11\fswiss\fcharset0 Verdana;}}
+{\colortbl;\red255\green255\blue0;\red0\green0\blue255;\red255\green255\blue255;\red0\green102\blue255;\red224\green224\blue224;\red0\green0\blue0;}
+{\*\listtable{\list\listtemplateid18467\listhybrid
+{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid6334\'02\'00.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1\chshdng0\chcfpat1\chcbpat1 \fi-360\li720\jclisttab\tx720}
+{\listname ;}\listid41}
+}{\*\listoverridetable
+{\listoverride\listid41\listoverridecount0\ls1}
+}{\stylesheet{\*\cs0 \additive Default Paragraph Font;}
+}
+\jexpand\pgwsxn12240\pghsxn15840
+{\*\bkmkstart page1}{\*\bkmkend page1}
+\margl1620\margr1440\margt1440\margb586\marglsxn1620\margrsxn1440\cols1\colno1\colw9180
+{\pard\sl-117\slmult0\par
+
+{\pard\plain \li0\ql{\f4\b\fs40 Internet Explorer Standards Support}\par}
+}
+{\pard\sl-1\slmult0\par
+
+{\pard\plain \li0\ql{\f4\b\fs40 Documents Readme}\par}
+}
+{\shp {\*\shpinst \shptop122\shpleft-20\shpright9212\shpbottom132\shpfblwtxt1\shpbypara\shpbxcolumn\shpwr3{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn pib}{\sv{\pict\jpegblip\picw615\pich1\picwgoal12300\pichgoal20\picscalex82\picscaley82
+ffd8ffe000104a46494600010100000100010000ffdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e2720
+222c231c1c2837292c30313434341f27393d38323c2e333432ffdb0043010909090c0b0c180d0d1832211c213232323232323232323232323232323232323232
+323232323232323232323232323232323232323232323232323232323232ffc00011080001056903012200021101031101ffc4001f0000010501010101010100
+000000000000000102030405060708090a0bffc400b5100002010303020403050504040000017d01020300041105122131410613516107227114328191a10823
+42b1c11552d1f02433627282090a161718191a25262728292a3435363738393a434445464748494a535455565758595a636465666768696a737475767778797a
+838485868788898a92939495969798999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4c5c6c7c8c9cad2d3d4d5d6d7d8d9dae1e2e3e4e5e6e7e8e9eaf1
+f2f3f4f5f6f7f8f9faffc4001f0100030101010101010101010000000000000102030405060708090a0bffc400b5110002010204040304070504040001027700
+0102031104052131061241510761711322328108144291a1b1c109233352f0156272d10a162434e125f11718191a262728292a35363738393a43444546474849
+4a535455565758595a636465666768696a737475767778797a82838485868788898a92939495969798999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4
+c5c6c7c8c9cad2d3d4d5d6d7d8d9dae2e3e4e5e6e7e8e9eaf2f3f4f5f6f7f8f9faffda000c03010002110311003f00f9fe8a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a00fffd9
+}}}}}
+{\pard\sl-355\slmult0\par
+
+{\pard\plain \li0\sl224\slmult1 \ri340\nooverflow\ql{\f5\fs18 The Windows Internet Explorer standards support documentation set provides an overview of certain final approved web standards supported by Microsoft. It also details normative variations, clarifications, and extensions to these standards.}\par}
+}
+{\pard\sl-181\slmult0\par
+
+{\pard\plain \li0\sl239\slmult1 \ql{\f5\fs18 Read the full Microsoft PressPass article at 
+{\field {\*\fldinst {\cs15 HYPERLINK  "http://go.microsoft.com/fwlink/?LinkId=183867" }} {\fldrslt {\cs15 \ul {\ul \cf4 http://go.microsoft.com/fwlink/?LinkId=183867}}}}}\par}
+}
+{\pard\sl-181\slmult0\par
+
+{\pard\plain \li0\sl239\slmult1 \ql{\f1\b\fs18 Introduction}\par}
+}
+{\pard\sl-181\slmult0\par
+
+{\pard\plain \li0\sl239\slmult1 \ql{\f8\ul\cf4 \fs18 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=183868" }} {\fldrslt {\cs15 \ul http://go.microsoft.com/fwlink/?LinkId=183868}}}}\par}
+}
+{\pard\sl-225\slmult0\par
+
+{\pard\plain \li0\sl230\slmult1 \ri180\nooverflow\ql{\f5\fs18 Microsoft makes available information about protocols, binary file formats, and other specifications for a number of its most popular products, including various versions of Windows and Windows Server®, Microsoft SQL Server®, Microsoft Office, Microsoft Exchange Server, and Microsoft Office SharePoint® Server. These technical specifications enable and encourage a vibrant development community, resulting in smarter, interoperable products.}\par}
+}
+{\pard\sl-182\slmult0\par
+
+{\pard\plain \li0\sl239\slmult1 \ql{\f1\b\fs18 Important notes about the documentation}\par}
+}
+{\pard\sl-221\slmult0\par
+
+{\pard\plain \li280\sl183\slmult1 \ri300\nooverflow\ql\fi-274 {\f1\b\fs18 {\b0 \fs36 \f6 \super \u-3929 ?\u-4064 ?}Copy Code button does not currently work in Firefox. {\b0 It is a known issue that the} Copy Code {\b0 button that appears on code samples in an Open Specification does not copy code to the} \b0 clipboard when the specification is viewed in the Firefox web browser. Instead of using the button, highlight the code and copy it.}\par}
+}
+{\pard\sl-222\slmult0\par
+
+{\pard\plain \li280\sl181\slmult1 \ri80\nooverflow\ql\fi-274 {\f1\b\fs17 {\b0 \fs33 \f6 \super \u-3929 ?\u-4064 ?}In PDF files, underscore characters are not always visible in code. {\b0 In the PDF files,} \b0 depending on the magnification selected by the user, underscore characters might not be visible. Those characters appear when printed.}\par}
+}
+{\pard\sl-221\slmult0\par
+
+{\pard\plain \li280\sl182\slmult1 \ri20\nooverflow\ql\fi-274 {\f1\b\fs15 {\b0 \fs28 \f6 \super \u-3929 ?\u-4064 ?}In PDF files, information in a table row may split across two pages. {\b0 In the PDF files, some} \b0 table rows can split across two pages.}\par}
+}
+{\pard\sl-223\slmult0\par
+
+{\pard\plain \li280\sl181\slmult1 \ri540\nooverflow\ql\fi-274 {\f1\b\fs17 {\b0 \fs33 \f6 \super \u-3929 ?\u-4064 ?}In PDF files, table borders are not always visible. {\b0 In the PDF files, depending on the} \b0 magnification selected by the user, table borders might not be visible. Borders appear when printed.}\par}
+}
+{\pard\sl-221\slmult0\par
+
+{\pard\plain \li280\sl199\slmult1 \ri80\nooverflow\ql\fi-274 {\f1\b\fs18 {\b0 \fs36 \f6 \super \u-3929 ?\u-4064 ?}To retain links between PDF documents, download all interoperability-related PDF documents to the same directory. {\b0 If you use the PDF versions of the Open Specifications, be} \b0 sure to download all of the documents to the same directory. Hyperlinks between specifications require the documents to be in the same directory to work. Note that if you download additional standards support documents from Microsoft, they should also be stored in the same directory to enable linking.}\par}
+}
+{\pard\sl-223\slmult0\par
+
+{\pard\plain \li280\sl182\slmult1 \ri200\nooverflow\qj\fi-274 {\f1\b\fs17 {\b0 \fs33 \f6 \super \u-3929 ?\u-4064 ?}Adobe Reader 8.0 provides the best readability for documents. {\b0 For optimal readability of} \b0 the PDF documents, it is recommended that they be opened and viewed by using Adobe Reader 8.0. Earlier versions of Adobe Reader might not provide the same reading quality.}\par}
+}
+{\pard\sl-220\slmult0\par
+
+{\pard\plain \li280\sl181\slmult1 \ri40\nooverflow\ql\fi-274 {\f7\b\fs17 {\b0 \fs33 \f6 \super \u-3929 ?\u-4064 ?}Documentation links don\rquote t resolve in Adobe Reader 9. {\b0 This is a change introduced by} \b0 Adobe, which has altered the default setting for view mode in Adobe Reader 9. In order to access links, users need to change their settings so that the document is not in View mode.}\par}
+}
+{\shp {\*\shpinst \shptop586\shpleft-20\shpright9212\shpbottom596\shpfblwtxt1\shpbypara\shpbxcolumn\shpwr3{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn pib}{\sv{\pict\jpegblip\picw615\pich1\picwgoal12300\pichgoal20\picscalex82\picscaley82
+ffd8ffe000104a46494600010100000100010000ffdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e2720
+222c231c1c2837292c30313434341f27393d38323c2e333432ffdb0043010909090c0b0c180d0d1832211c213232323232323232323232323232323232323232
+323232323232323232323232323232323232323232323232323232323232ffc00011080001056903012200021101031101ffc4001f0000010501010101010100
+000000000000000102030405060708090a0bffc400b5100002010303020403050504040000017d01020300041105122131410613516107227114328191a10823
+42b1c11552d1f02433627282090a161718191a25262728292a3435363738393a434445464748494a535455565758595a636465666768696a737475767778797a
+838485868788898a92939495969798999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4c5c6c7c8c9cad2d3d4d5d6d7d8d9dae1e2e3e4e5e6e7e8e9eaf1
+f2f3f4f5f6f7f8f9faffc4001f0100030101010101010101010000000000000102030405060708090a0bffc400b5110002010204040304070504040001027700
+0102031104052131061241510761711322328108144291a1b1c109233352f0156272d10a162434e125f11718191a262728292a35363738393a43444546474849
+4a535455565758595a636465666768696a737475767778797a82838485868788898a92939495969798999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4
+c5c6c7c8c9cad2d3d4d5d6d7d8d9dae2e3e4e5e6e7e8e9eaf2f3f4f5f6f7f8f9faffda000c03010002110311003f00f9fe8a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a00fffd9
+}}}}}
+{\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-216\slmult0\par
+
+{\pard\plain \sl239\slmult1 \ri0\nooverflow\qr{\f2\i\fs16 1 / 2}\par}
+}
+{\pard\sl-162\slmult0\par
+
+{\pard\plain \li60\sl215\slmult1 \ri5800\nooverflow\ql\fi-58 {\f2\i\fs16 [[ReadmefirstInternetExplorer]] {\emdash } v 1.00 Windows Internet Explorer Standards}\par}
+}
+{\pard\sl-196\slmult0\par
+
+{\pard\plain \li60\sl239\slmult1 \ql{\f2\i\fs16 Copyright © 2011 Microsoft Corporation.}\par}
+}
+{\pard\sl-195\slmult0\par
+
+{\pard\plain \li60\sl239\slmult1 \ql{\f2\i\fs16 Release: July 25, 2012}\par}
+}\sect\sbkpage\sectd\pard\plain
+\pgwsxn12240\pghsxn15840
+{\*\bkmkstart page2}{\*\bkmkend page2}
+\margl1620\margr1320\margt1079\margb586\marglsxn1620\margrsxn1320\cols1\colno1\colw9300
+{{{\listtext{\pard\plain {\f5\fs18 1. }\tab}}\pard\plain 
+\f5\fs18 \qj\fi-279\nowidctlpar\jclisttab\tx560\faauto\ls1\ilvl0\rin0\nooverflow\lin560\itap0 \sl239\slmult1 {\plain\f5\fs18 In Adobe Reader 9, on the {\b Edit} menu, click {\b Preferences}. In the {\b Categories} list, click }\par{\listtext\tab}\pard\qj\nowidctlpar\jclisttab\faauto\rin0\nooverflow\lin560\itap0 \sl239\slmult1 {\plain\f1\b\fs18 Documents{\b0 .} }\par\pard\sl-180\slmult0\par
+{\listtext{\pard\plain {\f5\fs18 2. }\tab}}\pard\plain 
+\f5\fs18 \qj\fi-279\nowidctlpar\jclisttab\tx560\faauto\ls1\ilvl0\rin0\nooverflow\lin560\itap0 \sl239\slmult1 {\plain\f5\fs18 Under {\b PDF/A View Mode}, change the selection from {\b Only for PDF/A documents} to }\par{\listtext\tab}\pard\qj\nowidctlpar\jclisttab\faauto\rin0\nooverflow\lin560\itap0 \sl239\slmult1 {\plain\f1\b\fs18 Never{\b0 , and click} OK{\b0 .} }\par}
+}
+{\pard\sl-226\slmult0\par
+
+{\pard\plain \li0\sl223\slmult1 \ri1460\nooverflow\ql{\f5\fs18 Additional details on changing the setting can be located on the Adobe help site at \ul \cf4 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://help.adobe.com/en_US/Acrobat/9.0/Standard/WS3E0E8467-B787-4020-A1D3-6BC762A42DF2.w.html" }} {\fldrslt {\cs15 \ul http://help.adobe.com/en_US/Acrobat/9.0/Standard/WS3E0E8467-B787-4020-A1D3-}}}\ul0 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://help.adobe.com/en_US/Acrobat/9.0/Standard/WS3E0E8467-B787-4020-A1D3-6BC762A42DF2.w.html" }} {\fldrslt {\cs15 {\ul 6BC762A42DF2.w.html}{\cf0 .}}}}}\par}
+}
+{\pard\sl-182\slmult0\par
+
+{\pard\plain \li0\sl239\slmult1 \ql{\f1\b\fs18 Documentation Roadmap and Forum Information}\par}
+}
+{\pard\sl-181\slmult0\par
+
+{\pard\plain \li0\sl239\slmult1 \ql{\f5\fs18 To navigate the documentation set, follow these guidelines:}\par}
+}
+{\pard\sl-130\slmult0\par
+
+{\pard\plain \li0\sl239\slmult1 \ql{\f5\fs18 {\fs36 \f6 \super \u-3929 ?\u-4064 ?}Go directly to the documents in which you are interested.}\par}
+}
+{\pard\sl-2\slmult0\par
+
+{\trqc\trowd \trrh40\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\sl-20\fs1\cell}\pard\intbl
+\trowd \trrh40\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh245\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Reference}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl\li140\ql{{\f9\b\fs16 Details}\cell}\pard\intbl\li140\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh245\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh100\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh100\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh274\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Internet Explorer Standards Support Documents on MSDN}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\li140\ql{{\f10\fs16 Click to view this content}\cell}\pard\intbl\li140\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh274\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh197\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs17\cell}\pard\intbl
+\pard\plain\intbl{\fs17\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f11\ul\cf4 \fs16 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=183860" }} {\fldrslt {\cs15 \ul http://go.microsoft.com/fwlink/?LinkId=183860}}}}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs17\cell}\pard\intbl
+\pard\plain\intbl\li140\ql{{\f10\fs16 online.}\cell}\pard\intbl\li140\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh197\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh60\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh60\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh88\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh88\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh274\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\ql\sl-194\slmult0 {{\f9\b\fs16 Internet Explorer Standards Support Documents .zip file}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\li140\ql\sl-194\slmult0 {{\f10\fs16 Download all documents in a}\cell}\pard\intbl\li140\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh274\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh194\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f11\ul\cf4 \fs16 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=183853" }} {\fldrslt {\cs15 \ul http://go.microsoft.com/fwlink/?LinkId=183853}}}}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\li140\ql\sl-194\slmult0 {{\f10\fs16 single (large) ZIP file.}\cell}\pard\intbl\li140\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh194\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh60\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh60\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh88\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh88\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh274\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Find downloads to specific, individual Internet Explorer}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\li140\ql{{\f10\fs16 Details page from which you}\cell}\pard\intbl\li140\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh274\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh194\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\ql\sl-194\slmult0 {{\f9\b\fs16 Standards Support Documents .pdf files}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\li140\ql\sl-194\slmult0 {{\f10\fs16 can download individual files.}\cell}\pard\intbl\li140\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh194\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh254\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f11\ul\cf4 \fs16 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=183862" }} {\fldrslt {\cs15 \ul http://go.microsoft.com/fwlink/?LinkId=183862}}}}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh254\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5900 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh90\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6020 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh90\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth320 \cellx320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6020 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh556\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6340 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl\ql{{\f5\fs18 {\fs36 \f6 \super \u-3929 ?\u-4064 ?}For more support, see the following forums:}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs24\cell}\pard\intbl
+\pard\plain\intbl{\fs24\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh556\trleft0\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6340 \cellx6340
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth160 \cellx6500
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2820 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+
+}
+}{\shp{\*\shpinst\shpleft6483\shptop-2684\shpright6503\shpbottom-2645 
+\shpfhdr0\shpbxcolumn\shpbypara\shpwr3\shpfblwtxt1\shpz0
+{\sp{\sn shapeType}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn fFilled}{\sv 1}}
+{\sp{\sn fillColor}{\sv 0}}
+}}
+
+{
+{\trqc\trowd \trrh40\trleft300\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx5060
+\clvmgf\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Reference}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Details}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs3\cell}\pard\intbl
+\pard\plain\intbl{\sl-20\fs1\cell}\pard\intbl
+\trowd \trrh40\trleft300\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx5060
+\clvmgf\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh243\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx5060
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs21\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh243\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx5060
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh100\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs8\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh100\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrnone \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clcbpat5\clcbpatraw5\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh276\trleft300\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs24\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Open Specifications Forum Group:}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs24\cell}\pard\intbl
+\pard\plain\intbl{\fs24\cell}\pard\intbl
+\pard\plain\intbl{\fs24\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f10\fs16 Participate in the top-level forum group.}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh276\trleft300\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrs\brdrw20 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh254\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f11\ul\cf4 \fs16 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=111125" }} {\fldrslt {\cs15 \ul http://go.microsoft.com/fwlink/?LinkId=111125}}}}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs22\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh254\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh88\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh88\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh274\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Using the Open Specifications:}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f10\fs16 Ask questions about the Open Specifications}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh274\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh194\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f11\ul\cf4 \fs16 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=111122" }} {\fldrslt {\cs15 \ul http://go.microsoft.com/fwlink/?LinkId=111122}}}}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\ql\sl-194\slmult0 {{\f10\fs16 documents, their organization, language}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh194\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh60\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl\ql\sl-194\slmult0 {{\f10\fs16 conventions, and references.}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh60\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh134\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs11\cell}\pard\intbl
+\pard\plain\intbl{\fs11\cell}\pard\intbl
+\pard\plain\intbl{\fs11\cell}\pard\intbl
+\pard\plain\intbl{\fs11\cell}\pard\intbl
+\pard\plain\intbl{\fs11\cell}\pard\intbl
+\pard\plain\intbl{\fs11\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh134\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh88\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh88\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh274\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f9\b\fs16 Using the Internet Explorer Standards Support}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl{\fs23\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f10\fs16 Discuss technical content and implementation of}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh274\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh194\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\ql\sl-194\slmult0 {{\f9\b\fs16 Documents:}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl{\fs16\cell}\pard\intbl
+\pard\plain\intbl\ql\sl-194\slmult0 {{\f10\fs16 certain standards as they are implemented in}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh194\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh197\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs17\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f11\ul\cf4 \fs16 
+{\field {\*\fldinst {\cs15 HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=129153" }} {\fldrslt {\cs15 \ul http://go.microsoft.com/fwlink/?LinkId=129153}}}}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs17\cell}\pard\intbl
+\pard\plain\intbl{\fs17\cell}\pard\intbl
+\pard\plain\intbl{\fs17\cell}\pard\intbl
+\pard\plain\intbl\ql{{\f10\fs16 Microsoft high-volume products.}\cell}\pard\intbl\ql
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh197\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmgf\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth4260 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh60\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs5\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh60\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvmrg\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+\trowd \trrh88\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs7\cell}\pard\intbl
+\pard\plain\intbl{\fs1\cell}\pard\intbl
+\trowd \trrh88\trleft300\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrs\brdrw20 \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx440
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4340 \cellx4780
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth140 \cellx4920
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clcbpat6\clcbpatraw6\clftsWidth3\clwWidth20 \cellx4940
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth120 \cellx5060
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4100 \cellx9160
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw20 \clbrdrr\brdrs\brdrw20 \cltxlrtb\clftsWidth3\clwWidth160 \cellx9320
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth0 \cellx10940
+\row 
+
+
+}
+}
+{\shp {\*\shpinst \shptop3397\shpleft-20\shpright9212\shpbottom3407\shpfblwtxt1\shpbypara\shpbxcolumn\shpwr3{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn pib}{\sv{\pict\jpegblip\picw615\pich1\picwgoal12300\pichgoal20\picscalex82\picscaley82
+ffd8ffe000104a46494600010100000100010000ffdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e2720
+222c231c1c2837292c30313434341f27393d38323c2e333432ffdb0043010909090c0b0c180d0d1832211c213232323232323232323232323232323232323232
+323232323232323232323232323232323232323232323232323232323232ffc00011080001056903012200021101031101ffc4001f0000010501010101010100
+000000000000000102030405060708090a0bffc400b5100002010303020403050504040000017d01020300041105122131410613516107227114328191a10823
+42b1c11552d1f02433627282090a161718191a25262728292a3435363738393a434445464748494a535455565758595a636465666768696a737475767778797a
+838485868788898a92939495969798999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4c5c6c7c8c9cad2d3d4d5d6d7d8d9dae1e2e3e4e5e6e7e8e9eaf1
+f2f3f4f5f6f7f8f9faffc4001f0100030101010101010101010000000000000102030405060708090a0bffc400b5110002010204040304070504040001027700
+0102031104052131061241510761711322328108144291a1b1c109233352f0156272d10a162434e125f11718191a262728292a35363738393a43444546474849
+4a535455565758595a636465666768696a737475767778797a82838485868788898a92939495969798999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4
+c5c6c7c8c9cad2d3d4d5d6d7d8d9dae2e3e4e5e6e7e8e9eaf2f3f4f5f6f7f8f9faffda000c03010002110311003f00f9fe8a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0028a28a0
+028a28a0028a28a0028a28a00fffd9
+}}}}}{\shp{\*\shpinst\shpleft4914\shptop-2628\shpright4933\shpbottom-2599 
+\shpfhdr0\shpbxcolumn\shpbypara\shpwr3\shpfblwtxt1\shpz0
+{\sp{\sn shapeType}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn fFilled}{\sv 1}}
+{\sp{\sn fillColor}{\sv 0}}
+}}
+
+{\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-200\slmult0\par
+\pard\sl-226\slmult0\par
+
+{\pard\plain \sl239\slmult1 \ri120\nooverflow\qr{\f2\i\fs16 2 / 2}\par}
+}
+{\pard\sl-162\slmult0\par
+
+{\pard\plain \li60\sl215\slmult1 \ri5920\nooverflow\ql\fi-58 {\f2\i\fs16 [[ReadmefirstInternetExplorer]] {\emdash } v 1.00 Windows Internet Explorer Standards}\par}
+}
+{\pard\sl-196\slmult0\par
+
+{\pard\plain \li60\sl239\slmult1 \ql{\f2\i\fs16 Copyright © 2011 Microsoft Corporation.}\par}
+}
+{\pard\sl-195\slmult0\par
+
+{\pard\plain \li60\sl239\slmult1 \ql{\f2\i\fs16 Release: July 25, 2012}\par}
+}}

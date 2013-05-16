@@ -1,0 +1,79 @@
+﻿
+Internet Explorer Standards Support
+
+Documents Readme
+
+The Windows Internet Explorer standards support documentation set provides an overview of certain final approved web standards supported by Microsoft. It also details normative variations, clarifications, and extensions to these standards.
+
+Read the full Microsoft PressPass article at  http://go.microsoft.com/fwlink/?LinkId=183867
+
+Introduction
+
+ http://go.microsoft.com/fwlink/?LinkId=183868
+
+Microsoft makes available information about protocols, binary file formats, and other specifications for a number of its most popular products, including various versions of Windows and Windows Server®, Microsoft SQL Server®, Microsoft Office, Microsoft Exchange Server, and Microsoft Office SharePoint® Server. These technical specifications enable and encourage a vibrant development community, resulting in smarter, interoperable products.
+
+Important notes about the documentation
+
+••Copy Code button does not currently work in Firefox. It is a known issue that the Copy Code button that appears on code samples in an Open Specification does not copy code to the clipboard when the specification is viewed in the Firefox web browser. Instead of using the button, highlight the code and copy it.
+
+••In PDF files, underscore characters are not always visible in code. In the PDF files, depending on the magnification selected by the user, underscore characters might not be visible. Those characters appear when printed.
+
+••In PDF files, information in a table row may split across two pages. In the PDF files, some table rows can split across two pages.
+
+••In PDF files, table borders are not always visible. In the PDF files, depending on the magnification selected by the user, table borders might not be visible. Borders appear when printed.
+
+••To retain links between PDF documents, download all interoperability-related PDF documents to the same directory. If you use the PDF versions of the Open Specifications, be sure to download all of the documents to the same directory. Hyperlinks between specifications require the documents to be in the same directory to work. Note that if you download additional standards support documents from Microsoft, they should also be stored in the same directory to enable linking.
+
+••Adobe Reader 8.0 provides the best readability for documents. For optimal readability of the PDF documents, it is recommended that they be opened and viewed by using Adobe Reader 8.0. Earlier versions of Adobe Reader might not provide the same reading quality.
+
+••Documentation links don’t resolve in Adobe Reader 9. This is a change introduced by Adobe, which has altered the default setting for view mode in Adobe Reader 9. In order to access links, users need to change their settings so that the document is not in View mode.
+
+
+
+1 / 2
+
+[[ReadmefirstInternetExplorer]] — v 1.00 Windows Internet Explorer Standards
+
+Copyright © 2011 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1. In Adobe Reader 9, on the Edit menu, click Preferences. In the Categories list, click 
+Documents. 
+
+2. Under PDF/A View Mode, change the selection from Only for PDF/A documents to 
+Never, and click OK. 
+
+Additional details on changing the setting can be located on the Adobe help site at  http://help.adobe.com/en_US/Acrobat/9.0/Standard/WS3E0E8467-B787-4020-A1D3- 6BC762A42DF2.w.html.
+
+Documentation Roadmap and Forum Information
+
+To navigate the documentation set, follow these guidelines:
+
+••Go directly to the documents in which you are interested.
+
+ReferenceDetailsInternet Explorer Standards Support Documents on MSDNClick to view this content http://go.microsoft.com/fwlink/?LinkId=183860online.Internet Explorer Standards Support Documents .zip fileDownload all documents in a http://go.microsoft.com/fwlink/?LinkId=183853single (large) ZIP file.Find downloads to specific, individual Internet ExplorerDetails page from which youStandards Support Documents .pdf filescan download individual files. http://go.microsoft.com/fwlink/?LinkId=183862••For more support, see the following forums:ReferenceDetailsOpen Specifications Forum Group:Participate in the top-level forum group. http://go.microsoft.com/fwlink/?LinkId=111125Using the Open Specifications:Ask questions about the Open Specifications http://go.microsoft.com/fwlink/?LinkId=111122documents, their organization, languageconventions, and references.Using the Internet Explorer Standards SupportDiscuss technical content and implementation ofDocuments:certain standards as they are implemented in http://go.microsoft.com/fwlink/?LinkId=129153Microsoft high-volume products.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 2
+
+[[ReadmefirstInternetExplorer]] — v 1.00 Windows Internet Explorer Standards
+
+Copyright © 2011 Microsoft Corporation.
+
+Release: July 25, 2012
