@@ -1,0 +1,1394 @@
+﻿
+
+[MS-SVG]:
+
+Internet Explorer Scalable Vector Graphics (SVG)
+
+Standards Support Document
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments09/08/20100.1NewReleased new document.10/13/20100.2MinorClarified the meaning of the technical content.02/10/20111.0MinorClarified the meaning of the technical content.02/28/20111.1MajorSignificantly changed the technical content.03/23/20111.2MinorClarified the meaning of the technical content.02/22/20122.0MajorSignificantly changed the technical content.07/25/20122.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................51.1 Glossary ...............................................................................................................51.2 References ............................................................................................................51.2.1 Normative References .......................................................................................51.2.2 Informative References .....................................................................................51.3 Microsoft Implementations ......................................................................................51.4 Standards Support Requirements ............................................................................61.5 Notation ...............................................................................................................6
+ 2  Standards Support Statements .................................................................................8 2.1  Normative Variations ..............................................................................................8 2.1.1  [SVG11] Section 5.10.2, The xml:lang and xml:space attributes ............................8 2.1.2  [SVG11] Section 7.7, The viewBox attribute ........................................................8 2.1.3  [SVG11] Section 7.11, Object bounding box units ................................................9 2.1.4  [SVG11] Section 8.5, DOM interfaces..................................................................9 2.1.5  [SVG11] Section 10.6, The 'tref' element ..........................................................10 2.1.6  [SVG11] Section 10.7.3, Glyph orientation within a text run ................................10 2.1.7  [SVG11] Section 10.9.2, Baseline alignment properties .......................................10 2.1.8  [SVG11] Section 10.11, Spacing properties .......................................................11 2.1.9  [SVG11] Section 10.14.1, The ‘altGlyph’ element ...............................................12 2.1.10  [SVG11] Section 10.15, White space handling ..................................................12 2.1.11  [SVG11] Section 11.6.2, The 'marker' element .................................................122.1.12  [SVG11] Section 11.7.1, Color interpolation properties: 'color-interpolation' and 
+ 'color-interpolation-filters'	13
+
+ 2.1.13  [SVG11] Section 11.7.2, The 'color-rendering' property	13
+
+ 2.1.14  [SVG11] Section 11.7.4, The 'text-rendering' property	13
+
+ 2.1.15  [SVG11] Section 11.7.5, The 'image-rendering' property	13
+
+ 2.1.16  [SVG11] Section 13.3, Patterns	13
+
+ 2.1.17  [SVG11] Section 14.3.3, The 'overflow' and 'clip' properties	14
+
+ 2.1.18  [SVG11] Section 14.3.5, Establishing a new clipping path	14
+
+ 2.1.19  [SVG11] Section 16.7, Magnification and panning	14
+
+ 2.1.20  [SVG11] Section 16.12, Cursor Module	15
+
+ 2.1.21  [SVG11] Section 17.2.2, SVG fragment identifiers	15
+
+ 2.1.22  [SVG11] Section 17.5, ExternalResourcesRequired Attribute Module	16
+
+ 2.1.23  [SVG11] Section 19, Animation	16
+
+ 2.1.24  [SVG11] Section 23.3, The 'foreignObject' element	16
+
+ 2.1.25  [SVG11] Section B.5, Relationship with DOM2 events	17
+
+ 2.1.26  [SVG11] Section C., IDL Definitions	17
+
+ 2.2  Clarifications	17
+
+ 2.2.1  [SVG11] Section 6.18, Aural style sheets	18
+
+ 2.2.2  [SVG11] Section 7.12, Geographic Coordinate Systems	18
+ 2.2.3  [SVG11] Section 8.3.9, The grammar for path data	18
+ 2.2.4  [SVG11] Section 11.7.3, The 'shape-rendering' property	19
+ 2.2.5  [SVG11] Section 13.3, Patterns	19
+
+ 2.2.6  [SVG11] Section 14.3.3, The 'overflow' and 'clip' properties	19
+ 2.3  Error Handling	20
+ 2.4  Security	20
+
+ 3  Change Tracking	21
+
+
+
+3 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+ 4  Index	23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® 9 and Windows® Internet Explorer® 10 for the Scalable Graphics (SVG) 1.1 Specification (Second Edition)
+
+ [W3C-SVG1.1/2], W3C Recommendation published August 16, 2011.
+
+The  [W3C-SVG1.1/2] specification may contain guidance for authors of webpages and browser users, in addition to user agents (browser applications). Statements found in this document apply only to normative requirements in the specification targeted to user agents, not those targeted to authors.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+[W3C-SVG1.1/2] Andersson, O., et al., "Scalable Vector Graphics (SVG) 1.1 (Second Edition)", W3C Working Draft 22 June 2010,  http://www.w3.org/TR/SVG11/
+
+[W3C-SVG1.1] W3C, "Scalable Vector Graphics (SVG) 1.1 Specification", W3C Recommendation 14 January 2003, edited in place 30 April 2009,  http://www.w3.org/TR/2003/REC-SVG11-20030114/
+
+1.2.2 Informative References 
+
+None.
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of the SVG specification:
+
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer.
+
+
+5 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Browser VersionDocument Modes SupportedInternet Explorer 9Quirks ModeIE7 ModeIE8 ModeIE9 ModeInternet Explorer 10Quirks ModeIE7 ModeIE8 ModeIE9 ModeIE10 Mode
+Note that IE9 mode and IE10 Mode are the only document modes that support SVG.
+
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+1.4 Standards Support Requirements 
+
+To conform to  [W3C-SVG1.1/2], a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+The following table lists the sections of  [W3C-SVG1.1/2] and whether they are considered normative or informative.
+
+SectionsNormative/Informative1-3Informative4-23NormativeAppendices A-CNormativeAppendices D, EInformativeAppendices F, G, ONormativeAppendices H-N, PInformative
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and extension points.
+
+NotationExplanationC####Identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.
+
+6 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+NotationExplanationV####Identifies an intended point of variability in the target specification such as the use of MAY,SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibility points.E####Identifies extensibility points (such as optional implementation-specific data) in the targetspecification, which can impair interoperability.
+For document mode and browser version notation, see section  1.3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of [W3C-SVG1.1/2].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+The following subsections detail the normative variations from MUST requirements in  [W3C- SVG1.1/2].
+
+2.1.1 [SVG11] Section 5.10.2, The xml:lang and xml:space attributes 
+
+V0030:
+
+The specification states:
+
+xml:space = "{default | preserve}"
+
+Standard XML attribute to specify whether white space is preserved in character data. The only possible values are 'default' and 'preserve'.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The xml:space attribute is not supported in SVG.
+
+2.1.2 [SVG11] Section 7.7, The viewBox attribute 
+
+V0032:
+
+The specification states:
+
+All elements that establish a new viewport (see elements that establish viewports), plus the 'marker', 'pattern' and 'view' elements have attribute viewBox. The value of the viewBox attribute is a list of four numbers <min-x>, <min-y>, <width> and <height>, separated by whitespace and/or a comma, which specify a rectangle in user space which should be mapped to the bounds of the viewport established by the given element, taking into account attribute preserveAspectRatio. If specified, an additional transformation is applied to all descendants of the given element to achieve the specified effect.
+
+A negative value for <width> or <height> is an error (see Error processing). A value of zero disables rendering of the element.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+A value of 0 on the viewBox height or width does not disable rendering of the element.
+
+
+
+
+
+8 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.3 [SVG11] Section 7.11, Object bounding box units 
+
+V0003:
+
+The specification states:
+
+Element: 'filter'
+
+Attribute: ‘filterUnits’
+
+Effect: Indicates that the attributes which define the filter effects region (x, y, width, height) represent fractions or percentages of the bounding box of the element to which the filter is applied.
+
+IE9 Mode (All Versions)
+
+The filter element and the filterUnits attribute are not supported.
+
+V0006:
+
+The specification states:
+
+Element:	'mask'
+
+Attribute:  primitiveUnits="objectBoundingBox"
+
+Effect:	Indicates that the various length values within the filter primitives represent
+
+fractions or percentages of the bounding box of the element to which the filter is applied.
+
+IE9 Mode (All Versions)
+
+The filter element and the primitiveUnits attribute are not supported.
+
+2.1.4 [SVG11] Section 8.5, DOM interfaces 
+
+V0035:
+
+The specification states:
+
+DOM attribute normalizedPathSegList provides normalized access to the static/base contents of the d attribute where all path data commands are expressed in terms of the following subset of SVGPathSeg types: SVG_PATHSEG_MOVETO_ABS (M), SVG_PATHSEG_LINETO_ABS (L), SVG_PATHSEG_CURVETO_CUBIC_ABS (C) and SVG_PATHSEG_CLOSEPATH (z).and two lists to access the current animated values of the d attribute:
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The normalizedPathSegList attribute is not supported. C0022:
+
+The specification defines the pathLength attribute of the SVGPathElement interface as follows:
+
+readonly attribute SVGAnimatedNumber pathLength;
+
+IE9 Mode and IE10 Mode (All Versions)
+
+
+9 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The pathLength attribute is not supported.
+
+2.1.5 [SVG11] Section 10.6, The 'tref' element 
+
+V0008:
+
+The specification states:
+
+The textual content for a ‘text’ can be either character data directly embedded within the ‘text’ element or the character data content of a referenced element, where the referencing is specified with a ‘tref’ element.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The tref element and its attributes are not supported.
+
+2.1.6 [SVG11] Section 10.7.3, Glyph orientation within a text run 
+
+V0036:
+
+The specification states:
+
+In some cases, it is required to alter the orientation of a sequence of characters relative to the inline-progression-direction. The requirement is particularly applicable to vertical layouts of East Asian documents, where sometimes narrow-cell Latin text is to be displayed horizontally and other times vertically.
+
+Two properties control the glyph orientation relative to the reference orientation for each of the two possible inline-progression-directions. 'glyph-orientation-vertical' controls glyph orientation when the inline-progression-direction is vertical. 'glyph-orientation-horizontal' controls glyph orientation when the inline-progression-direction is horizontal.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The glyph-orientation-horizontal and glyph-orientation-vertical attributes are not supported.
+
+2.1.7 [SVG11] Section 10.9.2, Baseline alignment properties 
+
+V0037:
+
+The specification states:
+
+‘dominant-baseline'
+
+Value: auto | use-script | no-change | reset-size | ideographic | alphabetic | hanging | | mathematical | central | middle | text-after-edge | text-before-edge | inherit
+
+Initial:  auto
+
+Applies to: text content elements Inherited: no
+
+Percentages: N/A Media: visual Animatable: yes
+
+IE9 Mode and IE10 Mode (All Versions)
+
+
+
+10 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The dominant-baseline attribute is not supported.
+
+C0023:
+
+The specification states:
+
+'alignment-baseline'
+
+Value: auto | baseline | before-edge | text-before-edge | middle | central | after-edge | text-after-edge | ideographic | alphabetic | hanging | mathematical | inherit
+
+Initial:  auto
+
+Applies to: 'tspan', 'tref', 'altGlyph', 'textPath' elements Inherited: no
+
+Percentages: N/A Media: visual Animatable: yes
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The alignment-baseline property is not supported.
+
+V0038:
+
+The specification states:
+
+‘baseline-shift'
+
+Value: baseline | sub | super | <percentage> | <length> | inherit Initial: baseline
+
+Applies to: 'tspan', 'tref', 'altGlyph', 'textPath' elements Inherited: no
+
+Percentages: refers to the "line-height" of the 'text' element, which in the case of SVG is defined to be equal to the 'font-size'
+
+Media: visual Animatable:
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The baseline-shift attribute is not supported.
+
+2.1.8 [SVG11] Section 10.11, Spacing properties 
+
+V0039:
+
+The specification states:
+
+‘kerning'
+
+Value: auto | <length> | inherit Initial: auto
+
+Applies to: text content elements Inherited: yes
+
+Percentages: N/A Media: visual Animatable: yes
+
+IE9 Mode and IE10 Mode (All Versions)
+
+
+
+11 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The kerning attribute is not supported.
+
+2.1.9 [SVG11] Section 10.14.1, The ‘altGlyph’ element 
+
+V0040:
+
+The specification states:
+
+The 'altGlyph' element provides control over the glyphs used to render particular character data.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The altGlyph element is not supported.
+
+2.1.10 [SVG11] Section 10.15, White space handling 
+
+V0007:
+
+The specification states (see also [SVG11] Section 5.10., The xml:lang and xml:space attributes):
+
+SVG supports the standard XML attribute xml:space to specify the handling of white space characters within a given 'text' element's character data. The SVG user agent has special processing rules associated with this attribute as described below. These are behaviors that occur subsequent to XML parsing and any construction of a Document Object Model.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The xml:space attribute is not supported.
+
+2.1.11 [SVG11] Section 11.6.2, The 'marker' element 
+
+V0010:
+
+The specification states:
+
+Properties inherit into the 'marker' element from its ancestors; properties do not inherit from the element referencing the 'marker' element.
+
+'marker' elements are never rendered directly; their only usage is as something that can be referenced using the 'marker', 'marker-start', 'marker-end' and 'marker-mid' properties. The 'display' property does not apply to the 'marker' element; thus, 'marker' elements are not directly rendered even if the 'display' property is set to a value other than none, and 'marker' elements are available for referencing even when the 'display' property on the 'marker' element or any of its ancestors is set to none.
+
+Event attributes and event listeners attached to the contents of a 'marker' element are not processed; only the rendering aspects of 'marker' elements are processed.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+Properties of a marker element inherit at the point of reference, not from the ancestors of the marker element.
+
+
+
+
+12 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.12 [SVG11] Section 11.7.1, Color interpolation properties: 'color-interpolation' and 'color-interpolation-filters'
+
+V0011:
+
+The specification defines the color-interpolation and color-interpolation-filters properties.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The color-interpolation and color-interpolation-filters properties are not supported.
+
+2.1.13 [SVG11] Section 11.7.2, The 'color-rendering' property 
+
+V0013:
+
+The specification defines the color-rendering property.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The color-rendering property is not supported.
+
+2.1.14 [SVG11] Section 11.7.4, The 'text-rendering' property 
+
+V0014:
+
+The specification defines the text-rendering property.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The text-rendering property is not supported.
+
+2.1.15 [SVG11] Section 11.7.5, The 'image-rendering' property 
+
+V0015:
+
+The specification defines the image-rendering property.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The image-rendering property is not supported.
+
+2.1.16 [SVG11] Section 13.3, Patterns 
+
+V0049:
+
+The specification states:
+
+‘pattern' elements are never rendered directly; their only usage is as something that can be referenced using the 'fill' and 'stroke' properties. The 'display' property does not apply to the 'pattern' element; thus, 'pattern' elements are not directly rendered even if the 'display' property is set to a value other than none, and 'pattern' elements are available for referencing even when the 'display' property on the 'pattern' element or any of its ancestors is set to none.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The display property affects pattern elements and references to those pattern elements.
+
+
+13 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.17 [SVG11] Section 14.3.3, The 'overflow' and 'clip' properties 
+
+V0018:
+
+The specification states:
+
+'clip'
+
+Value: <shape> | auto | inherit Initial: auto
+
+Applies to: elements which establish a new viewport, 'pattern' elements and 'marker' elements
+
+Inherited: no Percentages: N/A Media: visual Animatable: yes
+
+The ‘clip’ property has the same parameter values as defined in CSS2 ([CSS2], section
+
+11.1.2). Unitless values, which indicate current user coordinates, are permitted on the coordinate values on the <shape>. The value of auto defines a clipping path along the bounds of the viewport created by the given element.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The clip property is not supported.
+
+2.1.18 [SVG11] Section 14.3.5, Establishing a new clipping path 
+
+V0019:
+
+The specification states:
+
+A 'clipPath' element can contain 'path' elements, 'text' elements, basic shapes (such as 'circle') or a 'use' element. If a 'use' element is a child of a 'clipPath' element, it must directly reference 'path', 'text' or basic shape elements. Indirect references are an error (see Error processing).
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The clipPath element allows indirect references. Indirect references are not an error.
+
+2.1.19 [SVG11] Section 16.7, Magnification and panning 
+
+V0021:
+
+The specification states:
+
+The outermost 'svg' element in an SVG document fragment has attribute zoomAndPan, which takes the possible values of disable and magnify, with the default being magnify.
+
+If disable, the user agent shall disable any magnification and panning controls and not allow the user to magnify or pan on the given document fragment.
+
+If magnify, in environments that support user interactivity, the user agent shall provide controls to allow the user to perform a "magnify" operation on the document fragment.
+
+If a zoomAndPan attribute is assigned to an inner 'svg' element, the zoomAndPan setting on the inner 'svg' element will have no effect on the SVG user agent.
+
+14 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Animatable: no.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The zoomAndPan attribute is not supported, except for the default magnify operation.
+
+2.1.20 [SVG11] Section 16.12, Cursor Module 
+
+V0022:
+
+The specification states:
+
+‘cursor’
+
+Categories:
+
+None
+
+Content model:
+
+Any number of the following elements, in any order: descriptive elements — ‘desc’, ‘metadata’, ‘title’
+
+Attributes:
+
+core attributes — ‘id’, ‘xml:base’, ‘xml:lang’, ‘xml:space’
+
+conditional processing attributes — ‘requiredFeatures’, ‘requiredExtensions’, ‘systemLanguage’
+
+xlink attributes — ‘xlink:href’, ‘xlink:show’, ‘xlink:actuate’, ‘xlink:type’, ‘xlink:role’, ‘xlink:arcrole’, ‘xlink:title’
+
+‘externalResourcesRequired’
+
+‘x’
+
+‘y’
+
+‘xlink:href’
+
+DOM Interfaces:
+
+SVGCursorElement
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The cursor element and its attributes are not supported.
+
+2.1.21 [SVG11] Section 17.2.2, SVG fragment identifiers 
+
+V0055:
+
+The specification states:
+
+If the SVG fragment identifier addresses specific SVG view (e.g., MyDrawing.svg#svgView(viewBox(0,200,1000,1000))), then the document fragment defined by the closest ancestor 'svg' element is displayed in the viewport using the SVG view specification provided by the SVG fragment identifier.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+Parameters for viewBox elements in fragment specifications may be delimited by single spaces in addition to commas.
+
+
+15 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.22 [SVG11] Section 17.5, ExternalResourcesRequired Attribute Module 
+
+V0024:
+
+The specification states:
+
+Collection Name:  External.attrib
+
+Attributes in Collection: externalResourcesRequired
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The externalResourcesRequired attribute is not supported.
+
+2.1.23 [SVG11] Section 19, Animation 
+
+V0025:
+
+The specification describes Synchronized Multimedia Integration Language (SMIL) Animation.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+SMIL animation is not supported. In addition, no references to animation elements, properties, attributes, interfaces, or data types in other chapters of  [W3C-SVG1.1] are supported.
+
+For data types that can be animated, the default setting for the animVal attribute is animVal = baseVal.
+
+2.1.24 [SVG11] Section 23.3, The 'foreignObject' element 
+
+V0026:
+
+The specification states:
+
+Categories:
+
+None
+
+Content model:
+
+Any elements or character data.
+
+Attributes:
+
+core attributes — ‘id’, ‘xml:base’, ‘xml:lang’, ‘xml:space’
+
+conditional processing attributes — ‘requiredFeatures’, ‘requiredExtensions’, ‘systemLanguage’
+
+graphical event attributes — ‘onfocusin’, ‘onfocusout’, ‘onactivate’, ‘onclick’, ‘onmousedown’, ‘onmouseup’, ‘onmouseover’, ‘onmousemove’, ‘onmouseout’, ‘onload’ presentation attributes — ‘alignment-baseline’, ‘baseline-shift’, ‘clip’, ‘clip-path’, ‘clip-rule’, ‘color’, ‘color-interpolation’, ‘color-interpolation-filters’, ‘color-profile’, ‘color-rendering’, ‘cursor’, ‘direction’, ‘display’, ‘dominant-baseline’, ‘enable-background’, ‘fill’, ‘fill-opacity’, ‘fill-rule’, ‘filter’, ‘flood-color’, ‘flood-opacity’, ‘font-family’, ‘font-size’, ‘font-size-adjust’, ‘font-stretch’, ‘font-style’, ‘font-variant’, ‘font-weight’, ‘glyph-orientation-horizontal’, ‘glyph-orientation-vertical’, ‘image-rendering’, ‘kerning’, ‘letter-spacing’, ‘lighting-color’, ‘marker-end’, ‘marker-mid’, ‘marker-start’, ‘mask’, ‘opacity’, ‘overflow’, ‘pointer-events’, ‘shape-rendering’, ‘stop-color’, ‘stop-opacity’, ‘stroke’, ‘stroke-dasharray’, ‘stroke-dashoffset’, ‘stroke-linecap’, ‘stroke-linejoin’, ‘stroke-miterlimit’, ‘stroke-opacity’, ‘stroke-width’, ‘text-anchor’, ‘text-decoration’, ‘text-rendering’, ‘unicode-bidi’, ‘visibility’, ‘word-spacing’, ‘writing-mode’
+
+
+
+16 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+‘class’
+
+‘style’
+
+‘externalResourcesRequired’
+
+‘transform’
+
+‘x’
+
+‘y’
+
+‘width’
+
+‘height’
+
+DOM Interfaces:
+
+SVGForeignObjectElement
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The foreignObject element is not supported.
+
+2.1.25 [SVG11] Section B.5, Relationship with DOM2 events 
+
+V0060:
+
+The specification states:
+
+The SVG DOM supports the following mouse event types [ DOM2-MOUSEEVENTS]: click
+
+mousedown mouseup mouseover mousemove mouseout
+
+clientX and clientY parameters for mouse events represent the mouse coordinates at which the event occurred relative to the DOM Implementation's client area. relatedTarget is used to identify a secondary EventTarget related to a UI event. Currently this attribute is used with the mouseover event to indicate the EventTarget which the pointing device exited and with the mouseout event to indicate the EventTarget which the pointing device entered.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The title attribute supports the click event even though it should not be supported.
+
+2.1.26 [SVG11] Section C., IDL Definitions 
+
+C0024:
+
+The specification defines the currentView attribute of the SVGSVGElement as follows:
+
+readonly attribute SVGViewSpec currentView;
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The currentView attribute is not supported.
+
+2.2 Clarifications 
+
+The following subsections identify clarifications to recommendations made by  [W3C-SVG1.1].
+
+
+
+17 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.2.1 [SVG11] Section 6.18, Aural style sheets 
+
+C0004:
+
+The specification defines aural style sheets, which are optional.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+Aural style sheets are not supported.
+
+2.2.2 [SVG11] Section 7.12, Geographic Coordinate Systems 
+
+C0005:
+
+The specification defines geographic coordinate systems, which are optional.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+Geographic coordinate systems are not supported.
+
+2.2.3 [SVG11] Section 8.3.9, The grammar for path data 
+
+V0027:
+
+The specification states:
+
+The following is the BNF for SVG paths.
+
+svg-path:
+
+     wsp* moveto-drawto-command-groups? wsp* moveto-drawto-command-groups:
+
+moveto-drawto-command-group
+
+     | moveto-drawto-command-group wsp* moveto-drawto-command-groups moveto-drawto-command-group:
+
+     moveto wsp* drawto-commands? drawto-commands:
+
+drawto-command
+
+     | drawto-command wsp* drawto-commands drawto-command:
+
+closepath | lineto
+
+| horizontal-lineto | vertical-lineto | curveto
+
+| smooth-curveto
+
+| quadratic-bezier-curveto
+
+| smooth-quadratic-bezier-curveto | elliptical-arc
+
+moveto:
+
+     ( "M" | "m" ) wsp* moveto-argument-sequence moveto-argument-sequence:
+
+coordinate-pair
+
+     | coordinate-pair comma-wsp? lineto-argument-sequence closepath:
+
+     ("Z" | "z") lineto:
+
+     ( "L" | "l" ) wsp* lineto-argument-sequence lineto-argument-sequence:
+
+
+18 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+coordinate-pair
+
+     | coordinate-pair comma-wsp? lineto-argument-sequence horizontal-lineto:
+
+     ( "H" | "h" ) wsp* horizontal-lineto-argument-sequence horizontal-lineto-argument-sequence:
+
+coordinate
+
+     | coordinate comma-wsp? horizontal-lineto-argument-sequence vertical-lineto:
+
+     ( "V" | "v" ) wsp* vertical-lineto-argument-sequence vertical-lineto-argument-sequence:
+
+coordinate
+
+| coordinate comma-wsp? vertical-lineto-argument-sequence
+
+
+IE9 Mode and IE10 Mode (All Versions)
+
+White spaces and commas in the Backus-Naur Form (BNF) grammar are interchangeable. White spaces and commas can both delimit command groups.
+
+2.2.4 [SVG11] Section 11.7.3, The 'shape-rendering' property 
+
+V0028:
+
+The specification defines the shape-rendering property.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The shape-rendering property is not supported.
+
+2.2.5 [SVG11] Section 13.3, Patterns 
+
+C0022:
+
+The specification states:
+
+SVG's user agent style sheet sets the 'overflow' property for 'pattern' elements to hidden, which causes a rectangular clipping path to be created at the bounds of the pattern tile. Unless the 'overflow' property is overridden, any graphics within the pattern which goes outside of the pattern rectangle will be clipped. Example pattern01 below shows the effect of clipping to the pattern tile.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+The overflow property on pattern elements is always treated as if the value hidden is assigned to it; it cannot be overridden.
+
+2.2.6 [SVG11] Section 14.3.3, The 'overflow' and 'clip' properties 
+
+C0011:
+
+The specification describes the overflow property as follows:
+
+• The initial value for 'overflow' as defined in [CSS2-overflow] is 'visible'; however, SVG's user agent style sheet overrides this initial value and set the 'overflow' property on
+
+
+
+19 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+elements that establish new viewports (e.g., 'svg' elements), 'pattern' elements and 'marker' elements to the value 'hidden'.
+
+IE9 Mode and IE10 Mode (All Versions)
+
+On the outermost svg element that is inline in HTML5, the initial value for the overflow property is visible.
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-SVG] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+21 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type
+1Updated the document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+A
+
+ Animation 16
+ Aural style sheets 18
+
+B
+
+ Baseline alignment properties 10
+
+C
+
+ Change tracking 21
+
+ Color interpolation properties: 'color-interpolation'  and 'color-interpolation-filters' 13
+
+ Cursor Module 15
+
+D
+
+ DOM interfaces 9
+
+E
+
+ Establishing a new clipping path 14  ExternalResourcesRequired Attribute Module 16
+
+G
+
+ Geographic Coordinate Systems 18
+ Glossary 5
+
+ Glyph orientation within a text run 10
+
+I
+
+ IDL Definitions 17
+ Informative references 5
+ Introduction 5
+
+M
+
+ Magnification and panning 14
+
+N
+
+ Normative references 5
+
+O
+
+ Object bounding box units 9
+
+P
+
+Patterns ( section 2.1.16 13,  section 2.2.5 19) Properties
+
+ :clip 14  :color-rendering 13  :image-rendering 13  :overflow 19  :shape-rendering 19
+
+
+
+ :text-rendering 13
+
+R
+
+References  informative 5  normative 5
+
+ Relationship with DOM2 events 17
+
+S
+
+ Spacing properties 11
+ SVG fragment identifiers 15
+
+T
+
+ The ‘altGlyph’ element 12
+
+ The 'color-rendering' property 13  The 'foreignObject' element 16  The grammar for path data 18  The 'image-rendering' property 13  The 'marker' element 12
+
+The 'overflow' and 'clip' properties ( section 2.1.17 14,  section 2.2.6 19)
+
+ The 'shape-rendering' property 19  The 'text-rendering' property 13  The 'tref' element 10
+
+ The viewBox attribute 8
+
+ The xml:lang and xml:space attributes 8  Tracking changes 21
+
+W
+
+ White space handling 12
+
+
+
+23 / 23
+
+[MS-SVG] — v20120725
+
+Internet Explorer Scalable Vector Graphics (SVG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
