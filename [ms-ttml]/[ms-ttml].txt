@@ -1,0 +1,652 @@
+﻿
+
+[MS-TTML]:
+
+Internet Explorer Timed Text Markup Language (TTML)
+
+1.0 Standards Support Documentation
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments02/22/20120.1NewReleased new document.07/25/20121.0MajorSignificantly changed the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................41.3 Microsoft Implementations ......................................................................................41.4 Standards Support Requirements ............................................................................51.5 Notation ...............................................................................................................5
+2 Standards Support Statements .................................................................................62.1 Normative Variations ..............................................................................................6 2.1.1  [[W3C-TTML-1.0]] Section 6.1, Parameter Element Vocabulary ..............................6 2.1.2  [[W3C-TTML-1.0]] Section 6.2, Parameter Element Vocabulary ..............................6 2.1.3  [[W3C-TTML-1.0]] Section 7.1.5, p ....................................................................7 2.1.4  [[W3C-TTML-1.0]] Section 7.2.2, xml:lang ..........................................................7 2.1.5  [[W3C-TTML-1.0]] Section 7.2.3, xml:space ........................................................7 2.1.6  [[W3C-TTML-1.0]] Section 8, Styling ..................................................................8 2.1.7  [[W3C-TTML-1.0]] Section 9, Layout ..................................................................8 2.1.8  [[W3C-TTML-1.0]] Section 10.2.3, dur ................................................................8 2.1.9  [[W3C-TTML-1.0]] Section 10.2.4, timeContainer .................................................8 2.1.10  [[W3C-TTML-1.0]] Section 11, Animation ..........................................................9 2.1.11  [[W3C-TTML-1.0]] Section 12, Metadata ...........................................................92.2 Clarifications .........................................................................................................92.3 Error Handling .......................................................................................................92.4 Security ................................................................................................................93 Change Tracking.....................................................................................................104 Index .....................................................................................................................12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® 10 for the Timed Text Markup Language (TTML) 1.0 specification, published November 18, 2010.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+[W3C-TTML-1.0] Dolan, M., Freed, G., Hayes, S., et al., "Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation", W3C Recommendation 18 November 2010,  http://www.w3.org/TR/2010/REC-ttaf1-dfxp-20101118/
+
+1.2.2 Informative References 
+
+None.
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of the TTML specification:
+
+••Windows® Internet Explorer® 10
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer.
+
+Browser VersionDocument Modes SupportedInternet Explorer 10Quirks ModeIE7 ModeIE8 ModeIE9 ModeIE10 Mode
+
+
+4 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Note TTML is supported in IE10 Mode only.
+
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+Note "Standards mode" in Windows® Internet Explorer® 7 and "IE7 mode" in Windows® Internet Explorer® 8 refer to the same document mode. "IE7 mode" is the preferred way of referring to this document mode across all versions of the browser.
+
+1.4 Standards Support Requirements 
+
+To conform to  [W3C-TTML-1.0] a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and extension points.
+
+NotationExplanationC####Identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.V####Identifies an intended point of variability in the target specification such as the use of MAY,SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibility points.E####Identifies extensibility points (such as optional implementation-specific data) in the targetspecification, which can impair interoperability.
+For document mode and browser version notation, see section  1.3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of  [W3C-TTML-1.0].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+The following subsections detail the normative variations from MUST requirements in  [W3C-TTML- 1.0].
+
+2.1.1 [[W3C-TTML-1.0]] Section 6.1, Parameter Element Vocabulary 
+
+V0001:
+
+The specification describes elements that are defined in the TT Parameter Namespace.
+
+IE10 Mode (All Versions)
+
+The following elements are not supported:
+
+••ttp:profile
+••ttp:features
+••ttp:feature
+••ttp:extensions
+••ttp:extension
+
+2.1.2 [[W3C-TTML-1.0]] Section 6.2, Parameter Element Vocabulary 
+
+V0002:
+
+The specification describes attributes that are defined in the TT Parameter Namespace.
+
+IE10 Mode (All Versions)
+
+The following attributes are not supported:
+
+••ttp:cellResolution
+••ttp:clockMode
+••ttp:dropMode
+••ttp:frameRate
+••ttp:frameRateMultiplier
+
+6 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••ttp:markerMode
+••ttp:pixelAspectRatio
+••ttp:profile
+••ttp:subFrameRate
+••ttp:timeBase
+
+Note: The ttp:tickRate attribute is supported.
+
+2.1.3 [[W3C-TTML-1.0]] Section 7.1.5, p 
+
+V0003:
+
+The specification states:
+
+If no timeContainer attribute is specified on a p element, then it must be interpreted as having parallel time containment semantics.
+
+IE10 Mode (All Versions)
+
+The timeContainer attribute is ignored.
+
+2.1.4 [[W3C-TTML-1.0]] Section 7.2.2, xml:lang 
+
+V0004:
+
+The specification states:
+
+The xml:lang attribute must be specified on the tt element and may be specified by an instance of any other element type in the core vocabulary catalog.
+
+IE10 Mode (All Versions)
+
+The xml:lang attribute is ignored when selecting a track to display.
+
+2.1.5 [[W3C-TTML-1.0]] Section 7.2.3, xml:space 
+
+V0005:
+
+The specification states:
+
+The xml:space attribute is used as defined by [XML 1.0], §2.10, White Space Handling.
+
+The xml:space attribute may be used with any element in the core vocabulary catalog.
+
+IE10 Mode (All Versions)
+
+The xml:space attribute is ignored. Whitespace is ignored.
+
+
+
+
+
+
+7 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.6 [[W3C-TTML-1.0]] Section 8, Styling 
+
+V0006:
+
+The specification states:
+
+Styling attributes are included in TTML to enable authorial intent of presentation to be included within a self-contained document. This section describes the semantics of style presentation in terms of a standard processing model. TTML Processors are not required to present TTML documents in any particular way; but an implementation of this model by a TTML Presentation Processor that provides externally observable results that are consistent with this model is likely to lead to a user experience that closely resembles the experience intended by the documents' authors.
+
+IE10 Mode (All Versions)
+
+Styling is not supported.
+
+2.1.7 [[W3C-TTML-1.0]] Section 9, Layout 
+
+V0007:
+
+The specification describes the layout matter of the core vocabulary catalog.
+
+IE10 Mode (All Versions)
+
+The layout element is not supported.
+
+The region element is not supported.
+
+2.1.8 [[W3C-TTML-1.0]] Section 10.2.3, dur 
+
+V0008:
+
+The specification states:
+
+The semantics of the dur attribute are those defined by [SMIL 2.1], § 10.4.1, while taking into account any overriding semantics defined by this specification.
+
+Note:
+
+In the context of the subset of [SMIL 2.1] semantics supported by this specification, the active duration of an element that specifies both end and dur attributes is equal to the lesser of the value of the dur attribute and the difference between the value of theend attribute and the element's begin time.
+
+IE10 Mode (All Versions)
+
+If both dur and end attributes are defined, then the dur attribute is ignored.
+
+2.1.9 [[W3C-TTML-1.0]] Section 10.2.4, timeContainer 
+
+V0009:
+
+The specification states:
+
+
+
+
+
+8 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The timeContainer attribute is used to specify a local temporal context by means of which timed child elements are temporally situated.
+
+IE10 Mode (All Versions)
+
+The timeContainer attribute is not supported.
+
+2.1.10 [[W3C-TTML-1.0]] Section 11, Animation 
+
+V0010:
+
+The specification describes the animation matter of the core vocabulary catalog.
+
+IE10 Mode (All Versions)
+
+Animation is not supported.
+
+2.1.11 [[W3C-TTML-1.0]] Section 12, Metadata 
+
+V0011:
+
+The specification describes the metadata matter of the core vocabulary catalog.
+
+IE10 Mode (All Versions)
+
+Metadata is not supported.
+
+2.2 Clarifications 
+
+There are no additional clarifications to  [W3C-TTML-1.0].
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-TTML] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+10 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type
+1Updated the document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+A
+
+ Animation 9
+
+C
+
+ Change tracking 10
+
+D
+
+ dur 8
+
+G
+
+ Glossary 4
+
+I
+
+ Informative references 4
+ Introduction 4
+
+L
+
+ Layout 8
+
+M
+
+ Metadata 9
+
+N
+
+ Normative references 4
+
+P
+
+ p 7
+
+Parameter Element Vocabulary ( section 2.1.1 6,  section 2.1.2 6)
+
+R
+
+References  informative 4  normative 4
+
+S
+
+ Styling 8
+
+T
+
+ timeContainer 8  Tracking changes 10
+
+X
+
+ xml:lang 7  xml:space 7
+
+
+12 / 12
+
+[MS-TTML] — v20120725
+
+Internet Explorer Timed Text Markup Language (TTML) 1.0 Standards Support Documentation
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
