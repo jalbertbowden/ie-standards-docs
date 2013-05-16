@@ -1,0 +1,1535 @@
+﻿
+
+[MS-DOM2CE]:
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments03/26/20101.0NewReleased new document.05/26/20101.2NoneIntroduced no new technical or language changes.09/08/20101.3MajorSignificantly changed the technical content.10/13/20101.4MinorClarified the meaning of the technical content.02/10/20112.0No changeIntroduced no new technical or language changes.02/22/20123.0MajorSignificantly changed the technical content.07/25/20123.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................51.1 Glossary ...............................................................................................................51.2 References ............................................................................................................51.2.1 Normative References .......................................................................................51.2.2 Informative References .....................................................................................51.3 Extension Overview (Synopsis) ................................................................................6 1.3.1  Organization of This Documentation ...................................................................71.4 Relationship to Standards and Other Extensions ........................................................71.5 Applicability Statement ...........................................................................................7
+2 Extensions ................................................................................................................9 2.1  Extensions to the Element Interface .........................................................................92.1.1 Attributes ......................................................................................................102.1.1.1 canHaveChildren ......................................................................................102.1.1.2 canHaveHTML ..........................................................................................102.1.1.3 parentElement .........................................................................................112.1.1.4 scopeName ..............................................................................................112.1.1.5 sourceIndex .............................................................................................112.1.1.6 tagUrn ....................................................................................................112.1.2 Methods ........................................................................................................112.1.2.1 applyElement ...........................................................................................112.1.2.2 clearAttributes .........................................................................................122.1.2.3 contains ..................................................................................................122.1.2.4 insertAdjacentElement ..............................................................................132.1.2.5 mergeAttributes .......................................................................................132.1.2.6 removeNode ............................................................................................142.1.2.7 replaceNode .............................................................................................142.1.2.8 swapNode ................................................................................................142.1.3 Collections .....................................................................................................152.1.3.1 all ...........................................................................................................152.1.3.2 children ...................................................................................................16 2.2  Extensions to the Comment Interface .....................................................................172.2.1 Attributes ......................................................................................................182.2.1.1 text ........................................................................................................182.2.2 Methods ........................................................................................................182.2.2.1 atomic .....................................................................................................18 2.3  Extensions to the Document Interface ....................................................................182.3.1 Methods ........................................................................................................192.3.1.1 clear .......................................................................................................192.3.1.2 removeNode ............................................................................................192.3.1.3 replaceNode .............................................................................................192.3.1.4 swapNode ................................................................................................20 2.4  Extensions to the Text Interface ............................................................................202.4.1 Methods ........................................................................................................212.4.1.1 removeNode ............................................................................................212.4.1.2 replaceNode .............................................................................................212.4.1.3 swapNode ................................................................................................213 Security Considerations ..........................................................................................23
+
+
+3 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+ 4  Appendix A: Product Behavior	24
+
+ 5  Change Tracking	25
+
+ 6  Index	27
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes extensions provided by Windows® Internet Explorer® for the Document Object Model (DOM) Level 2 Core Specification Version 1.0  [DOM Level 2 - Core], W3C Recommendation 13 November, 2000.
+
+Sections 1.7 and 2 of this specification are normative and can contain the terms MAY, SHOULD, MUST, MUST NOT, and SHOULD NOT as defined in RFC 2119. All other sections and examples in this specification are informative.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[DOM Level 2 - Core] W3C, "Document Object Model (DOM) Level 2 Core Specification Version 1.0", W3C Recommendation 13 November, 2000,  http://www.w3.org/TR/DOM-Level-2-Core/
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+1.2.2 Informative References 
+
+[CSS-Level2-2009] Bos, B., Celik, T., Hickson, I., and Wium Lie, H., Eds., "Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification", W3C Candidate Recommendation 08 September 2009,  http://www.w3.org/TR/2009/CR-CSS2-20090908/
+
+[DOM Level 2 - HTML] W3C, "Document Object Model (DOM) Level 2 HTML Specification Version 1.0", W3C Recommendation, January 2003,  http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/
+
+[DOM Level 2 - Style] W3C, "Document Object Model (DOM) Level 2 Style Specification Version 1.0", W3C Recommendation, November 2000,  http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/
+
+[HTML] World Wide Web Consortium, "HTML 4.01 Specification", December 1999,  http://www.w3.org/TR/html4/
+
+[MS-CSS21E] Microsoft Corporation, " Internet Explorer Extensions to the Cascading Style Sheets  (CSS) 2.1 Specification".
+
+
+5 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+[MS-DOM2CEX] Microsoft Corporation, " Microsoft XML Extensions to the Document Object Model  (DOM) Level 2 Core Specification".
+
+[MS-DOM2E] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 2  Events Standards Support Document".
+
+[MS-DOM2EE] Microsoft Corporation, " Internet Explorer Extensions to the DOM Level 2 Events  Specification".
+
+[MS-HTML401E] Microsoft Corporation, " Internet Explorer Extensions to the HTML 4.01  Specification".
+
+1.3 Extension Overview (Synopsis) 
+
+The extensions described in this document were selected for their applicability to  [DOM Level 2 -  Core].
+
+The additional Document Object Model interfaces, attributes, methods and collections are organized based on section 1.2, Fundamental Interfaces, of  [DOM Level 2 - Core] as follows:
+
+Element
+
+••Attributes
+ ••canHaveChildren
+ ••canHaveHTML
+ ••parentElement
+ ••scopeName
+ ••sourceIndex
+ ••tagUrn
+••Methods
+ ••applyElement
+ ••clearAttributes
+ ••contains
+ ••insertAdjacentElement
+ ••mergeAttributes
+ ••removeNode
+ ••replaceNode
+ ••swapNode
+••Collections
+ ••all
+ ••children
+
+6 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Comment
+
+••Attributes
+ ••text
+••Methods
+ ••atomic
+
+Document
+
+••Methods
+ ••clear
+ ••removeNode
+ ••replaceNode
+ ••swapNode
+
+Text
+
+••Methods
+ ••removeNode
+ ••replaceNode
+ ••swapNode
+
+1.3.1 Organization of This Documentation 
+
+This document is organized as follows:
+
+••Interfaces: The extensions are listed according to interface at the highest level.
+••Attributes, Methods, Collections: The interface members are described at the next levels.
+
+1.4 Relationship to Standards and Other Extensions 
+
+The following documents provide information on additional extensions.
+
+%5bMS-CSS21E%5d.pdf •• [MS-CSS21E]: Extensions to the  [CSS-Level2-2009] and  [DOM Level 2 - Style] specifications.
+%5bMS-HTML401E%5d.pdf •• [MS-HTML401E]: Extensions to the  [HTML] and the  [DOM Level 2 - HTML] specifications.
+
+%5bMS-DOM2CEX%5d.pdf •• [MS-DOM2CEX]: Extensions to the  [HTML] and the  [DOM Level 2 - HTML] specifications for Microsoft XML Core Services.
+
+%5bMS-DOM2EE%5d.pdf •• [MS-DOM2EE]: Extensions to the  [MS-DOM2E] specifications.
+
+1.5 Applicability Statement 
+
+This document specifies a set of extensions to the  [DOM Level 2 - Core] specification. The extensions in this document provide access to some features that are unique to Windows® Internet
+
+
+
+7 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Explorer® 7, Windows® Internet Explorer® 8, Windows® Internet Explorer® 9, and Windows® Internet Explorer® 10.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Extensions
+
+This section specifies additional attributes and methods to elements from  [DOM Level 2 - Core] that are available in Windows® Internet Explorer®.
+
+The extensions to  [DOM Level 2 - Core] are as follows:
+
+••Extensions to the  Element Interface
+••Extensions to the  Comment Interface
+••Extensions to the  Document Interface
+••Extensions to the  Text Interface
+
+2.1 Extensions to the Element Interface 
+
+Extensions have been added to the Element interface of the Document Object Model (DOM) Level 2 Core Specification  [DOM Level 2 - Core]. The extensions of the Element interface are:
+
+Attributes
+
+The Elements interface is extended by the following attributes. For details, see  Attributes.
+
+page10 •• canHaveChildren
+page10 •• canHaveHTML
+page11 •• parentElement
+page11 •• scopeName
+page11 •• sourceIndex
+page11 •• tagUrn
+
+Methods
+
+The Elements interface is extended by the following methods. For details, see  Methods.
+
+page11 •• applyElement
+page12 •• clearAttributes
+page12 •• contains
+page13 •• insertAdjacentElement
+page13 •• mergeAttributes
+page14 •• removeNode
+page14 •• replaceNode
+page14 •• swapNode
+
+Collections
+
+The Elements interface is extended by the following collections. For details, see  Collections.
+
+9 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page15 •• all
+page16 •• children
+
+The following IDL definition documents the Element interface:
+
+interface Element : Node {// Extension of DOM Level 2:readonly attribute booleancanHaveChildren;readonly attribute booleancanHaveHTML;readonly attribute booleanparentElement;readonly attribute longsourceIndex;// Extension of DOM Level 2:ElementapplyElementvoidclearAttributes;booleancontains;NodeinsertAdjacentElementNodemergeAttributesbooleanremoveNode;NodereplaceNode (in Node newNode)raises(DOMException);NodeswapNode;};
+
+2.1.1 Attributes 
+
+The Elements interface as specified in the  [DOM Level 2 - Core] is extended by the addition of the following attributes:
+
+page10 •• canHaveChildren
+page10 •• canHaveHTML
+page11 •• parentElement
+page11 •• sourceIndex
+
+2.1.1.1 canHaveChildren 
+
+canHaveChildren of type boolean, read-only
+
+Gets a Boolean value indicating whether the object can contain child objects. Objects do not have to contain children for the canHaveChildren attribute to return true. The canHaveChildren attribute is useful in determining whether objects can be appended as children. The property has no default value.
+
+2.1.1.2 canHaveHTML 
+
+canHaveHTML of type boolean
+
+Retrieves the Boolean value indicating whether the object can contain rich HTML markup. The property is read-only for all objects except the defaults object, which is read-write. The property has no default value.
+
+
+
+
+
+10 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.1.3 parentElement 
+
+parentElement of type Element, read-only
+
+Retrieves the parent object in the object hierarchy. The highest object returns null as its parent. The property has no default value.
+
+2.1.1.4 scopeName 
+
+Quirks Mode, IE7 Mode, IE8 Mode, and IE9 Mode (All Versions)
+
+scopeName of type String, read-only
+
+Gets the namespace defined for the element. The property has a default value of HTML.
+
+2.1.1.5 sourceIndex 
+
+sourceIndex of type long, read-only
+
+Retrieves the ordinal position of the object, in source order, as the object appears in the document's all collection. The property has no default value.
+
+2.1.1.6 tagUrn 
+
+Quirks Mode, IE7 Mode, IE8 Mode, and IE9 Mode (All Versions)
+
+tagUrn of type String
+
+Sets or gets the Uniform Resource Name (URN) specified in the namespace declaration. The property has a default value of null.
+
+2.1.2 Methods 
+
+The Element interface is extended by the addition of the following methods:
+
+page11 •• applyElement
+page12 •• clearAttributes
+page12 •• contains
+page13 •• insertAdjacentElement
+page13 •• mergeAttributes
+page14 •• removeNode
+page14 •• replaceNode
+page14 •• swapNode
+
+2.1.2.1 applyElement 
+
+applyElement
+
+
+
+
+
+11 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The applyElement method makes the element either a child or parent of another element. The applyElement method is accessible at run time. If elements are removed at run time before the closing tag is parsed, areas of the document might not render.
+
+Parameters
+
+oNewElement of type Element
+
+An object that becomes the child or parent of the current element.
+
+sWhere of type String
+
+Optional. If outside, the specified element becomes parent of the current element. The default parameter is outside. If inside, the specified element becomes a child of the current element, but contains all the child elements of the current element.
+
+Return Value
+
+Element The applied element, oNewElement.
+
+JScript Error
+
+E_INVALIDARG: Raised if oNewElement is null, oNewElement is outside the root node, or if oNewElement is not owned by the current document.
+
+2.1.2.2 clearAttributes 
+
+clearAttributes
+
+The clearAttributes method removes attributes and values from the object. It clears persistent HTML attributes only; the ID attribute, styles, and script-only properties are not affected.
+
+Parameters
+
+None.
+
+Return Value
+
+None.
+
+No Jscript Error
+
+2.1.2.3 contains 
+
+contains
+
+The contains method checks whether the specified element is contained within the object.
+
+Parameters
+
+oElement
+
+Element object that specifies the element to check.
+
+Return Value
+
+Boolean. Returns one of the following possible values:
+
+
+
+12 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+True - The element is contained within the object.
+
+False - The element is not contained within the object.
+
+JScript Error
+
+The error 'null' is null or not an object is raised if elements defined in the script are not present.
+
+2.1.2.4 insertAdjacentElement 
+
+insertAdjacentElement
+
+The insertAdjacentElement method inserts an element at the specified location. Text cannot be inserted while a document is loading; the onload event must be completed before attempting to call the insertAdjacentElement method.
+
+Parameters
+
+sWhere
+
+A String that specifies where to insert the HTML element, using one of the following values:
+
+beforeBegin - Inserts oElement immediately before the object.
+
+   afterBegin - Inserts oElement after the start of the object, but before all other content in the object.
+
+   beforeEnd - Inserts oElement immediately before the end of the object, but after all other content in the object.
+
+afterEnd - Inserts oElement immediately after the end of the object.
+
+oElement
+
+Object that specifies the element to be inserted adjacent to the object that invoked the insertAdjacentElement method.
+
+Return Value
+
+Returns an element object.
+
+No JScript Error
+
+2.1.2.5 mergeAttributes 
+
+mergeAttributes
+
+The mergeAttributes method copies all read/write HTML attributes, events, and styles from one element to another specified element.
+
+Parameters
+
+oSource
+
+Pointer to an Object that specifies the attributes copied to the object that invokes the attributes of the mergeAttributes method.
+
+bPreserve
+
+
+13 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Optional. Pointer to a Boolean value that specifies one of the following values:
+
+   True - Default. The id and name attributes of the element to which attributes are being merged is preserved.
+
+   False - The id and name attributes of the element to which attributes are being merged are not preserved.
+
+Return Value
+
+No return value.
+
+2.1.2.6 removeNode 
+
+removeNode
+
+The removeNode method removes the specified object from the document hierarchy. The removeNode method is accessible at run time. If elements are removed at run time, before the closing tag is parsed, areas of the document might not render.
+
+Parameters
+
+bRemoveChildren
+
+Optional. A Boolean parameter that specifies one of the following values:
+
+False - Default. The childNodes collection of the object is not removed.
+
+True - The childNodes collection of the object is removed.
+
+Return Value
+
+Returns a reference to the removed object.
+
+2.1.2.7 replaceNode 
+
+replaceNode
+
+The replaceNode method replaces the object with another element. When a node is replaced, all values that are associated with the replaced object are removed. The replaceNode method is accessible at run time. If elements are removed at run time before the closing tag is parsed, areas of the document might not render.
+
+Parameters
+
+oNewNode
+
+An object that specifies the new element to replace the object.
+
+Return Value
+
+Returns a reference to the removed object.
+
+2.1.2.8 swapNode 
+
+swapNode
+
+
+
+
+14 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The swapNode method exchanges the location of two objects in the document hierarchy. This method is accessible at run time. If elements are removed at run time, before the closing tag is parsed, areas of the document might not render.
+
+Parameters
+
+oNode
+
+Element that specifies the existing element.
+
+Return Values
+
+Returns a reference to the object that invoked the method.
+
+2.1.3 Collections 
+
+The following collections are extensions to the Elements interface as specified in the  [DOM Level 2 -  Core]:
+
+page15 •• all
+page16 •• children
+
+2.1.3.1 all 
+
+all
+
+Returns a reference to the collection of elements contained by the object.
+
+The all collection includes one element object for each valid HTML tag. If a valid tag has a matching end tag, both tags are represented by the same element object.
+
+The collection returned by the document's all collection always includes a reference to the html, head, and title objects regardless of whether the tags are present in the document. If the BODY tag is not present, but other HTML tags are, a body object is added to the all collection.
+
+If the document contains invalid or unknown tags, the collection includes one element object for each. Unlike valid end tags, unknown end tags are represented by their own element objects. The order of the element objects is the HTML source order. Although the collection indicates the order of tags, it does not indicate hierarchy.
+
+The name property only applies to some elements such as form elements. If the vIndex is set to a string matching the value of a name property in an element that the name property does not apply, then that element is not added to the collection.
+
+Syntax
+
+[ collAll = ] object.all
+
+[ oObject = ] object.all(vIndex [, iSubIndex])
+
+Possible Values
+
+collAll  Array of elements contained by the object.
+
+oObject  Reference to an individual item in the array of elements contained by the object.
+
+
+
+
+15 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+vIndex Required. Integer or string that specifies the element or collection to retrieve. If this parameter is an integer, the method returns the element in the collection at the specified position, where the first element has value 0, the second has 1, and so on. If this parameter is a string and there is more than one element with the name or id property equal to the string, the method returns a collection of matching elements.
+
+iSubIndex Optional. Position of an element to retrieve. This parameter is used when vIndex is a string. The method uses the string to construct a collection of all elements that have a name or id property equal to the string, and then retrieves from this collection the element at the position specified by iSubIndex.
+
+Members Table
+
+The following table lists the members exposed by the all object.
+
+Attributes
+
+AttributeDescriptionlengthSets or retrieves the number of objects in a collection.MethodsMethodDescriptionitemRetrieves an object from various collections, including the all collection.namedItemRetrieves an object or a collection from a specified collection.tagsRetrieves a collection of objects that have the specified HTML tag name.urnsRetrieves a collection of all objects to which a specified behavior is attached.
+2.1.3.2 children 
+
+children
+
+Retrieves a collection of DHTML Objects that are direct descendants of the object.
+
+Similar to the objects contained in the all collection, the objects contained in the children collection are undefined if the child elements are overlapping tags.
+
+The children collection can contain HTML elements.
+
+Syntax
+
+[ collAll = ] object.children
+
+[ oObject = ] object.children(vIndex [, iSubIndex])
+
+Possible Values
+
+collAll  Array of elements contained by the object.
+
+oObject  Reference to an individual item in the array of elements contained by the object.
+
+
+
+
+16 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+vIndex Required. Integer or string that specifies the element or collection to retrieve. If this parameter is an integer, the method returns the element in the collection at the specified position, where the first element has value 0, the second has 1, and so on. If this parameter is a string and there is more than one element with the name or id property equal to the string, the method returns a collection of matching elements.
+
+iSubIndex Optional. Position of an element to retrieve. This parameter is used when vIndex is a string. The method uses the string to construct a collection of all elements that have a name or id property equal to the string, and then retrieves from this collection the element at the position specified by iSubIndex.
+
+Members Table
+
+The following table lists the members exposed by the children object.
+
+Attributes
+
+AttributeDescriptionconstructorReturns a reference to the constructor of an object.lengthSets or retrieves the number of objects in a collection.MethodsMethodDescriptionitemRetrieves an object from various collections, including the all collection.tagsRetrieves a collection of objects that have the specified HTML tag name.urnsRetrieves a collection of all objects to which a specified behavior is attached.
+2.2 Extensions to the Comment Interface 
+
+The following methods of the Comment Interface are prototype extensions to the Comment interface of the Document Object Model (DOM) Level 2 Core Specification  [DOM Level 2 - Core].
+
+Attributes
+
+The Comment interface is extended by the  text attribute. For details, see  Attributes.
+
+Methods
+
+The Comment interface is extended by the  atomic attribute. For details, see  Methods.
+
+The following IDL Definition documents the Comment interface:
+
+interface Comment : CharacterData {
+
+// Extension of DOM Level 2: read-write attribute text; 
+
+// Extension of DOM Level 2: 
+
+Comment	atomic
+
+};
+
+
+
+
+
+17 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.2.1 Attributes 
+
+The Comment interface as specified in the  [DOM Level 2 - Core] is extended by the addition of the  text attribute.
+
+2.2.1.1 text 
+
+text of type DOMString
+
+The text attribute retrieves or sets the text of the object as a string.
+
+2.2.2 Methods 
+
+The Comment interface as specified in the  [DOM Level 2 - Core] is extended by the addition of the  atomic method.
+
+2.2.2.1 atomic 
+
+atomic
+
+The atomic method is functional but has been deprecated. The use of atomic indicates whether comment is a standalone tag or is used in a tag pair.
+
+Parameters
+
+None
+
+Return Values
+
+Returns one of the following possible values:
+
+1 - if the comment is self-closing <!-- --> style.
+
+0 - if the comment uses the deprecated <comment> tag. 
+
+2.3 Extensions to the Document Interface 
+
+The following methods are extensions to the Document interface of the Document Object Model (DOM) Level 2 Core Specification  [DOM Level 2 - Core]:
+
+page19 •• clear
+page19 •• removeNode
+page19 •• replaceNode
+page20 •• swapNode
+
+The following IDL definition documents the Document interface:
+
+interface Element : Node { // Extension of DOM Level 2:
+
+boolean	clear;
+
+boolean	removeNode;
+
+Node	replaceNode (in Node newNode)
+
+raises(DOMException);
+
+Node	swapNode;
+
+
+18 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+};
+
+
+2.3.1 Methods 
+
+The following properties are extensions to the Document interface as specified in the  [DOM Level 2  - Core]:
+
+page19 •• clear
+page19 •• removeNode
+page19 •• replaceNode
+page20 •• swapNode
+
+2.3.1.1 clear 
+
+clear
+
+The clear method removes all key/value pairs from the DOM Storage area. Session storage is cleared immediately. Local storage key/value pairs are removed from memory, and disk storage quota is updated.
+
+Return Value
+
+None
+
+JScript Error
+
+None
+
+2.3.1.2 removeNode 
+
+removeNode
+
+The removeNode method removes the object from the document hierarchy.
+
+Parameters
+
+bRemoveChildren
+
+Optional. A Boolean parameter that specifies one of the following values:
+
+False - Default. childNodes collection of the object is not removed.
+
+True - childNodes collection of the object is removed.
+
+Return Value
+
+Returns a reference to the removed object.
+
+2.3.1.3 replaceNode 
+
+replaceNode
+
+The replaceNode method replaces the object with another element. When a node is replaced, all values that are associated with the replaced object are removed. The replaceNode method is
+
+19 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+accessible at run time. If elements are removed at run time before the closing tag is parsed, areas of the document might not render.
+
+Parameters
+
+oNewNode
+
+An element that specifies the new element to replace the object.
+
+Return Value
+
+Returns a reference to the removed object.
+
+2.3.1.4 swapNode 
+
+swapNode
+
+The swapNode method exchanges the location of two objects in the document hierarchy. This method is accessible at run time. If elements are removed at run time, before the closing tag is parsed, areas of the document might not render.
+
+Parameters
+
+oNode
+
+Element that specifies the existing element.
+
+Return Values
+
+Returns a reference to the object that invoked the method.
+
+2.4 Extensions to the Text Interface 
+
+The following methods are extensions to the Text interface of the Document Object Model (DOM) Level 2 Core Specification  [DOM Level 2 - Core]:
+
+page21 •• removeNode
+page21 •• replaceNode
+page21 •• swapNode
+
+The following IDL definition documents the Document interface:
+
+interface Element : Node { // Extension of DOM Level 2:
+
+boolean	removeNode;
+
+Node	replaceNode (in Node newNode)
+
+raises(DOMException);
+
+Node	swapNode;
+
+};
+
+
+
+
+
+
+
+
+20 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.4.1 Methods 
+
+The following properties are extensions to the Text interface as specified in the  [DOM Level 2 -  Core]:
+
+page21 •• removeNode
+page21 •• replaceNode
+page21 •• swapNode
+
+2.4.1.1 removeNode 
+
+removeNode
+
+The removeNode removes the object from the document hierarchy.
+
+Parameters
+
+bRemoveChildren
+
+Optional. A Boolean parameter that specifies one of the following values:
+
+False - Default. childNodes collection of the object is not removed.
+
+True - childNodes collection of the object is removed.
+
+Return Value
+
+Returns a reference to the removed object.
+
+2.4.1.2 replaceNode 
+
+replaceNode
+
+The replaceNode method replaces the object with another element.
+
+Parameters
+
+oNewNode
+
+An element that specifies the new element to replace the object.
+
+Return Value
+
+Returns a reference to the removed object.
+
+2.4.1.3 swapNode 
+
+swapNode
+
+The swapNode method exchanges the location of two objects in the document hierarchy. This method is accessible at run time. If elements are removed at run time, before the closing tag is parsed, areas of the document might not render.
+
+Parameters
+
+oNode
+
+
+21 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Element that specifies the existing element.
+
+Return Values
+
+Returns a reference to the object that invoked the method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Security Considerations
+
+No security considerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Appendix A: Product Behavior
+
+The information in this specification is applicable to the following Microsoft products or supplemental software. References to product versions include released service packs:
+
+••Windows® Internet Explorer® 7
+••Windows® Internet Explorer® 8
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+Exceptions, if any, are noted below. If a service pack or Quick Fix Engineering (QFE) number appears with the product version, behavior changed in that service pack or QFE. The new behavior also applies to subsequent service packs of the product unless otherwise specified. If a product edition appears with the product version, behavior is different in that product edition.
+
+Unless otherwise specified, any statement of optional behavior in this specification that is prescribed using the terms SHOULD or SHOULD NOT implies product behavior in accordance with the SHOULD or SHOULD NOT prescription. Unless otherwise specified, the term MAY implies that the product does not follow the prescription.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+5  Change Tracking
+
+This section identifies changes that were made to the [MS-DOM2CE] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+25 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type1Updated document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+6  Index
+
+A
+
+ Applicability 7 Attributes
+
+ canHaveChildren 10  canHaveHTML 10  parentElement 11  sourceIndex 11  text 18
+
+C
+
+ Change tracking 25 Collections
+
+ all 15  children 16
+
+G
+
+ Glossary 5
+
+I
+
+ Implementer - security considerations 23  Informative references 5
+
+Interfaces  Comment 17  Document 18  Element 9  Text 20
+
+ Introduction 5
+
+M
+
+Methods  applyElement 11  atomic 18
+
+ clear 19  clearAttributes 12  contains 12
+
+ insertAdjacentElement 13  mergeAttributes 13
+
+removeNode ( section 2.1.2.6 14,  section 2.3.1.2 19,  section 2.4.1.1 21)
+
+replaceNode ( section 2.1.2.7 14,  section 2.3.1.3 19,  section 2.4.1.2 21)
+
+swapNode ( section 2.1.2.8 14,  section 2.3.1.4 20,  section 2.4.1.3 21)
+
+N
+
+ Normative references 5
+
+O
+
+ Overview (synopsis) 6
+
+P
+
+
+
+ Product behavior 24
+
+R
+
+ References 5  informative 5  normative 5
+
+S
+
+ Security - implementer considerations 23
+
+T
+
+ Tracking changes 25
+
+
+
+27 / 27
+
+[MS-DOM2CE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Core Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
