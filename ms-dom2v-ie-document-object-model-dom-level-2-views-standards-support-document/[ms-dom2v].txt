@@ -1,0 +1,647 @@
+﻿
+
+[MS-DOM2V]:
+
+Internet Explorer Document Object Model (DOM) Level 2
+
+Views Standards Support Document
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments03/17/20100.1NewReleased new document.03/26/20101.0NoneIntroduced no new technical or language changes.05/26/20101.2NoneIntroduced no new technical or language changes.09/08/20101.3MajorSignificantly changed the technical content.02/10/20112.0No changeIntroduced no new technical or language changes.02/22/20123.0MajorSignificantly changed the technical content.07/25/20123.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................41.3 Microsoft Implementations ......................................................................................41.4 Standards Support Requirements ............................................................................51.5 Notation ...............................................................................................................5
+2 Standards Support Statements .................................................................................72.1 Normative Variations ..............................................................................................7 2.1.1  [DOM Level 2 - Views] Section 1.1, Introduction ..................................................7 2.1.2  [DOM Level 2 - Views] Section 1.2, Interfaces .....................................................72.2 Clarifications .........................................................................................................8 2.2.1  [DOM Level 2 - Views] Section 1.1, Introduction ..................................................82.3 Error Handling .......................................................................................................92.4 Security ................................................................................................................93 Change Tracking.....................................................................................................104 Index .....................................................................................................................12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® for the
+
+Document Object Model (DOM) Level 2 Views Specification Version 1.0  [DOM Level 2 - Views], W3C Recommendation 13 November, 2000. Internet Explorer displays webpages written in HTML.
+
+The  [DOM Level 2 - Views] specification may contain guidance for authors of webpages and browser users, in addition to user agents (browser applications). Statements found in this document apply only to normative requirements in the specification targeted to user agents, not those targeted to authors.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[DOM Level 2 - Core] W3C, "Document Object Model (DOM) Level 2 Core Specification Version 1.0", W3C Recommendation 13 November, 2000,  http://www.w3.org/TR/DOM-Level-2-Core/
+
+[DOM Level 2 - Views] W3C, "Document Object Model (DOM) Level 2 Views Specification Version 1.0", W3C Recommendation 13 November, 2000,  http://www.w3.org/TR/DOM-Level-2-Views/
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+1.2.2 Informative References 
+
+None.
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of  [DOM Level 2 - Views]:
+
+••Windows® Internet Explorer® 7
+••Windows® Internet Explorer® 8
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+4 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes that are available in each version of Internet Explorer.
+
+Browser versionDocuments modes supportedInternet Explorer 7Quirks ModeStandards ModeInternet Explorer 8Quirks ModeIE7 ModeIE8 ModeInternet Explorer 9Quirks ModeIE7 ModeIE8 ModeIE9 ModeInternet Explorer 10 (Beta)Quirks ModeIE7 ModeIE8 ModeIE9 ModeIE10 Mode
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and browser versions for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+Note "Standards Mode" in Internet Explorer 7 and "IE7 Mode" in Internet Explorer 8 refer to the same document mode. IE7 Mode is the preferred way of referring to this document mode across all versions of the browser.
+
+1.4 Standards Support Requirements 
+
+To conform to  [DOM Level 2 - Views] a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+The following table lists the sections of  [DOM Level 2 - Views] and whether they are considered normative or informative.
+
+SectionsNormative/Informative1NormativeAppendix A-DInformative
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and extension points.
+
+
+
+
+5 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+NotationExplanationC####This identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.V####This identifies an intended point of variability in the target specification such as the use ofMAY, SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibilitypoints.E####Because the use of extensibility points (such as optional implementation-specific data) canimpair interoperability, this profile identifies such points in the target specification.
+For document mode and browser version notation, see also section  1.3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of  [DOM Level 2 - Views].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+The following subsections detail the normative variations from MUST requirements in  [DOM Level 2 -  Views].
+
+2.1.1 [DOM Level 2 - Views] Section 1.1, Introduction 
+
+V0002:
+
+The specification states:
+
+In order to fully support this module, an implementation must also support the "Core" feature defined defined in the Document Object Model Level 2 Core specification [DOM Level 2 - Core]. Please refer to additional information about conformance in the DOM Level 2 Core specification.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The "Core" feature is not fully supported. The hasFeature method of the DOMImplementation interface returns false for the "Core" module and the version strings "1.0" and "2.0."
+
+2.1.2 [DOM Level 2 - Views] Section 1.2, Interfaces 
+
+V0003:
+
+The specification states:
+
+Interface AbstractView (introduced in DOM Level 2)
+
+A base interface that all views shall derive from.
+
+IDL Definition
+
+// Introduced in DOM Level 2: interface AbstractView {
+
+  readonly attribute DocumentView document; };
+
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The AbstractView and DocumentView interfaces are not supported.
+
+V0004:
+
+
+7 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The specification states:
+
+document of type DocumentView, readonly
+
+The source DocumentView of which this is an AbstractView.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The AbstractView and DocumentView interfaces are not supported.
+
+V0005:
+
+The specification states:
+
+Interface DocumentView (introduced in DOM Level 2)
+
+The DocumentView interface is implemented by Document objects in DOM implementations supporting DOM Views. It provides an attribute to retrieve the default view of a document.
+
+IDL Definition
+
+// Introduced in DOM Level 2:
+
+interface DocumentView {
+
+readonly attribute AbstractView	defaultView;
+
+};
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The DocumentView interface is not supported.
+
+V0006:
+
+The specification states:
+
+defaultView of type AbstractView, readonly
+
+The default AbstractView for this Document, or null if none available.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The AbstractView and DocumentView interfaces are not supported.
+
+2.2 Clarifications 
+
+The following subsection identifies clarifications to recommendations made by  [DOM Level 2 -  Views].
+
+2.2.1 [DOM Level 2 - Views] Section 1.1, Introduction 
+
+C0001:
+
+The specification states:
+
+The interfaces found within this section are not mandatory. A DOM application may use the hasFeature(feature, version) method of the DOMImplementation interface with parameter values "Views" and "2.0" (respectively) to determine whether or not this module is supported by the implementation.
+
+
+8 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The hasFeature method of the DOMImplementation interface returns false for the "Views" module and the version strings "1.0" and "2.0."
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-DOM2V] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+10 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type1Updated document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+C
+
+ Change tracking 10
+
+G
+
+ Glossary 4
+
+I
+
+ Informative references 4  Interfaces 7
+
+Introduction ( section 1 4,  section 2.1.1 7,  section  2.2.1 8)
+
+N
+
+ Normative references 4
+
+R
+
+References  informative 4  normative 4
+
+T
+
+ Tracking changes 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12 / 12
+
+[MS-DOM2V] — v20120725
+
+Internet Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
