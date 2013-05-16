@@ -1,0 +1,644 @@
+﻿
+
+[MS-ISO8859]:
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets
+
+Standards Support Document
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments03/26/20101.0NewReleased new document.05/26/20101.2NoneIntroduced no new technical or language changes.09/08/20101.3MajorSignificantly changed the technical content.02/10/20112.0No changeIntroduced no new technical or language changes.02/22/20123.0MajorSignificantly changed the technical content.07/25/20123.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................51.3 Microsoft Implementations ......................................................................................51.4 Standards Support Requirements ............................................................................61.5 Notation ...............................................................................................................6
+2 Standards Support Statements ................................................................................. 72.1 Normative Variations ..............................................................................................7 2.1.1  ISO-8859-1 .....................................................................................................7 2.1.2  ISO-8859-8 .....................................................................................................9 2.1.3  ISO-8859-9 .....................................................................................................9 2.1.4  ISO-8859-15 .................................................................................................12 2.1.5  ISO-8859-16 .................................................................................................122.2 Clarifications .......................................................................................................142.3 Error Handling .....................................................................................................142.4 Security ..............................................................................................................143 Change Tracking.....................................................................................................154 Index .....................................................................................................................17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® for the following specifications:
+
+••International Organization for Standardization, Information Technology -- 8-Bit Single-Byte Coded Graphic Character Sets -- Part 1: Latin Alphabet No. 1", ISO/IEC 8859-1, 1998,  [ISO- 8859-1]
+
+••International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 8: Latin/Hebrew alphabet", 1999,  [ISO-8859-8]
+
+••International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 9: Latin alphabet No. 5", 1999  [ISO-8859-9]
+
+••International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 15: Latin alphabet No. 9", 1999,  [ISO-8859-15]
+
+••International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 16: Latin alphabet No. 10", 2001,  [ISO-8859-16]
+
+Internet Explorer displays webpages written in HTML.
+
+The  [ISO-8859-1],  [ISO-8859-8],  [ISO-8859-9],  [ISO-8859-15], and  [ISO-8859-16] specifications may contain guidance for authors of webpages and browser users, in addition to user agents (browser applications). Statements found in this document apply only to normative requirements in the specification targeted to user agents, not those targeted to authors.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[ISO-8859-1] International Organization for Standardization, "Information Technology -- 8-Bit Single-Byte Coded Graphic Character Sets -- Part 1: Latin Alphabet No. 1", ISO/IEC 8859-1, 1998,  http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=28245
+
+[ISO-8859-15] International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 15: Latin alphabet No. 9", 1999,  http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=29505
+
+
+
+4 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+[ISO-8859-16] International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 16: Latin alphabet No. 10", 2001,  http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=33428
+
+[ISO-8859-8] International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 8: Latin/Hebrew alphabet", 1999,  http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=28252
+
+[ISO-8859-9] International Organization for Standardization, "Information technology -- 8-bit single-byte coded graphic character sets -- Part 9: Latin alphabet No. 5", 1999,  http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=28253
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+1.2.2 Informative References 
+
+[MSDN-CODEPG-Win1252] Microsoft Corporation, "Windows 1252", Windows Code Pages,  http://msdn.microsoft.com/en-us/goglobal/cc305145.aspx
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of the relevant specifications:
+
+••Windows® Internet Explorer® 7
+••Windows® Internet Explorer® 8
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer:
+
+Browser VersionDocuments Modes SupportedInternet Explorer 7Quirks ModeStandards ModeInternet Explorer 8Quirks ModeIE7 ModeIE8 ModeInternet Explorer 9Quirks ModeIE7 ModeIE8 ModeIE9 ModeInternet Explorer 10Quirks ModeIE7 ModeIE8 ModeIE9 ModeIE10 Mode5 / 17
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+Note "Standards mode" in Internet Explorer 7 and "IE7 mode" in Internet Explorer 8 refer to the same document mode. "IE7 mode" is the preferred way of referring to this document mode across all versions of the browser.
+
+Throughout this document, Microsoft XML Core Services (MSXML) 3.0 is referred to as MSXML3 and Microsoft XML Core Services (MSXML) 6.0 is referred to as MSXML6.
+
+MSXML3 is the only version of MSXML that is implemented in Internet Explorer 7 and Internet Explorer 8. Both MSXML3 and MSXML6 are implemented in Internet Explorer 9 and Internet Explorer 10.
+
+1.4 Standards Support Requirements 
+
+To conform to  [ISO-8859-1],  [ISO-8859-8],  [ISO-8859-9],  [ISO-8859-15], and  [ISO-8859-16], a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and points of extensibility.
+
+NotationExplanationC####This identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.V####This identifies an intended point of variability in the target specification such as the use ofMAY, SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibilitypoints.E####Because the use of extensibility points (such as optional implementation-specific data) canimpair interoperability, this profile identifies such points in the target specification.
+For document mode and browser version notation, see also section  1.3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of  [ISO-8859-1], [ISO-8859-8], [ISO-8859-9], [ISO-8859-15], and  [ISO-8859-16].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+The following subsections detail the normative variations from MUST requirements in  [ISO-8859-1],  [ISO-8859-8], [ISO-8859-9], [ISO-8859-15], and  [ISO-8859-16].
+
+2.1.1 ISO-8859-1 
+
+All Document Modes (All Versions)
+
+The following table describes variations from the  [ISO-8859-1] character set:
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x0080U+0080U+20AC0x0082U+0082U+201A0x0083U+0083U+01920x0084U+0084U+201E0x0085U+0085U+20260x0086U+0086U+20200x0087U+0087U+2021
+
+
+
+
+7 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x0088U+0088U+02C60x0089U+0089U+20300x008AU+008AU+01610x008BU+008BU+20390x008CU+008CU+01520x008EU+008EU+017D0x0091U+0091U+20180x0092U+0092U+20190x0093U+0093U+201C0x0094U+0094U+201D0x0095U+0095U+20220x0096U+0096U+20130x0097U+0097U+20140x0098U+0098U+02DC
+
+
+
+8 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x0099U+0099U+21220x009AU+009AU+01610x009BU+009BU+203A0x009CU+009CU+01530x009EU+009EU+017E0x009FU+009FU+0178
+The implementation of  [ISO-8859-1] in Internet Explorer is closely related to the Windows-1252 code page  [MSDN-CODEPG-Win1252]. The code ranges from 0x00 to 0x7F and from 0xA0 to 0xFF are the same in both  [ISO-8859-1] and the Windows-1252 code page  [MSDN-CODEPG-Win1252].
+
+MSXML3 and MSXML6
+
+There are no variations from the  [ISO-8859-1] character set.
+
+2.1.2 ISO-8859-8 
+
+All Document Modes (All Versions)
+
+The following table describes variations from the  [ISO-8859-8] character set:
+
+Charset HexUnicodeExpectedInternet ExplorerInternetvaluePointCharacterUnicode PointExplorer0x00FDU+200ELRM (left-to-right0xF7BF<box>mark)0x00FEU+200FRLM (right-to-left0xF7C0<box>mark)
+2.1.3 ISO-8859-9 
+
+All Document Modes (All Versions)
+
+The following table describes variations from the  [ISO-8859-9] character set:
+
+
+
+
+9 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x0080U+0080U+20AC0x0082U+0082U+201A0x0083U+0083U+01920x0084U+0084U+201E0x0085U+0085U+20260x0086U+0086U+20200x0087U+0087U+20210x0088U+0088U+02C60x0089U+0089U+20300x008AU+008AU+01610x008BU+008BU+20390x008CU+008CU+01520x008EU+008EU+017D0x0091U+0091U+2018
+
+
+
+10 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x0092U+0092U+20190x0093U+0093U+201C0x0094U+0094U+201D0x0095U+0095U+20220x0096U+0096U+20130x0097U+0097U+20140x0098U+0098U+02DC0x0099U+0099U+21220x009AU+009AU+01610x009BU+009BU+203A0x009CU+009CU+01530x009EU+009EU+017E0x009FU+009FU+0178
+The implementation of  [ISO-8859-9] in Internet Explorer is closely related to the Windows-1252 code page  [MSDN-CODEPG-Win1252].The code ranges from 0x00 to 0x7F and from 0xA0 to 0xFF are the same in both  [ISO-8859-9] and the Windows-1252 code page  [MSDN-CODEPG-Win1252].
+
+
+
+11 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+MSXML3
+
+There are no variations from the  [ISO-8859-9] character set.
+
+2.1.4 ISO-8859-15 
+
+There are no variations from the  [ISO-8859-15] character set.
+
+2.1.5 ISO-8859-16 
+
+All Document Modes (All Versions)
+
+The following table describes variations from the  [ISO-8859-16] character set:
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x0080U+0080U+20AC0x0082U+0082U+201A0x0083U+0083U+01920x0084U+0084U+201E0x0085U+0085U+20260x0086U+0086U+20200x0087U+0087U+20210x0088U+0088U+02C60x0089U+0089U+20300x008AU+008AU+0161
+
+
+
+
+12 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x008BU+008BU+20390x008CU+008CU+01520x008EU+008EU+017D0x0091U+0091U+20180x0092U+0092U+20190x0093U+0093U+201C0x0094U+0094U+201D0x0095U+0095U+20220x0096U+0096U+20130x0097U+0097U+20140x0098U+0098U+02DC0x0099U+0099U+21220x009AU+009AU+01610x009BU+009BU+203A
+
+
+
+13 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Charset HexExpected UnicodeInternet Explorer UnicodeInternet ExplorervaluePointPointGlyph0x009CU+009CU+01530x009EU+009EU+017E0x009FU+009FU+0178
+The implementation of  [ISO-8859-16] in Internet Explorer is closely related to the Windows-1252 code page  [MSDN-CODEPG-Win1252].The code ranges from 0x00 to 0x7F and from 0xA0 to 0xFF are the same in both  [ISO-8859-16] and the Windows-1252 code page  [MSDN-CODEPG-Win1252].
+
+MSXML3
+
+There are no variations from the  [ISO-8859-16] character set.
+
+2.2 Clarifications 
+
+There are no additional clarifications to  [ISO-8859-1],  [ISO-8859-8],  [ISO-8859-9],  [ISO-8859-15], and  [ISO-8859-16].
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-ISO8859] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+15 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type1Updated document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+C
+
+ Change tracking 15
+Character Sets
+
+ ISO-8859-1 7
+ ISO-8859-15 12
+
+ ISO-8859-16 12
+ ISO-8859-8 9
+
+ ISO-8859-9 9
+
+G
+
+ Glossary 4
+
+I
+
+ Informative references 5
+
+ Introduction 4
+
+N
+
+ Normative references 4
+
+R
+
+References  informative 5  normative 4
+
+T
+
+ Tracking changes 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17 / 17
+
+[MS-ISO8859] — v20120725
+
+Microsoft 8-bit Single-byte Coded Graphic Character Sets Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
