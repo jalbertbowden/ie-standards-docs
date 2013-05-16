@@ -1,0 +1,615 @@
+﻿
+
+[MS-PICSRS]:
+
+Internet Explorer PICS Rating Services and Systems
+
+Standards Support Document
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments03/17/20100.1NewReleased new document.03/26/20101.0NoneIntroduced no new technical or language changes.05/26/20101.2NoneIntroduced no new technical or language changes.09/08/20101.3MajorSignificantly changed the technical content.02/10/20112.0No changeIntroduced no new technical or language changes.02/22/20123.0MajorSignificantly changed the technical content.07/25/20123.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................41.3 Microsoft Implementations ......................................................................................41.4 Standards Support Requirements ............................................................................51.5 Notation ...............................................................................................................6
+2 Standards Support Statements .................................................................................72.1 Normative Variations ..............................................................................................7 2.1.1  [W3C-PICS-Services] Detailed syntax of application/pics-service ............................72.2 Clarifications .........................................................................................................8 2.2.1  [W3C-PICS-Services] Semantics of the application/pics-service Description .............82.3 Error Handling .......................................................................................................92.4 Security ................................................................................................................93 Change Tracking.....................................................................................................104 Index .....................................................................................................................12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® for the
+
+Rating Services and Rating Systems (and Their Machine Readable Descriptions) Version 1.1  [W3C- PICS-Services], W3C Recommendation 31 October 1996, revised 24 November 2009. Internet Explorer displays webpages written in HTML.
+
+The  [W3C-PICS-Services] specification may contain guidance for authors of webpages and browser users, in addition to user agents (browser applications). Statements found in this document apply only to normative requirements in the specification targeted to user agents, not those targeted to authors.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[IEEE754-2008] Institute of Electrical and Electronics Engineers, "IEEE Standard for Floating-Point Arithmetic", 2008,  http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=4610935&tag=1
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+[W3C-PICS-Services] Miller, J., Resnick, P., and Singer, D., "Rating Services and Rating Systems (and Their Machine Readable Descriptions) Version 1.1", W3C Recommendation 31-October-96,  http://www.w3.org/TR/REC-PICS-services-961031
+
+1.2.2 Informative References 
+
+None.
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of  [W3C-PICS-Services]:
+
+••Windows® Internet Explorer® 7
+••Windows® Internet Explorer® 8
+••Windows® Internet Explorer® 9
+
+4 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Windows® Internet Explorer® 10
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer:
+
+Browser VersionDocuments Modes SupportedInternet Explorer 7Quirks ModeStandards ModeInternet Explorer 8Quirks ModeIE7 ModeIE8 ModeInternet Explorer 9Quirks ModeIE7 ModeIE8 ModeIE9 ModeInternet Explorer 10Quirks ModeIE7 ModeIE8 ModeIE9 ModeIE10 Mode
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+Note "Standards mode" in Internet Explorer 7 and "IE7 mode" in Internet Explorer 8 refer to the same document mode. "IE7 mode" is the preferred way of referring to this document mode across all versions of the browser.
+
+1.4 Standards Support Requirements 
+
+To conform to  [W3C-PICS-Services] a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+The following table lists the sections of  [W3C-PICS-Services] and whether they are considered normative or informative.
+
+SectionsNormative/InformativeIntroductionInformativeWhat is a "rating service"?What is a "rating system"?What is a "content label"?The application/pics-service document
+
+
+5 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+SectionsNormative/InformativeExplanation of Sample Rating ServiceNormativeDetailed syntax of application/pics-serviceAppendix A-CInformative
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and extension points.
+
+NotationExplanationC####This identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.V####This identifies an intended point of variability in the target specification such as the use ofMAY, SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibilitypoints.E####Because the use of extensibility points (such as optional implementation-specific data) canimpair interoperability, this profile identifies such points in the target specification.
+For document mode and browser version notation, see also section  1.3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of  [W3C-PICS-Services].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+The following subsections detail the normative variations from MUST requirements in  [W3C-PICS- Services].
+
+2.1.1 [W3C-PICS-Services] Detailed syntax of application/pics-service 
+
+V0001:
+
+The specification states:
+
+Transmit-names and quoted strings are case sensitive. Option names and other tokens in the BNF grammar are case insensitive.
+
+All Document Modes (All Versions)
+
+Quoted strings are treated as case-insensitive.
+
+V0002:
+
+The specification states:
+
+The only service-option that may occur more than once in a single service description is the extension option. Likewise, the only option that may occur more than once as a default or as a category-option is extension. In each case, if the extension option is supplied more than once, the quoted-URLs defining the extensions must be distinct.
+
+All Document Modes (All Versions)
+
+Distinct quoted-URLs for multiple extensions are not enforced.
+
+V0003:
+
+The specification states:
+
+This specification requires the use of UTF-7 encoding to allow for the inclusion of non-English description strings. For those rating systems and services that use only the US-ASCII character set in their descriptive strings, UTF-7 allows direct encoding of the following (printable) characters: a-z, A-Z, 0-9, '(),-
+
+./:?!#$%&*;<=>@[]^_`{|} Notice that "+" is not included in this set, since it is
+
+
+7 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+used by the UTF-7 encoding system.
+
+All Document Modes (All Versions)
+
+Only ratings (.rat) files that have been encoded in ANSI format are recognized.
+
+2.2 Clarifications 
+
+The following subsections identify clarifications to recommendations made by  [W3C-PICS-Services].
+
+2.2.1 [W3C-PICS-Services] Semantics of the application/pics-service Description 
+
+V0004:
+
+The specification states:
+
+Values in PICS labels may be integers or fractions with no greater range or precision than that provided by IEEE single-precision floating point numbers. Values may be given names by using the label attribute. When a value is given a name, it may optionally have attached an icon and a human-readable description. The description for each category can specify restrictions on the range of permissible values for certain named attributes. Values may be restricted in a variety of ways:
+
+1. minimum (min attribute, defaults to -INF) value; 
+
+2. maximum (max attribute, defaults to +INF) value; 
+
+3. integer values only (integer attribute, defaults to false if the attribute is omitted, but true if it is present with no value specified); 
+
+4. named values only (label-only attribute, defaults to false if the attribute is omitted, but true if it is present with no value specified). 
+
+5. more than a single rating allowed for a given document (consider the dimension "sizes available"). This is indicated by setting the attribute multivalue to true (default is false if the attribute is omitted, but true if it is present with no value specified). 
+
+6. unordered values (unordered attribute, defaults to false if the attribute is omitted, but true if its is present with no value specified.) 
+
+All Document Modes (Internet Explorer 7)
+
+Large integers or fractions as defined by IEEE single-precision floating-point numbers reference  [IEEE754-2008] are not recognized or compared.
+
+V0005:
+
+The specification states:
+
+In particular, the defaultable-options of a category (extension, integer, label-only, max, min, multivalue, and unordered) are inherited by each category from its enclosing (parent) category.
+
+All Document Modes (Internet Explorer 7)
+
+
+8 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+A ratings file that is incorrectly constructed functions in the same manner as a correct ratings file.
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-PICSRS] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+10 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorchangeTracking number (if applicable)(Y orSectionand descriptionN)Change type1Updated document to remove beta tagging.NContentIntroductionupdated. 1.3Added Internet Explorer 10 (Beta) to productsNContentMicrosoftlist.updated.Implementations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+C
+
+ Change tracking 10
+
+G
+
+ Glossary 4
+
+I
+
+ Informative references 4
+ Introduction 4
+
+N
+
+ Normative references 4
+
+R
+
+References  informative 4  normative 4
+
+T
+
+ Tracking changes 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12 / 12
+
+[MS-PICSRS] — v20120725
+
+Internet Explorer PICS Rating Services and Systems Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
