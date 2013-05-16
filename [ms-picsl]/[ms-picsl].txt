@@ -1,0 +1,685 @@
+﻿
+
+[MS-PICSL]:
+
+Internet Explorer PICS Label Distribution and Syntax
+
+Standards Support Document
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments03/17/20100.1NewReleased new document.03/26/20101.0NoneIntroduced no new technical or language changes.05/26/20101.2NoneIntroduced no new technical or language changes.09/08/20101.3MajorSignificantly changed the technical content.10/13/20101.4MinorClarified the meaning of the technical content.02/10/20112.0No changeIntroduced no new technical or language changes.02/22/20123.0MajorSignificantly changed the technical content.07/25/20123.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................41.3 Microsoft Implementations ......................................................................................41.4 Standards Support Requirements ............................................................................51.5 Notation ...............................................................................................................6
+2 Standards Support Statements .................................................................................72.1 Normative Variations ..............................................................................................72.2 Clarifications .........................................................................................................7 2.2.1  [W3C-PICS-Labels] General Format ....................................................................72.3 Error Handling .....................................................................................................112.4 Security ..............................................................................................................113 Change Tracking.....................................................................................................124 Index .....................................................................................................................14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® for the
+
+PICS Label Distribution Label Syntax and Communication Protocols, Version 1.1  [W3C-PICS-Labels] W3C Recommendation 31 October 1996, Revised 24 November 2009. Internet Explorer displays webpages written in HTML.
+
+The  [W3C-PICS-Labels] specification may contain guidance for authors of webpages and browser users, in addition to user agents (browser applications). Statements found in this document apply only to normative requirements in the specification targeted to user agents, not those targeted to authors.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+[W3C-PICS-Labels] Krauskopf, T., Miller, J., Resnick, P., Treese, W., "PICS Label Distribution Label Syntax and Communication Protocols Version 1.1", W3C Recommendation 31-October-96,  http://www.w3.org/TR/REC-PICS-labels-961031
+
+1.2.2 Informative References 
+
+None.
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of  [W3C-PICS-Labels]:
+
+••Windows® Internet Explorer® 7
+••Windows® Internet Explorer® 8
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+
+4 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer:
+
+Browser VersionDocuments Modes SupportedInternet Explorer 7Quirks ModeStandards ModeInternet Explorer 8Quirks ModeIE7 ModeIE8 ModeInternet Explorer 9Quirks ModeIE7 ModeIE8 ModeIE9 ModeInternet Explorer 10Quirks ModeIE7 ModeIE8 ModeIE9 ModeIE10 Mode
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+Note "Standards mode" in Internet Explorer 7 and "IE7 mode" in Internet Explorer 8 refer to the same document mode. "IE7 mode" is the preferred way of referring to this document mode across all versions of the browser.
+
+1.4 Standards Support Requirements 
+
+To conform to  [W3C-PICS-Labels] a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+The following table lists the sections of  [W3C-PICS-Labels] and whether they are considered normative or informative.
+
+SectionsNormative/InformativeOverviewInformativeGeneral FormatNormativeDetailed SyntaxSemantics of PICS Labels and Label ListsEmbedding Labels in HyperText Markup Language (HTML)Using HTTP to Request Labels With A DocumentRequesting Labels Separately
+
+5 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+SectionsNormative/InformativeMICs and Digital SignaturesAppendix A-BInformative
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and extension points.
+
+NotationExplanationC####This identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.V####This identifies an intended point of variability in the target specification such as the use ofMAY, SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibilitypoints.E####Because the use of extensibility points (such as optional implementation-specific data) canimpair interoperability, this profile identifies such points in the target specification.
+For document mode and browser version notation, see also section  1.3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of  [W3C-PICS-Labels].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+There are no variations from  [W3C-PICS-Labels].
+
+2.2 Clarifications 
+
+The following subsections identify clarifications to recommendations made by  [W3C-PICS-Labels].
+
+2.2.1 [W3C-PICS-Labels] General Format 
+
+V0001:
+
+The specification states:
+
+A rating service may provide a generic label for any or all prefixes of a given URL, but should provide only one specific label for that URL. When the specific label for a document can be found, it should be used in preference to any generic label. Lacking a specific label, any generic label may be substituted, but preference should be given to the generic label which has the longest string. Some PICS client software may impose restrictions on the use of generic labels. For example, a client may choose to ignore a generic label that applies to a node in the URL tree more than two levels above the node where the document is located.
+
+All Document Modes (All Versions)
+
+The generic label option of an initial webpage is supported, but generic label options for any subdomains are not.
+
+V0002:
+
+The specification states:
+
+Information about the document that is labeled. at quoted-ISO-date The last modification date of the item to which this rating applies, at the time the rating was assigned. This can serve as a less expensive, but less reliable, alternative to the message integrity check (MIC) options. MIC-md5 "Base64-string" -or- md5 "Base64-string" A message integrity check (MIC) of the item being rated. The MD5 Message Digest Algorithm (see RFC1321) is used to compute the MIC. One way to create this message digest is to use the RSAREF (version 2.0) software available for this purpose at no charge from RSA Laboratories. See MICs and Digital Signatures below.
+
+
+7 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+All Document Modes (All Versions)
+
+The syntax or validity of the actual quoted-ISO-date is not checked. The 'at' option is supported but its value is ignored.
+
+Any "Base64-string" for a label passes through PICS rules processing normally.
+
+V0003:
+
+The specification states:
+
+Information about the label itself.
+
+until quoted-ISO-date -or- exp quoted-ISO-date
+
+The date on which this rating expires.
+
+All Document Modes (All Versions)
+
+The "until" clause in labels is not supported.
+
+V0004:
+
+The specification states:
+
+Other information.
+
+comment quotedname
+
+Information for humans who may see the label; no associated semantics.
+
+complete-label quotedURL -or- full quotedURL
+
+Dereferencing this URL returns a complete label that can be used in place of the current one. The complete label has values for as many attributes as possible. This is used when a short label is transmitted for performance purposes but additional information is also available. When the URL is dereferenced it returns an item of type application/pics-labels that contains a labellist with exactly one label. extension (optional quotedURL data*)
+
+-or- extension (mandatory quotedURL data*)
+
+Future extension mechanism. To avoid duplication of extension names, each extension is identified by a quotedURL. The URL can be dereferenced to get a human-readable description of the extension. If the extension is optional then software which does not understand the extension can simply ignore it; if the extension is mandatory then software which does not understand the extension should act as though no label had been supplied. Each item of data must be one of a fixed set of simple-to-parse data types as specified in the detailed syntax below. See http://w3.org/PICS/extensions/ to find out what extensions are currently in use.
+
+All Document Modes (All Versions)
+
+The data* value is supported. But if data* is enclosed in parentheses, only a single data value is supported within an extension. If more than a single value is supplied, a syntax error for the entire PICS label is returned.
+
+C0001:
+
+
+8 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The specification states:
+
+Transmit-names and quoted strings are case sensitive. Option names and other tokens in the BNF grammar are case insensitive.
+
+All Document Modes (Internet Explorer 7)
+
+Whenever transmit-name labels for a webpage do not match the label in the ratings file, an error message stating "Either the rating label on this page is invalid, or your settings have been tampered with" is returned.
+
+All Document Modes (Internet Explorer 8 and Internet Explorer 9)
+
+Whenever transmit-name labels for a webpage do not match the label in the ratings file, an error message stating "The rating was obtained from the webpage" is returned.
+
+V0005:
+
+The specification states:
+
+Numbers in PICS labels may be integers or fractions with no greater range or precision than that provided by IEEE single-precision floating point numbers. Implementors concerned about the vagaries of floating point comparisons may choose to represent numbers internally as ASCII strings.
+
+All Document Modes (Internet Explorer 7)
+
+Numbers with a greater range or precision than that provided by IEEE single-precision floating-point numbers are supported and compared.
+
+V0006:
+
+The specification states:
+
+The multi-value syntax must be used when there is more than one value for a particular category. This syntax may be used when there is exactly one value, but the more compact version may also be used in that case. When there is no value, the category may be omitted entirely or transmitted using the multi-value syntax.
+
+All Document Modes (All Versions)
+
+The multi-value syntax is recognized, but does not support multiple values for a given category. The multi-value syntax is not supported when only a single value is present. The more compact version should be used when there is only a single value.
+
+V0007:
+
+The specification states:
+
+For parsing purposes, notice that a label ends with either "ratings" or "r" followed by a parenthesized list of categories and values. If this does not end the label list, it is followed by either another label (possibly starting with options), a new service URL (recognizable because it must be surrounded by quotation marks), or an error (starting with the word "error").
+
+
+
+9 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+All Document Modes (All Versions)
+
+Labels can end with something other than another label, service URL, or the word "error".
+
+V0008:
+
+The specification states:
+
+Note that the content attribute uses single quotes, because the PICS label syntax uses double quotes. Any of the following characters appearing within the content must be escaped using SGML entities:
+
+'&#39;/* single quote */&&amp;/* ampersand   */>&gt;/* greater than */
+All Document Modes (All Versions)
+
+Ratings service names that contain an escaped ampersand (&) value are not supported.
+
+V0009:
+
+The specification states:
+
+A request for a minimal label asks that all options be omitted, unless a generic label is returned, in which case the generic and for options must also be included in the label. A short label includes everything that is included in a minimal label, plus additional options that the server deems appropriate. A request for a full label asks that as much information as possible should be sent back in the label, either directly or through the use of a complete-label (or full) option, but no signature-RSA-MD5 option is needed.
+
+All Document Modes (All Versions)
+
+Requests for labels from HTTP servers are not issued, although the labels embedded within the response header from the server are properly parsed.
+
+V0010:
+
+The specification states:
+
+The query asks the label bureau http://www.labels.org/Ratings to send a single label that applies to everything in the images hierarchy at site www.questionable.org. The desired label should have been created by the service http://www.gcf.org/v2.5. Notice the use of %3A to represent a ":" and %2F for "/." This is required for encoding characters within a URL. See RFC-1738.
+
+All Document Modes (All Versions)
+
+Label bureaus are not supported.
+
+V0011:
+
+The specification states:
+
+MIC-md5 or md5
+
+
+10 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+If the label is intended to apply only to the data that was actually rated, then a form of checksum (called a "message digest") can be applied to the data when the label is created. The message digest is converted into US-ASCII characters using MIME base-64 encoding and stored in the MIC-md5 (also called md5) field. When the document is later retrieved, the same algorithm can be used to recompute the message digest and the two digests can be compared. The MD5 algorithm is designed so that it is extremely unlikely that the two digests will be the same if the document has been tampered with in any way.
+
+This technique is well-known in the cryptographic community and has been adopted by the electronic mail community, where it is part of the MOSS specification. For use with electronic mail, an elaborate technique is required to assure that the two message digests will match, since electronic mail gateways can modify the data before it is delivered (by wrapping lines, for example). We have chosen not to adopt MOSS directly for PICS, largely because of this complexity.
+
+Instead, we recommend the direct use of the MD5 algorithm on the source document and conversion of the result to base64 encoding. This resulting string is included directly in the mic-md5 (md5) label option. The MD5 algorithm and the conversion of
+
+the result into US-ASCII characters is provided by the RSAREF (version 2.0) software. Because PICS labels can be embedded inside of the documents they label, care must
+
+be taken to ensure that the message digest is computed excluding all PICS labels in the document. For HTML documents, this means that the digest must be computed after removing all META elements that include PICS labels (and any whitespace immediately following the end of each of these meta elements).
+
+All Document Modes (All Versions)
+
+The md5 label option is not supported. When this option is specified, the contents of the option are ignored.
+
+V0012:
+
+The specification states:
+
+When the client receives a label and wants to verify the signature it takes the label it received and converts it back into the same special form in which it was originally signed. The client recomputes the message digest on this special form. It also takes the contents of the signature-rsa-md5 option, combines all of the lines back into a single string of US-ASCII characters, converts these from base64 into their original (binary) form, and decrypts them using the service's public key. If the result isn't the same as the message digest it computed the signature is invalid. (RSAREF contains routines to do all of this work except for the combining of the lines into a long string.)
+
+All Document Modes (All Versions)
+
+The signature-rsa-md5 label option is not supported. When this option is specified, an error that the document does not have a rating is returned.
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+
+11 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-PICSL] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+12 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type1Updated document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+C
+
+ Change tracking 12
+
+G
+
+ Glossary 4
+
+I
+
+ Informative references 4
+ Introduction 4
+
+N
+
+ Normative references 4
+
+R
+
+References  informative 4  normative 4
+
+T
+
+ Tracking changes 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14 / 14
+
+[MS-PICSL] — v20120725
+
+Internet Explorer PICS Label Distribution and Syntax Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
