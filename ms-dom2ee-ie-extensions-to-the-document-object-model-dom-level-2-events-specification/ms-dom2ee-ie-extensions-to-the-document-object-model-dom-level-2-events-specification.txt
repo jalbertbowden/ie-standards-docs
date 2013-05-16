@@ -1,0 +1,660 @@
+﻿-+
+
+[MS-DOM2EE]:
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments09/08/20100.1NewReleased new document.10/13/20100.2MinorClarified the meaning of the technical content.02/10/20111.0No changeIntroduced no new technical or language changes.02/22/20122.0MajorSignificantly changed the technical content.07/25/20122.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................41.3 Extension Overview (Synopsis) ................................................................................5 1.3.1  Organization of This Documentation ...................................................................51.4 Relationship to Standards and Other Extensions ........................................................51.5 Applicability Statement ...........................................................................................5
+2 Extensions ................................................................................................................6 2.1  Extensions to the Event Interface ............................................................................62.1.1cancelBubbleAttribute......................................................................................62.1.2srcElementAttribute.........................................................................................6 2.2  Extensions to the MouseEvent Interface ...................................................................62.2.1fromElementAttribute......................................................................................72.2.2layerXAttribute................................................................................................72.2.3layerYAttribute................................................................................................72.2.4toElementAttribute..........................................................................................73 Security Considerations ............................................................................................84 Appendix A: Product Behavior ..................................................................................95 Change Tracking.....................................................................................................106Index.....................................................................................................................12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes extensions provided by Windows® Internet Explorer® for the Document Object Model (DOM) Level 2 Events Specification Version 1.0  [DOM Level 2 - Events], W3C Recommendation 13 November, 2000.
+
+Sections 1.7 and 2 of this specification are normative and can contain the terms MAY, SHOULD, MUST, MUST NOT, and SHOULD NOT as defined in RFC 2119. All other sections and examples in this specification are informative.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[DOM Level 2 - Events] W3C, "Document Object Model (DOM) Level 2 Events Specification Version 1.0", W3C Recommendation, November 2000,  http://www.w3.org/TR/2000/REC-DOM-Level-2- Events-20001113/
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+1.2.2 Informative References 
+
+[CSS-Level2-2009] Bos, B., Celik, T., Hickson, I., and Wium Lie, H., Eds., "Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification", W3C Candidate Recommendation 08 September 2009,  http://www.w3.org/TR/2009/CR-CSS2-20090908/
+
+[DOM Level 2 - Core] W3C, "Document Object Model (DOM) Level 2 Core Specification Version 1.0", W3C Recommendation 13 November, 2000,  http://www.w3.org/TR/DOM-Level-2-Core/
+
+[DOM Level 2 - HTML] W3C, "Document Object Model (DOM) Level 2 HTML Specification Version 1.0", W3C Recommendation, January 2003,  http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/
+
+[DOM Level 2 - Style] W3C, "Document Object Model (DOM) Level 2 Style Specification Version 1.0", W3C Recommendation, November 2000,  http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/
+
+
+
+
+4 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+[ECMA-262] ECMA International, "ECMAScript Language Specification" ECMA-262, December 1999,  http://www.ecma-international.org/publications/standards/Ecma-262.htm
+
+[HTML] World Wide Web Consortium, "HTML 4.01 Specification", December 1999,  http://www.w3.org/TR/html4/
+
+[MS-CSS21E] Microsoft Corporation, " Internet Explorer Extensions to the Cascading Style Sheets  (CSS) 2.1 Specification".
+
+[MS-DOM2CE] Microsoft Corporation, " Internet Explorer Extensions to the Document Object Model  (DOM) Level 2 Core Specification".
+
+[MS-DOM2CEX] Microsoft Corporation, " Microsoft XML Extensions to the Document Object Model  (DOM) Level 2 Core Specification".
+
+[MS-ES3EX] Microsoft Corporation, " Microsoft JScript Extensions to the ECMAScript Language  Specification 3rd Edition".
+
+[MS-HTML401E] Microsoft Corporation, " Internet Explorer Extensions to the HTML 4.01  Specification".
+
+1.3 Extension Overview (Synopsis) 
+
+The extensions that are described in this document are selected for their applicability to  [DOM Level  2 - Events].
+
+1.3.1 Organization of This Documentation 
+
+The following sections describe additional attributes for the following interfaces:
+
+••Event
+••MouseEvent
+
+1.4 Relationship to Standards and Other Extensions 
+
+The following documents provide information about additional extensions:
+
+%5bMS-CSS21E%5d.pdf •• [MS-CSS21E]: Extensions to the  [CSS-Level2-2009] and  [DOM Level 2 - Style] specifications.
+%5bMS-HTML401E%5d.pdf •• [MS-HTML401E]: Extensions to the  [HTML] and the  [DOM Level 2 - HTML] specifications.
+
+%5bMS-DOM2CE%5d.pdf •• [MS-DOM2CE]: Extensions to the  [DOM Level 2 - Core] specification for DOM Level 2 Core Services.
+
+%5bMS-DOM2CEX%5d.pdf •• [MS-DOM2CEX]: Extensions to the  [HTML] and the  [DOM Level 2 - HTML] specifications for Microsoft XML Core Services (MSXML).
+
+%5bMS-ES3EX%5d.pdf •• [MS-ES3EX]: Extensions to the ECMAScript  [ECMA-262] specification.
+
+1.5 Applicability Statement 
+
+This document specifies a set of extensions to the  [DOM Level 2 - Events] specification. The extensions in this document provide access to some features that are unique to Windows® Internet Explorer® 9 and Windows® Internet Explorer® 10.
+
+
+
+
+5 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Extensions
+
+This section specifies additional attributes for interfaces from  [DOM Level 2 - Events] that are available in Windows® Internet Explorer®.
+
+The extensions are as follows:
+
+page6 •• Extensions to the Event Interface
+page6 •• Extensions to the MouseEvent Interface
+
+2.1 Extensions to the Event Interface 
+
+The Event interface as specified in the  [DOM Level 2 - Events] specification is extended by the addition of the following attributes:
+
+••cancelBubble
+••srcElement
+
+2.1.1 cancelBubble Attribute 
+
+cancelBubble of type boolean, read/write
+
+Gets or sets a value that indicates whether the current event should bubble up the hierarchy of event handlers. Specifies one of the following values:
+
+••false - Bubbling is enabled for this event. The next event handler in the hierarchy receives the event.
+
+••true - Bubbling is disabled for this event. The next event handler in the hierarchy does not receive the event.
+
+The default value is false.
+
+Using the cancelBubble attribute to cancel bubbling for an event does not affect subsequent events.
+
+2.1.2 srcElement Attribute 
+
+srcElement of type Element, read-only
+
+Gets the element that raised the event. The value of the srcElement attribute is the element that specifies or receives the event that occurred. When a non-element is the target of an event, the srcElement attribute returns null.
+
+The srcElement attribute is read-only and has no default value.
+
+2.2 Extensions to the MouseEvent Interface 
+
+The MouseEvent interface as specified in the  [DOM Level 2 - Events] is extended by the addition of the following attributes:
+
+••fromElement
+••layerX
+
+6 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••layerY
+••toElement
+
+2.2.1 fromElement Attribute 
+
+fromElement of type Element, read-only
+
+Gets the element from which activation or the mouse pointer is exiting during the event. The fromElement attribute is read-only and has no default value.
+
+2.2.2 layerX Attribute 
+
+layerX of type long, read-only
+
+Gets the horizontal coordinate of the event, relative to the whole document, unless the event occurs inside a positioned element. When the event occurs within a positioned element, the layerX attribute gets the horizontal coordinate of the event relative to that positioned element.
+
+The layerX attribute is read-only and has no default value.
+
+2.2.3 layerY Attribute 
+
+layerY of type long, read-only
+
+Gets the vertical coordinate of the event, relative to the whole document, unless the event occurs inside a positioned element. When the event occurs within a positioned element, the layerY attribute gets the vertical coordinate of the event relative to that positioned element.
+
+The layerY attribute is read-only and has no default value.
+
+2.2.4 toElement Attribute 
+
+toElement of type Element, read-only
+
+Gets the element toward which the user is moving the mouse pointer. The toElement attribute is read-only and has no default value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Security Considerations
+
+There are no additional security considerations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Appendix A: Product Behavior
+
+The information in this specification is applicable to the following Microsoft products or supplemental software. References to product versions include released service packs:
+
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+Exceptions, if any, are noted below. If a service pack or Quick Fix Engineering (QFE) number appears with the product version, behavior changed in that service pack or QFE. The new behavior also applies to subsequent service packs of the product unless otherwise specified. If a product edition appears with the product version, behavior is different in that product edition.
+
+Unless otherwise specified, any statement of optional behavior in this specification that is prescribed using the terms SHOULD or SHOULD NOT implies product behavior in accordance with the SHOULD or SHOULD NOT prescription. Unless otherwise specified, the term MAY implies that the product does not follow the prescription.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+5  Change Tracking
+
+This section identifies changes that were made to the [MS-DOM2EE] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+10 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type1Updated document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+6  Index
+
+A
+
+ Applicability 5
+
+C
+
+ Change tracking 10
+
+G
+
+ Glossary 4
+
+I
+
+ Implementer - security considerations 8
+ Informative references 4
+
+ Introduction 4
+
+N
+
+ Normative references 4
+
+O
+
+ Overview (synopsis) 5
+
+P
+
+ Product behavior 9
+
+R
+
+ References 4  informative 4  normative 4
+
+S
+
+ Security - implementer considerations 8
+
+T
+
+ Tracking changes 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12 / 12
+
+[MS-DOM2EE] — v20120725
+
+Internet Explorer Extensions to the Document Object Model (DOM) Level 2 Events Specification
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
