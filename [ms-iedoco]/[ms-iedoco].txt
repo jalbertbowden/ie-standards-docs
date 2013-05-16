@@ -1,0 +1,1120 @@
+﻿
+
+[MS-IEDOCO]:
+
+Internet Explorer Standards Support Documentation
+
+Overview
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+RevisionRevisionDateHistoryClassComments02/24/20100.1NewReleased new document.03/17/20100.2MinorClarified the meaning of the technical content.03/26/20101.0MinorClarified the meaning of the technical content.05/26/20101.2NoneIntroduced no new technical or language changes.06/29/20101.21EditorialChanged language and formatting in the technicalcontent.09/08/20101.3MajorSignificantly changed the technical content.02/10/20112.0MinorClarified the meaning of the technical content.12/07/20112.1MinorClarified the meaning of the technical content.02/22/20123.0MajorSignificantly changed the technical content.07/25/20123.1MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Documentation Scope and Objectives ......................................................................41.1 Audience ..............................................................................................................41.2 Glossary ...............................................................................................................41.3 References ............................................................................................................41.3.1 Normative References .......................................................................................41.3.2 Informative References .....................................................................................71.4 Microsoft Implementations ......................................................................................7
+2 Documentation Architecture ....................................................................................8 2.1  Overview and Reference Documents ........................................................................82.1.1VersionsofStandards.......................................................................................82.1.2DocumentModes..............................................................................................8 2.1.2.1  How Internet Explorer Chooses Between Document Modes ..............................92.1.2.2 Developer Tools ........................................................................................102.1.2.3 iframe Handling ........................................................................................10 2.1.2.4  X-UA-Compatibility Meta Tag and HTTP Response Header ..............................112.1.2.5 Compatibility View ....................................................................................142.1.2.6 <!DOCTYPE> Declaration ..........................................................................162.1.2.7 X-UA-Compatible Processing Instruction ......................................................16 2.1.3  Microsoft XML Core Services (MSXML) ...............................................................172.1.4CharacterSetStandards.................................................................................18 2.2  Standards Summary ............................................................................................183 Change Tracking.....................................................................................................234Index25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Documentation Scope and Objectives
+
+This document provides an overview of certain final approved web standards supported by Windows® Internet Explorer®. It is intended for use in conjunction with publicly available specifications and assumes that the reader either is familiar with this material or has immediate access to it.
+
+1.1 Audience 
+
+The documentation set provides the following levels of audience support:
+
+••For implementers—Provides conceptual and reference information for implementation of one or more specifications.
+
+••For reviewers—Provides a resource for readers who want to evaluate or understand one or more specification implemented by Windows® Internet Explorer®.
+
+1.2 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.3 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.3.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[HTML] World Wide Web Consortium, "HTML 4.01 Specification", December 1999,  http://www.w3.org/TR/html4/
+
+[MS-CSS21] Microsoft Corporation, " Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards  Support Document".
+
+[MS-CSS21E] Microsoft Corporation, " Internet Explorer Extensions to the Cascading Style Sheets  (CSS) 2.1 Specification".
+
+[MS-CSS3COLR] Microsoft Corporation, " Internet Explorer CSS Color Module Level 3 Standards  Support".
+
+[MS-CSS3NS] Microsoft Corporation, "Internet Explorer CSS Namespaces Module Level 3 Standards Support".
+
+[MS-CSS3SEL] Microsoft Corporation, "Internet Explorer CSS Selectors Module Level Standards
+
+Support".
+
+
+
+4 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+[MS-DOM1] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 1  Standards Support Document".
+
+[MS-DOM1X] Microsoft Corporation, " Microsoft XML Document Object Model (DOM) Level 1  Standards Support".
+
+[MS-DOM2C] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 2 Core  Standards Support Document".
+
+[MS-DOM2CE] Microsoft Corporation, " Internet Explorer Extensions to the Document Object Model  (DOM) Level 2 Core Specification".
+
+[MS-DOM2CEX] Microsoft Corporation, " Microsoft XML Extensions to the Document Object Model  (DOM) Level 2 Core Specification".
+
+[MS-DOM2CX] Microsoft Corporation, " Microsoft XML Document Object Model (DOM) Level 2 Core  Standards Support".
+
+[MS-DOM2E] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 2  Events Standards Support Document".
+
+[MS-DOM2EE] Microsoft Corporation, " Internet Explorer Extensions to the DOM Level 2 Events  Specification".
+
+[MS-DOM2H] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 2 HTML  Standards Support Document".
+
+[MS-DOM2S] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 2  Standards Support Document".
+
+[MS-DOM2TR] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) L2 Traversal  and Range Standards Support Document".
+
+[MS-DOM2V] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 2 Views  Standards Support Document".
+
+[MS-DOM3C] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 3 Core  Standards Support Document".
+
+[MS-ES3] Microsoft Corporation, " Microsoft JScript ECMAScript Language Specification 3rd Edition  Standards Support Document".
+
+[MS-ES3EX] Microsoft Corporation, " Microsoft JScript Extensions to the ECMAScript Language  Specification 3rd Edition".
+
+[MS-ES5] Microsoft Corporation, " Internet Explorer ECMA-262 ECMAScript Language Specification  Fifth Edition Standards Support Document".
+
+[MS-ES5EX] Microsoft Corporation, " Microsoft Internet Explorer Extensions to the ECMAScript  Language Specification Fifth Edition".
+
+[MS-HTML401] Microsoft Corporation, " Internet Explorer HTML 4.01 Standards Support Document".
+
+[MS-HTML401E] Microsoft Corporation, " Internet Explorer Extensions to the HTML 4.01  Specification".
+
+[MS-ISO10646] Microsoft Corporation, " Internet Explorer ISO 10646 Universal Character Set  Standards Support Document".
+
+
+5 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+[MS-ISO8859] Microsoft Corporation, " Internet Explorer ISO 8859 8-bit Single Byte Code Graphic  Character Sets Standards Support Document".
+
+[MS-P3P] Microsoft Corporation, " Internet Explorer Platform for Privacy Preferences (P3P) Standards  Support Document".
+
+[MS-PICSL] Microsoft Corporation, " Internet Explorer PICS Label Standards Support Document".
+
+[MS-PICSRL] Microsoft Corporation, " Internet Explorer PICSRules Standards Support Document".
+
+[MS-PICSRS] Microsoft Corporation, " Internet Explorer PICS Rating Services and Systems Standards  Support Document".
+
+[MS-PNG] Microsoft Corporation, " Internet Explorer Portable Network Graphics (PNG) Standards  Support Document".
+
+[MS-RUBY] Microsoft Corporation, " Internet Explorer Ruby Annotation Standards Support
+
+ Document".
+
+[MS-SVG] Microsoft Corporation, " Internet Explorer Scalable Vector Graphics (SVG) Standards  Support Document".
+
+[MS-TTML] Microsoft Corporation, " Internet Explorer Timed Text Markup Language (TTML) 1.0  Standards Support Documentation".
+
+[MS-XHTML] Microsoft Corporation, " Internet Explorer Extensible HyperText Markup Language  (XHTML) Standards Support Document".
+
+[MS-XML] Microsoft Corporation, " Microsoft Extensible Markup Language (XML) Fourth Edition  Standards Support Document".
+
+[MS-XMLH] Microsoft Corporation, " Internet Explorer XML 1.0 (Fourth Edition) Standards Support  Document".
+
+[MS-XMLNS] Microsoft Corporation, " Microsoft XML Namespaces Standards Support Document".
+
+[MS-XMLNSH] Microsoft Corporation, " Internet Explorer XML Namespaces 1.0 Standards Support
+
+ Document".
+
+[MS-XMLSD] Microsoft Corporation, " Microsoft XML Schema (Part 2: Datatypes) Standards Support  Document".
+
+[MS-XMLSS] Microsoft Corporation, " Microsoft XML Schema (Part 1: Structures) Standards Support  Document".
+
+[MS-XMLSTYL] Microsoft Corporation, " Microsoft XML Style Sheets Standards Support Document".
+
+[MS-XPATH] Microsoft Corporation, " Microsoft XML XPath Standards Support Document".
+
+[MS-XSLT] Microsoft Corporation, " Microsoft XSL Transformations (XSLT) Standards Support
+ Document".
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+[W3C-XHTML1.0] W3C HTML Working Group, "XHTML™ 1.0 The Extensible HyperText Markup
+
+Language (Second Edition)", A Reformulation of HTML 4 in XML 1.0 W3C Recommendation 26 January 2000, revised 1 August 2002,  http://www.w3.org/TR/xhtml1/
+
+
+6 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+[W3C-XML-StyleSheets] Clark, J., Ed., "Associating Style Sheets with XML documents Version 1.0", W3C Recommendation 29 June 1999,  http://www.w3.org/TR/xml-stylesheet/
+
+[W3C-XSLT] Clark, J., Ed., "XSL Transformations (XSLT) Version 1.0", W3C Recommendation, November 1999,  http://www.w3.org/TR/1999/REC-xslt-19991116
+
+[XML10] World Wide Web Consortium, "Extensible Markup Language (XML) 1.0 (Third Edition)", February 2004,  http://www.w3.org/TR/REC-xml
+
+[XMLNS] Bray, T., Hollander, D., Layman, A., et al., Eds., "Namespaces in XML 1.0 (Third Edition)", W3C Recommendation, December 2009,  http://www.w3.org/TR/2009/REC-xml-names-20091208/
+
+1.3.2 Informative References 
+
+[MSDN-DefiningDocCompat] Microsoft Corporation, "Defining Document Compatibility in Windows® Internet Explorer 8",  http://msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx
+
+[MSDN-EncodeXMLData] Microsoft Corporation, "How to Encode XML Data", March 2000,  http://msdn.microsoft.com/en-us/library/aa468560.aspx
+
+[MSDN-METATagsLocking] Microsoft Corporation, "META Tags and Locking in Future Compatibility",  http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+[MSDN-responseXML] Microsoft Corporation, "responseXML Property", HTML and DHTML Reference,  http://msdn.microsoft.com/en-us/library/ms534370(VS.85).aspx
+
+[MSDN-SECZONES] Microsoft Corporation, "About URL Security Zones",  http://msdn.microsoft.com/en-us/library/ms537183.aspx
+
+[MSDN-UnderstandingCompViewList] Microsoft Corporation, "Understanding the Compatibility View List",  http://msdn.microsoft.com/en-us/library/dd567845(VS.85).aspx
+
+[MSDN-XMLDataIslands] Microsoft Corporation, "XML Data Islands",  http://msdn.microsoft.com/en- us/library/ms766512(VS.85).aspx
+
+1.4 Microsoft Implementations 
+
+The implementation of the specifications listed in section  2.2 is applicable to the following versions of Windows® Internet Explorer®:
+
+••Windows® Internet Explorer® 7
+••Windows® Internet Explorer® 8
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+This document covers and is limited to variations and clarifications by these versions of Internet Explorer to the implementation of the listed final approved web standards.
+
+
+
+
+
+
+
+
+
+
+7 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Documentation Architecture
+
+This section discusses the scope and organization of the Windows® Internet Explorer® standards support documentation.
+
+2.1 Overview and Reference Documents 
+
+Windows® Internet Explorer® relies on certain final approved web standards—including HTML 4.01  [HTML] and CSS 2.1  [MS-CSS21] —for some of its behavior. This documentation details the variations or extensions from the standards listed in the  Standards Summary as implemented by Internet Explorer.
+
+2.1.1 Versions of Standards 
+
+It is common for web standards to evolve over time, and multiple versions of the same standard may exist. This documentation covers the version of each standard that was targeted by the Windows® Internet Explorer® implementation. For example, HTML 4.01 is documented, but HTML 3.2, which is superseded by the 4.01 version, is not.
+
+2.1.2 Document Modes 
+
+Each major release of Windows® Internet Explorer® adds new features. As Internet Explorer adds features, there is a risk that websites that are designed for older versions of the browser might not display as they are intended. To minimize this risk, Internet Explorer includes document compatibility, which enables a web developer to specify which Internet Explorer versions that a website is designed to support. Internet Explorer uses the "document modes," such as IE7 mode and IE8 mode, to interpret and render the website. For example, "quirks mode" displays webpages as if users view them with older versions of the browser. For more information, see "Defining Document Compatibility" at  [MSDN-DefiningDocCompat].
+
+Windows® Internet Explorer® 7 and Windows® Internet Explorer® 8 features increased support for industry standards, and Windows® Internet Explorer® 9 features contain the highest level of support.
+
+The following table shows the document modes that each version of Internet Explorer supports.
+
+Browser versionSupported document modesInternet Explorer 7Quirks modeStandards modeInternet Explorer 8Quirks modeIE7 modeIE8 modeInternet Explorer 9Quirks modeIE7 modeIE8 modeIE9 modeInternet Explorer 10Quirks modeIE7 modeIE8 mode8 / 25
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Browser versionSupported document modesIE9 modeIE10 mode
+The standards mode of Internet Explorer 7 implements standards that have the same variations and extensions as IE7 mode in Internet Explorer 8 unless it is otherwise indicated in the individual specifications of the standards that the browser supports, as listed in section  2.2.
+
+The standards mode of Internet Explorer 8 implements standards that have the same variations and extensions as IE8 mode in Internet Explorer 9 unless it is otherwise indicated in the individual specifications of the standards that the browser supports.
+
+The document mode name sometimes includes "standards", such as IE8 standards mode, to differentiate the mode from "Almost Standards" mode. For brevity, the extra word is not included in this documentation.
+
+Note Almost Standards mode in Internet Explorer 8 and Internet Explorer 9 enables the browser to properly render sliced-images-in-tables layouts. Rendering in Almost Standards mode matches standards mode except for the layout of images inside table cells. This type of table layout is handled the same way that quirks mode handles it. For more information, see  [MS-CSS21], section 6, Appendix D: Almost Standards Mode.
+
+Inline elements contribute to line height only under conditions described in [MS-CSS21], section 6.2. Otherwise, rendering is handled the same as in standards mode.
+
+2.1.2.1 How Internet Explorer Chooses Between Document Modes 
+
+By default, Windows® Internet Explorer® 8 uses IE8 mode, Windows® Internet Explorer® 9 uses IE9 mode and Windows® Internet Explorer® 10 uses IE10 mode. However, Windows® Internet Explorer® uses several criteria to determine which document mode to use. For example, if an HTML page contains a valid <!DOCTYPE> declaration (see  [HTML]), Internet Explorer uses one of the standards-based document modes. But, if there is no valid <!DOCTYPE> declaration, Internet Explorer uses quirks mode.
+
+The following rules determine how Internet Explorer selects the document mode:
+
+1. The Developer Tools setting overrides any document mode specified by a webpage. The setting remains active for the lifetime of the tab. 
+
+2. In Internet Explorer 9, if the document is hosted in an iframe element, the document mode is determined by the document mode of the top-level webpage. Subdocuments cannot be rendered in IE9 mode unless the top-level document is also in IE9 mode. 
+
+3. A meta tag with a value of X-UA-Compatible or a HTTP response header can override items in the Compatibility View Settings list and the doctype unless the X-UA-Compatible value is a Compatibility View setting, such as IE=EmulateIE7 or IE=EmulateIE8. 
+
+4. The Compatibility View settings can force a webpage to be displayed in a less-standard document mode. 
+
+5. If none of these rules apply, the <!DOCTYPE> declaration determines whether the webpage renders in a standards mode, Almost Standards mode, or quirks mode. 
+
+The following sections explain how these rules affect how Internet Explorer selects between document modes.
+
+
+9 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.2.2 Developer Tools 
+
+A user can select the browser mode and document mode by using the Developer Tools (F12) in Windows® Internet Explorer®. These settings remain active for subsquent navigations in the same tab. The following diagram shows how Developer Tools settings impact the browser mode and document mode. This diagram also includes a screen shot of the Document Mode menu in the
+Developer Tools window.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.1.2.3 iframe Handling 
+
+Windows® Internet Explorer® 9 restricts the document mode of webpages that are hosted within iframe elements. If the top-level page is not in IE9 mode, the iframe element cannot render its contents in IE9 mode, even if the web developer specifies it.
+
+This behavior is available only in Internet Explorer 9. The following diagram shows how iframe elements impact the document mode.
+
+ie10 uses IE10 Quirks Mode emulation if the top-level page is not in IE10 Mode. IE10 Quirks Mode is based on the definition of Quirks Mode from the HTML5 standard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.1.2.4 X-UA-Compatibility Meta Tag and HTTP Response Header 
+
+Web developers can also specify a document mode by including instructions in a meta element or HTTP response header:
+
+••Webpages that include a meta element (see  [HTML]) with an http-equivalent value of X-UA-Compatible.
+
+••Webpages that are served with an HTTP header named "X-UA-Compatible".
+
+If both of these instructions are sent, the developer's preference (meta element) takes precedence over the web server setting (HTTP header).
+
+For more information about how to control default rendering with document modes, see "META Tags and Locking in Future Compatibility" at  [MSDN-METATagsLocking].
+
+The following table indicates which document mode that Windows® Internet Explorer® 9 uses based on the X-UA-Compatible value.
+
+X-UA-Compatible valueDocument modesIE=5Quirks modeIE=7IE7 modeIE=8IE8 modeIE=9IE9 modeIE=10IE10 modeIE=edgeThe highest supported document mode of the browserIE=EmulateIE7IE7 mode (if a valid <!DOCTYPE> declaration is present)Quirks mode (otherwise)IE=EmulateIE8IE8 mode (if a valid <!DOCTYPE> declaration is present)Quirks mode (otherwise)IE=EmulateIE9IE9 mode (if a valid <!DOCTYPE> declaration is present)
+
+11 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+X-UA-Compatible valueDocument modesQuirks mode (otherwise)IE=EmulateIE10IE10 mode (if a valid <!DOCTYPE> declaration is present)Quirks mode (otherwise)
+For example, in Windows® Internet Explorer® 8, IE=9, IE=Edge, and IE=EmulateIE9 result in IE8 mode.
+
+Browser emulation modes are not document modes. They instruct Windows® Internet Explorer® about how to select a document mode when a valid <!DOCTYPE> declaration is included.
+
+The following diagram shows how Internet Explorer determines the appropriate document mode based on the meta element or HTTP header.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.2.5 Compatibility View 
+
+Compatibility View settings can also impact the document mode selection:
+
+••If a webpage is retrieved from a website in the Local intranet zone (see "About URL Security Zones" at  [MSDN-SECZONES]), IE7 mode is used.
+
+••If the webpage is retrieved from a site in a domain on the Compatibility View list (and the list is active), IE7 mode is used (see "Understanding the Compatibility View List" at  [MSDN- UnderstandingCompViewList]).
+
+Compatibility View is controlled by browser settings. When a user clicks the Compatibility View button next to the Address bar in Windows® Internet Explorer®, the website is added to a local list of exceptions called the "Compatibility View list." The user can manage the list in the Compatibility View Settings dialog box.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In addition to the user's local Compatibility View list, Microsoft regularly publishes a list of popular sites that render better in Compatibility View. The user can choose to use this list by selecting the
+
+Include updated website lists from Microsoft check box in the Compatibility View Settings dialog box.
+
+
+
+
+
+14 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Finally, the user can choose to view all websites or intranet sites in Compatibility View by selecting the Display intranet sites in Compatibility View or Display all websites in Compatibility View check boxes in the Compatibility View Settings dialog box.
+
+The following diagram shows how Internet Explorer determines the appropriate document mode based on Compatibility View settings.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.2.6 <!DOCTYPE> Declaration 
+
+The following table lists examples of the most common <!DOCTYPE> declarations and how they influence which document mode is used.
+
+Document Mode<!DOCTYPE> declarationImpactHTML 4.0 and higherStandards mode<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN""http://www.w3org/TR/html4/strict.dtd"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3org/TR/html4/strict.dtd">XHTML with or without a system identifier<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN""http://www.w3org/TR/xhtml11/DTD/xhtml11.dtd"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.0//EN""http://www.w3org/TR/xhtml-basic/xhtml-basic10.dtd"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3org/TR/xhtml1/DTD/xhtml1-strict.dtd">Unknown<!DOCTYPE html>XHTML Transitional or Frameset"Almost Standards"<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">mode (standards modein IE7)<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhmlt1-transitional.dtd">HTML 4.0 or HTML 4.01 Transitional or Frameset with a systemidentifier<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN""http://www.w3org/TR/html4/loose.dtd"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3org/TR/html4/loose.dtd"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN""http://www.w3org/TR/1999/REC-html401-19991224/loose.dtd">HTML 4 and lower, or no DOCTYPEQuirks mode<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">None
+2.1.2.7 X-UA-Compatible Processing Instruction 
+
+ie10 uses the "x-ua-compatible" processing instruction to switch the document mode of XML and XHTML documents.
+
+<?x-ua-compatible content="IE=10"?>
+
+
+
+
+16 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+This processing instruction (PI), in combination with other IE document mode settings, produces the following behavior for XML:
+
+The x-ua-compatible PI can affect document mode just like the meta tag in HTML
+
+1. The X-UA-Compatible HTTP header can affect the document mode just like in HTML 
+
+2. The minimum selectable document mode for XML is 9 (this differs from HTML) 
+
+••Note that if the Browser Mode (set via CV List, CV Button, Dev Tools, Intranet, etc.) is less than IE9, then the legacy MSXML Mime Viewer will be used for "text/xml" documents regardless of any other versioning information. 
+
+3. Quirks emulation mode (QME) is not supported in XML documents. 
+
+4. The x-ua-compatible PI can only be preceded by the XML Declaration and/or whitespace, anything else causes it to be ignored. 
+
+5. The value of the x-ua-compatible PI must in the form of well-formed XML attributes, else it will be ignored. 
+
+6. Only the "content" attribute from the x-ua-compatible PI will be read, but other attributes are allowed. 
+
+7. The supported format for the "content" attribute on the x-ua-compatible PI must match the meta tag from HTML. 
+
+8. Using the x-ua-compatible PI prior to an XSLT transform sets the "ceiling" mode of the output from XSLT. For example if the PI opts into IE9 mode in IE10 and the transform produces HTML output with the HTML5 DOCTYPE, then that output will render in IE9 mode. Conversely if the output does not contain a DOCTYPE, it will render in Quirks mode. 
+
+2.1.3 Microsoft XML Core Services (MSXML) 
+
+Microsoft XML Core Services (MSXML) version 3 provides the XML functionality of Windows® Internet Explorer® in Quirks Mode, IE7 Mode, and IE8 Mode. In IE9 Mode, MSXML6 is used for rendering XSLT  [W3C-XSLT], however Windows® Internet Explorer® 9 natively implements XML  [XML10], XHTML  [W3C-XHTML1.0], XML Namespaces  [XMLNS], and XML Stylesheets  [W3C-XML- StyleSheets].
+
+The MSXML or native parser is loaded whenever Internet Explorer encounters one or more of the following conditions:
+
+••A document is served with one of the following Content-Type HTTP headers:
+••text/xml
+••application/xml
+••application/xml+xhtml (Internet Explorer 9)
+••image/svg+xml
+
+••An XMLHttpRequest object provides access to an XML DOM containing the network response in the responseXML property (see  [MSDN-responseXML]).
+
+••An XML data island is accessed with the XMLDocument property (see  [MSDN-XMLDataIslands]). Data islands are not supported IE10 Mode in Windows® Internet Explorer® 10.
+
+
+17 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The Internet Explorer Standards Support Documentation also includes documents that describe MSXML and Internet Explorer 9 conformance to DOM and XML standards.
+
+2.1.4 Character Set Standards 
+
+Character sets in the HTML 4.01 standard  [HTML] are referenced in ISO/IEC 10646-2003,
+
+Information technology -- Universal Multiple-Octet Coded Character Set (UCS) (see  [MS- ISO10646]). All versions of Windows® Internet Explorer® support ISO/IEC 8859-1 and others,
+
+Information Technology -- 8-bit Single-byte Coded Graphic Character Sets (see  [MS-ISO8859]). In general, string handling is performed as UTF-16.
+
+Character set values are supplied to HTML using either the Content-Type header or the META element. The following example specifies the character set for the Latin alphabet set number 1:
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+The following example does the same with an XML processing instruction:
+
+<?xml version="1.0" charset="iso-8859-1"?>
+
+For more information, see  [MSDN-EncodeXMLData].
+
+2.2 Standards Summary 
+
+The tables below provide a list of certain final-approved Internet standards implemented by Windows® Internet Explorer®.
+
+Standards in this table enable functionality in HTML documents.
+
+Standard NameDescriptionLinkCascading StyleCSS is a style sheet language that allows authors and users to [MS-Sheets (CSS) 1.0 andattach style (such as fonts and spacing) to structured documentsCSS21]2.1(such as HTML documents and XML applications).This document describes extensions to CSS 2.1 and DOM Level 2 [MS-Style support in Internet Explorer.CSS21E]CSS3 Color ModuleCSS (Cascading Style Sheets) is a language for describing the [MS-Level 3rendering of HTML and XML documents on screen, on paper, inCSS3COLR]speech, etc. It uses color-related properties and values to colorthe text, backgrounds, borders, and other parts of elements in adocument. This specification describes color values andproperties for foreground color and group opacity. These includeproperties and values from CSS level 2 and new values.CSS NamespacesThis CSS Namespaces module defines the syntax for using[MS-Modulenamespaces in CSS. It defines the @namespace rule forCSS3NS]declaring the default namespace and binding namespaces tonamespace prefixes, and it also defines a syntax that otherspecifications can adopt for using those prefixes in namespace-qualified namesSelectors Level 3Selectors are patterns that match against elements in a tree, and[MS-as such form one of several technologies that can be used toCSS3SEL]select nodes in an XML document. Selectors have been optimized18 / 25[MS-IEDOCO] — v20120725Internet Explorer Standards Support Documentation OverviewCopyright © 2012 Microsoft Corporation.Release: July 25, 2012
+Standard NameDescriptionLinkfor use with HTML and XML, and are designed to be usable inperformance-critical code.Document ObjectDOM Level 1 provides a platform- and language-neutral interface [MS-DOM1]Model (DOM) Level 1that allows programs and scripts to dynamically access andupdate the content, structure and style of documents. TheDocument Object Model provides a standard set of objects forrepresenting HTML and XML documents, a standard model ofhow these objects can be combined, and a standard interface foraccessing and manipulating them.This document applies to HTML documents in Internet Explorer.Document ObjectThe DOM Level 2 Core is made of a set of core interfaces to [MS-Model (DOM) Level 2create and manipulate the structure and contents of a document.DOM2C]CoreThe Core also contains specialized interfaces dedicated to XML.The DOM Level 2 Core builds on the DOM Level 1 Core.This document applies to HTML documents in Internet Explorer.This document describes extensions to DOM Level 2 Core and [MS-HTML 4.01 support in Internet Explorer.DOM2CE]Document ObjectDOM Level 2 Events is a platform- and language-neutral [MS-Model (DOM) Level 2interface that gives to programs and scripts a generic eventDOM2E]Eventssystem. The DOM Level 2 Events builds on the DOM Level 2 Coreand on DOM Level 2 Views.This document applies to HTML documents in Internet Explorer.This document describes extensions for DOM Level 2 Events [MS-support in Internet Explorer.DOM2EE]Document ObjectDOM Level 2 HTML is a platform- and language-neutral interface [MS-Model (DOM) Level 2that allows programs and scripts to dynamically access andDOM2H]HTMLupdate the content and structure of HTML and XHTMLdocuments. The DOM Level 2 HTML builds on the DOM Level 2Core and is not backward compatible with DOM Level 1.This document applies to HTML documents in Internet Explorer.Document ObjectDOM Level 2 Style is a platform- and language-neutral interface [MS-Model (DOM) Level 2that allows programs and scripts to dynamically access andDOM2S]Styleupdate the content of style sheets documents. The DOM Level 2Style builds on the DOM Level 2 Core and on the DOM Level 2Views.This document applies to HTML documents in Internet Explorer.Document ObjectDOM Level 2 Views is a platform- and language-neutral interface [MS-Model (DOM) Level 2that allows programs and scripts to dynamically access andDOM2V]Viewsupdate the content of a representation of a document. The DOMLevel 2 Views builds on the DOM Level 2 Core.This document applies to HTML documents in Internet Explorer.Element TraversalNew for Windows® Internet Explorer® 9. This specification [MS-Specificationdefines the ElementTraversal interface, which allows scriptDOM2TR]navigation of the elements of a DOM tree, excluding all othernodes in the DOM, such as text nodes.Document ObjectDOM Level 3 Core is a platform- and language-neutral interface [MS-Model (DOM) Level 3that allows programs and scripts to dynamically access andDOM3C]update the content, structure and style of documents. The DOM19 / 25[MS-IEDOCO] — v20120725Internet Explorer Standards Support Documentation OverviewCopyright © 2012 Microsoft Corporation.Release: July 25, 2012
+Standard NameDescriptionLinkCoreLevel 3 Core builds on the DOM Level 2 Core.This document applies to HTML documents in Internet Explorer.Element TraversalThe Element Traversal Specification describes navigation of theSpecificationelements in a DOM tree, excluding all other nodes, such as textnodes, and provides an attribute to expose the number of childelements of an element.Note: Internet Explorer 9 and Windows® Internet Explorer® 10support the Element Traversal specification with no variations orextensions.HTML 4.01HyperText Markup Language (HTML) is the publishing language [MS-of the World Wide Web. It defines how to describe structuredHTML401]documents with headings, text, tables, lists, photos, hypertextlinks, and forms.This document describes extensions to HTML 4.01 and DOM [MS-Level 2 HTML support in Internet Explorer.HTML401E]Platform for PrivacyThe Platform for Privacy Preferences (P3P) enables Web sites to [MS-P3P]Preferences 1.0express their privacy practices in a standard format that can be(P3P1.0)retrieved automatically and interpreted easily by user agents.PICS LabelThe PICS specifications enable labels (metadata) to be [MS-PICSL]Distribution Labelassociated with Internet content. It was originally designed toSyntax andhelp parents and teachers control what children access on theCommunicationInternet, but they also facilitate other uses for labels, includingProtocolscode signing and privacy.The PICS Label specification defines a general format for labelsand methods by which these labels may be transmitted.PICSRules 1.1The PICSRules specification defines a language for writing [MS-profiles, which are filtering rules that allow or block access toPICSRL]URLs based on PICS labels that describe those URLs. Thislanguage is intended as a transmission format; Internet Explorerreads specifications in this language.PICS Rating ServicesThe PICS Rating Services specification defines a language for [MS-and Systems Versiondescribing rating services. Internet Explorer reads servicePICSRS]1.1descriptions written in this language in order to interpret contentlabels.Ruby Annotation"Ruby" are short runs of text alongside the base text, typically [MS-RUBY]used in East Asian documents to indicate pronunciation or toprovide a short annotation.Internet Explorer implements Ruby in HTML documents.Scalable VectorNew for Internet Explorer 9. SVG is a modularized language for [MS-SVG]Graphics 1.1 (Firstdescribing two-dimensional vector and mixed vector/rasterEdition)graphics in XML.Timed Text MarkupNew for Internet Explorer 10. The Timed Text Markup Language [MS-TTML]Language (TTML) 1.0is a content type that represents timed text media for thepurpose of interchange among authoring systems. Timed text istextual information that is intrinsically or extrinsically associatedwith timing information.XHTML™ 1.0 TheXHTML is a family of current and future document types and [MS-
+
+20 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Standard NameDescriptionLinkExtensible HyperTextmodules that reproduce, subset, and extend HTML 4. XHTMLXHTML]Markup Languagefamily document types are XML based, and ultimately are(Second Edition)designed to work in conjunction with XML-based user agents.
+Standards in this table enable functionality in XML documents.
+
+Internet Explorer provides built-in support for some specifications, where Windows® Internet Explorer® 7 and Windows® Internet Explorer® 8 use MSXML3. Internet Explorer 9 uses MSXML3 to support such specifications in quirks mode, IE7 mode, and IE8 mode. In this table,  [MS-XMLH] and  [MS-XMLNSH] describe Internet Explorer 9 built-in support.
+
+Standard NameDescriptionLinkDocument Object ModelThis document applies to XML documents in Internet Explorer. [MS-(DOM) Level 1DOM1X]Document Object ModelThis document applies to XML documents in Internet Explorer. [MS-(DOM) Level 2 CoreDOM2CX]This document describes extensions to DOM Level 2 Core [MS-support in Microsoft XML.DOM2CEX]Extensible MarkupThe Extensible Markup Language (XML) allows generic data to [MS-XML]Language (XML) 1.0be served, received, and processed on the Web in the way that[MS-XMLH](Fourth Edition)is now similar to HTML. XML was designed for ease ofimplementation and for interoperability with both SGML andHTML.Namespaces in XML 1.1XML namespaces provide a simple method for qualifying [MS-(Second Edition)element and attribute names used in Extensible MarkupXMLNS]Language (XML) documents by associating them with[MS-namespaces identified by IRI references.XMLNSH]XML Path LanguageXPath is a language for addressing parts of an XML document. It [MS-(XPath) Version 1.0also provides basic facilities for manipulation of strings,XPATH]numbers and Booleans.XML Schema Part 1:This specification sets out the structural part of the XML Schema [MS-Structures (Seconddefinition language.XMLSS]Edition)Associating StyleThis specification describes how a style sheet can be associated [MS-Sheets with XMLwith an XML document by including one or more processingXMLSTYL]Documentsinstructions.XML Schema Part 2:This specification defines facilities for defining datatypes to be [MS-Datatypes Secondused in XML Schemas as well as other XML specifications. TheXMLSD]Editiondatatype language provides a superset of the capabilities foundin XML 1.0 document type definitions (DTDs) for specifyingdatatypes.XSL TransformationsXSLT is a language for transforming XML documents into other [MS-XSLT](XSLT) Version 1.0XML documents.
+Standards in this table enable support of image files (for Internet Explorer 7 and Internet Explorer 8 only.)
+
+
+
+21 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Standard NameDescriptionLink
+Portable NetworkPNG is an extensible file format for the lossless, portable, well- [MS-Graphics (PNG)compressed storage of raster images. It is also published as ISO/IECPNG]15948:2003.ISO-10918-1:1994Specifies processes for converting source image data to compressedimage data. ISO-10918-1 is used in images commonly referred to as"JPEG" files.Note: Internet Explorer supports the ISO 10918-1:1994 specificationwith no variations or extensions.
+Standards in this table enable support of character sets.
+
+Standard NameDescriptionLinkInformation technology --Specifies the representation, transmission, [MS-Universal Multiple-Octet Codedinterchange, processing, storage, input andISO10646]Character Set (UCS)presentation of the written form of the languages ofthe world as well as additional symbols.Information technology -- 8-bitSpecifies the character-encoding scheme for characters [MS-single-byte coded graphicsuch as "Latin alphabet no. 1" consisting of 191ISO8859]character sets -- Parts 1, 8, 9,characters from the Latin script.15 and 16
+Standards in this table enable support of the Microsoft JScript Object Model.
+
+Standard NameDescriptionLinkECMA-262: ECMAScriptECMAScript is a scripting language defined in the [MS-Language Specification 3rdECMAScript Language Specification 3rd Edition used byES3]Editionweb pages.This document describes extensions to the ECMA 262 [MS-support in JScript.ES3EX]ECMA-262: ECMAScriptECMAScript is a scripting language defined in the [MS-Language Specification 5thECMAScript Language Specification 5th Edition used byES5]Editionweb pages.This document describes extensions to the ECMA 262 [MS-support in ECMAScript.ES5EX]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-IEDOCO] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+
+
+23 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••New protocol syntax added due to protocol revision.
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorchangeTracking number (if applicable)(Y orSectionand descriptionN)Change type
+1Updated document to remove betaNContent updated. Documentation Scope andtagging.Objectives1Updated document to remove betaNContent updated. Documentation Scope andtagging.Objectives 2.1.2.6Simplified table.NContent updated. <!DOCTYPE> Declaration 2.2Added link to [MS-TTML].NNew content Standards Summaryadded.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+C
+
+ Change tracking 23
+
+D
+
+ Document modes 8
+
+G
+
+ Glossary 4
+
+S
+
+Specifications
+
+ Associating Style Sheets with XML Documents 18  Cascading Style Sheets Level 1 18
+
+ Cascading Style Sheets Level 2 Revision 1 18 Document Object Model (DOM) Level 1 ( section
+
+ 2.2 18,  section 2.2 18)
+
+Document Object Model (DOM) Level 2 Core ( section 2.2 18,  section 2.2 18)
+
+ Document Object Model (DOM) Level 2 Events 18  Document Object Model (DOM) Level 2 HTML 18  Document Object Model (DOM) Level 2 Style 18  Document Object Model (DOM) Level 2 Views 18  ECMAScript Language Specification 3rd Edition 18  ECMAScript Language Specification 5th Edition 18  Element Traversal 18
+
+ Element Traversal Specification 18
+
+ Extensible Markup Language (XML) 1.0 (Fourth  Edition) 18
+
+ HTML 4.01 Specification 18
+
+Information Technology -- 8-bit Single-byte Coded Graphic Character Sets ( section 2.1.4 18,  section 2.2 18)
+
+Information technology -- Universal Multiple-Octet Coded Character Set (UCS) ( section  2.1.4 18,  section 2.2 18)
+
+ISO/IEC 10646-2003 ( section 2.1.4 18,  section  2.2 18)
+
+ISO/IEC 8859-1 ( section 2.1.4 18,  section 2.2 18)
+
+ ISO-10918-1-1994 18
+
+ Namespaces in XML 1.1 (Second Edition) 18  PICS Label Distribution Label Syntax and
+
+ Communication Protocols 18
+
+ PICS Rating Services and Systems Version 1.1 18  PICSRules 1.1 18
+
+ Platform for Privacy Preferences 1.0 (P3P1.0) 18  Portable Network Graphics (PNG) 18
+
+ Ruby Annotation 18
+
+ Scalable Vector Graphics (SVG) 18
+
+ Timed Text Markup Language 18
+
+ XHTML™ 1.0 The Extensible HyperText Markup
+
+ Language (Second Edition) 18
+
+ XML Path Language (XPath) Version 1.0 18 XML Schema Part 1
+
+
+
+ Structures Second Edition 18
+XML Schema Part 2
+
+ Datatypes Second Edition 18
+
+ XSL Transformations (XSLT) Version 1.0 18
+
+T
+
+ Tracking changes 23
+
+
+
+25 / 25
+
+[MS-IEDOCO] — v20120725
+
+Internet Explorer Standards Support Documentation Overview
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
