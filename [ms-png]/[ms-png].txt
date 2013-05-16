@@ -1,0 +1,667 @@
+﻿
+
+[MS-PNG]:
+
+Internet Explorer Portable Network Graphics (PNG)
+
+Standards Support Document
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments03/17/20100.1NewReleased new document.03/26/20101.0NoneIntroduced no new technical or language changes.05/26/20101.2NoneIntroduced no new technical or language changes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................41.3 Microsoft Implementations ......................................................................................41.4 Standards Support Requirements ............................................................................51.5 Notation ...............................................................................................................5
+2 Standards Support Statements .................................................................................72.1 Normative Variations ..............................................................................................7 2.1.1  [W3C-PNG] Section 4.2, Colour spaces ...............................................................7 2.1.2  [W3C-PNG] Section 4.6, Additional information ....................................................7 2.1.3  [W3C-PNG] Section 4.7.2, Chunk types ..............................................................8 2.1.4  [W3C-PNG] Section 11.3.3.1, cHRM Primary chromaticities and white point .............8 2.1.5  [W3C-PNG] Section 11.3.3.2, gAMA Image gamma ..............................................8 2.1.6  [W3C-PNG] Section 11.3.3.3, iCCP Embedded ICC profile ......................................9 2.1.7  [W3C-PNG] Section 11.3.3.4, sBIT Significant bits................................................9 2.1.8  [W3C-PNG] Section 11.3.3.5, sRGB Standard RGB colour space .............................9 2.1.9  [W3C-PNG] Section 11.3.4, Textual information ...................................................9 2.1.10  [W3C-PNG] Section 11.3.5, hIST Image histogram .............................................9 2.1.11  [W3C-PNG] Section 11.3.5.3, pHYs Physical pixel dimensions ............................10 2.1.12  [W3C-PNG] Section 11.3.5.4, sPLT Suggested palette .......................................10 2.1.13  [W3C-PNG] Section 11.3.6, tIME Image last-modification timev .........................10 2.1.14  [W3C-PNG] Section 12, PNG Encoders ............................................................102.2 Clarifications .......................................................................................................102.3 Error Handling .....................................................................................................102.4 Security ..............................................................................................................103 Change Tracking.....................................................................................................114 Index .....................................................................................................................12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® 7 and Windows® Internet Explorer® 8 for the Portable Network Graphics (PNG) Specification (Second Edition)  [W3C-PNG] W3C Recommendation 10 November 2003 Windows® Internet Explorer® displays webpages written in HTML.
+
+The  [W3C-PNG] specification may contain guidance for authors of webpages and browser users, in addition to user agents (browser applications). Statements found in this document apply only to normative requirements in the specification targeted to user agents, not those targeted to authors.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[IEC-RGB] International Electrotechnical Commission, "Colour Measurement and Management in Multimedia Systems and Equipment - Part 2-1: Default RGB Colour Space - sRGB", May 1998,  http://www.colour.org/tc8-05/Docs/colorspace/61966-2-1.pdf
+
+[ISO-3664] International Organization for Standardization, "Graphic technology and photography -- Viewing conditions", 2009,  http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=9117
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+[W3C-PNG] World Wide Web Consortium, "Portable Network Graphics (PNG) Specification, Second Edition", November 2003,  http://www.w3.org/TR/PNG
+
+1.2.2 Informative References 
+
+None.
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of  [W3C-PNG]:
+
+••Windows® Internet Explorer® 7
+
+
+4 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Windows® Internet Explorer® 8
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer:
+
+Browser VersionDocument Modes SupportedInternet Explorer 7Quirks modeStandards modeInternet Explorer 8Quirks modeIE7 modeIE8 mode
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+Note "Standards mode" in Internet Explorer 7 and "IE7 mode" in Internet Explorer 8 refer to the same document mode. "IE7 mode" is the preferred way of referring to this document mode across all versions of the browser.
+
+1.4 Standards Support Requirements 
+
+To conform to  [W3C-PNG] a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+The following table lists the sections of  [W3C-PNG] and whether they are considered normative or informative.
+
+SectionsNormative/Informative1-3Informative4-14NormativeAnnex A-FInformative
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and extension points.
+
+NotationExplanationC####This identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.V####This identifies an intended point of variability in the target specification such as the use ofMAY, SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibility
+
+5 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+NotationExplanationpoints.E####Because the use of extensibility points (such as optional implementation-specific data) canimpair interoperability, this profile identifies such points in the target specification.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of  [W3C-PNG].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+The following subsections detail the normative variations from MUST requirements in  [W3C-PNG].
+
+2.1.1 [W3C-PNG] Section 4.2, Colour spaces 
+
+V0001:
+
+The specification states:
+
+The RGB colour space in which colour samples are situated may be specified in one of three ways:
+
+a. by an ICC profile; 
+
+b. by specifying explicitly that the colour space is sRGB when the samples conform to this colour space; 
+
+c. by specifying the value of gamma and the 1931 CIE x,y chromaticities of the red, green, and blue primaries used in the image and the reference white point. 
+
+All Document Modes (All Versions)
+
+Color correction of PNG images is not supported.
+
+2.1.2 [W3C-PNG] Section 4.6, Additional information 
+
+V0002:
+
+The specification states:
+
+Gamma and chromaticity: Gamma characteristic of the image with respect to the desired output intensity, and chromaticity characteristics of the RGB values used in the image.
+
+All Document Modes (All Versions)
+
+When the gAMA chunk is present, the gamma conversion to a display gamma of 2.2 is incorrectly applied; a display gamma of ~1.9 is used instead of a 2.2 display gamma.
+
+
+
+7 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+V0003:
+
+The specification states:
+
+sRGB colour space
+
+A rendering intent (as defined by the International Color Consortium) and an indication that the image samples conform to this colour space.
+
+All Document Modes (All Versions)
+
+The sRGB chunk is not supported.
+
+2.1.3 [W3C-PNG] Section 4.7.2, Chunk types 
+
+V0004:
+
+The specification states:
+
+The remaining 14 chunk types are termed ancillary chunk types, which encoders may generate and decoders may interpret.
+
+a. Transparency information: tRNS (see 11.3.2: Transparency information). 
+
+b. Colour space information: cHRM, gAMA, iCCP, sBIT, sRGB (see 11.3.3: Colour space information). 
+
+All Document Modes (All Versions)
+
+gAMA chunks are the only color space information chunks that are supported. No color conversion is applied to the pixel color values that are read from the PNG file.
+
+2.1.4 [W3C-PNG] Section 11.3.3.1, cHRM Primary chromaticities and white point 
+
+V0005:
+
+The specification states:
+
+11.3.3.1 cHRM Primary chromaticities and white point
+
+All Document Modes (All Versions)
+
+The cHRM chunk is not supported.
+
+2.1.5 [W3C-PNG] Section 11.3.3.2, gAMA Image gamma 
+
+V0006:
+
+The specification states:
+
+For gAMA these are the reference viewing conditions of the sRGB specification [IEC-RGB], which are based on ISO 3664 [ISO-3664].
+
+All Document Modes (All Versions)
+
+
+8 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+When the gAMA chunk is present, the gamma conversion to a display gamma of 2.2 is incorrectly applied; a display gamma of ~1.9 is used instead of a 2.2 display gamma.
+
+2.1.6 [W3C-PNG] Section 11.3.3.3, iCCP Embedded ICC profile 
+
+V0007:
+
+The specification defines the iCCP Embedded ICC profile.
+
+All Document Modes (All Versions)
+
+The iCCP chunk is not supported.
+
+2.1.7 [W3C-PNG] Section 11.3.3.4, sBIT Significant bits 
+
+V0008:
+
+The specification states:
+
+11.3.3.4 sBIT Significant bits
+
+Each depth specified in sBIT shall be greater than zero and less than or equal to the sample depth (which is 8 for indexed-colour images, and the bit depth given in IHDR for other colour types). Note that sBIT does not provide a sample depth for the alpha channel that is implied by a tRNS chunk; in that case, all of the sample bits of the alpha channel are to be treated as significant. If the sBIT chunk is not present, then all of the sample bits of all channels are to be treated as significant.
+
+All Document Modes (All Versions)
+
+The sBIT chunk is not supported.
+
+2.1.8 [W3C-PNG] Section 11.3.3.5, sRGB Standard RGB colour space 
+
+V0009:
+
+The specification defines the sRGB Standard color space.
+
+All Document Modes (All Versions)
+
+The sRGB chunk is not supported.
+
+2.1.9 [W3C-PNG] Section 11.3.4, Textual information 
+
+V0010:
+
+The specification defines textual information.
+
+All Document Modes (All Versions)
+
+Textual information is not read from PNG files.
+
+2.1.10 [W3C-PNG] Section 11.3.5, hIST Image histogram 
+
+V0011:
+
+
+9 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The specification defines the hIST image histogram.
+
+All Document Modes (All Versions)
+
+The hIST chunk is not supported.
+
+2.1.11 [W3C-PNG] Section 11.3.5.3, pHYs Physical pixel dimensions 
+
+V0012:
+
+The specification defines pHYs physical pixel dimensions.
+
+All Document Modes (All Versions)
+
+The pHYs chunk is not supported.
+
+2.1.12 [W3C-PNG] Section 11.3.5.4, sPLT Suggested palette 
+
+V0013:
+
+The specification defines the sPLT suggested palette.
+
+All Document Modes (All Versions)
+
+The sPLT chunk is not supported.
+
+2.1.13 [W3C-PNG] Section 11.3.6, tIME Image last-modification timev 
+
+V0014:
+
+The specification defines the tIME image last-modification time.
+
+All Document Modes (All Versions)
+
+The tIME chunk is not supported.
+
+2.1.14 [W3C-PNG] Section 12, PNG Encoders 
+
+V0015:
+
+The specification states requirements and recommendations for PNG encoder behavior.
+
+All Document Modes (All Versions)
+
+PNG encoding is not supported.
+
+2.2 Clarifications 
+
+There are no additional clarifications to  [W3C-PNG].
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+10 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+No table of changes is available. The document is either new or has had no changes since its last release.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+A
+
+ Additional information 7
+
+C
+
+ Change tracking 11
+
+ cHRM Primary chromaticities and white point 8  Chunk types 8
+
+ Colour spaces 7
+
+G
+
+ gAMA Image gamma 8  Glossary 4
+
+H
+
+ hIST Image histogram 9
+
+I
+
+ iCCP Embedded ICC profile 9  Informative references 4  Introduction 4
+
+N
+
+ Normative references 4
+
+P
+
+ pHYs Physical pixel dimensions 10  PNG Encoders 10
+
+R
+
+References  informative 4  normative 4
+
+S
+
+ sBIT Significant bits 9  sPLT Suggested palette 10
+
+ sRGB Standard RGB colour space 9
+
+T
+
+ Textual information 9
+
+ tIME Image last-modification timev 10  Tracking changes 11
+
+
+
+
+
+
+
+
+
+12 / 12
+
+[MS-PNG] — v20120725
+
+Internet Explorer Portable Network Graphics (PNG) Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
