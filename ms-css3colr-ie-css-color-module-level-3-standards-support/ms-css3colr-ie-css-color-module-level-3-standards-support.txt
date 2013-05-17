@@ -1,0 +1,638 @@
+﻿
+
+[MS-CSS3COLR]:
+
+Internet Explorer CSS Color Module Level 3 Standards
+
+Support
+
+
+
+Intellectual Property Rights Notice for Open Specifications Documentation
+
+ Technical Documentation. Microsoft publishes Open Specifications documentation for protocols, file formats, languages, standards as well as overviews of the interaction among each of these technologies. 
+
+ Copyrights. This documentation is covered by Microsoft copyrights. Regardless of any other terms that are contained in the terms of use for the Microsoft website that hosts this documentation, you may make copies of it in order to develop implementations of the technologies described in the Open Specifications and may distribute portions of it in your implementations using these technologies or your documentation as necessary to properly document the implementation. You may also distribute in your implementation, with or without modification, any schema, IDL’s, or code samples that are included in the documentation. This permission also applies to any documents that are referenced in the Open Specifications. 
+
+ No Trade Secrets. Microsoft does not claim any trade secret rights in this documentation. 
+
+ Patents. Microsoft has patents that may cover your implementations of the technologies described in the Open Specifications. Neither this notice nor Microsoft's delivery of the documentation grants any licenses under those or any other Microsoft patents. However, a given Open Specification may be covered by Microsoft  Open Specification Promise or the  Community  Promise. If you would prefer a written license, or if the technologies described in the Open Specifications are not covered by the Open Specifications Promise or Community Promise, as applicable, patent licenses are available by contacting  iplg@microsoft.com. 
+
+ Trademarks. The names of companies and products contained in this documentation may be covered by trademarks or similar intellectual property rights. This notice does not grant any licenses under those rights. 
+
+ Fictitious Names. The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted in this documentation are fictitious. No association with any real company, organization, product, domain name, email address, logo, person, place, or event is intended or should be inferred. 
+
+Reservation of Rights. All other rights are reserved, and this notice does not grant any rights other than specifically described above, whether by implication, estoppel, or otherwise.
+
+Tools. The Open Specifications do not require the use of Microsoft programming tools or programming environments in order for you to develop an implementation. If you have access to Microsoft programming tools and environments you are free to take advantage of them. Certain Open Specifications are intended for use in conjunction with publicly available standard specifications and network programming art, and assumes that the reader either is familiar with the aforementioned material or has immediate access to it.
+
+
+
+
+1 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Revision Summary
+
+DateRevision HistoryRevision ClassComments12/07/20111.0NewReleased new document.02/22/20121.1MinorClarified the meaning of the technical content.07/25/20121.2MinorClarified the meaning of the technical content.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Table of Contents
+
+ 1  Introduction .............................................................................................................41.1 Glossary ...............................................................................................................41.2 References ............................................................................................................41.2.1 Normative References .......................................................................................41.2.2 Informative References .....................................................................................41.3 Microsoft Implementations ......................................................................................41.4 Standards Support Requirements ............................................................................51.5 Notation ...............................................................................................................5
+2 Standards Support Statements .................................................................................62.1 Normative Variations ..............................................................................................6 2.1.1  [W3C-CSS3-Color] Section 3.1, Foreground color: the ‘color’ property ....................6 2.1.2  [W3C-CSS3-Color] Section 3.2, Transparency: the ‘opacity’ property ......................7 2.1.3  [W3C-CSS3-Color] Section 4, Color units ............................................................7 2.1.4  [W3C-CSS3-Color] Section 4.2.1, RGB color values ..............................................7 2.1.5  [W3C-CSS3-Color] Section 4.2.2, RGBA color values ............................................7 2.1.6  [W3C-CSS3-Color] Section 4.2.3, ‘transparent’ color keyword ...............................8 2.1.7  [W3C-CSS3-Color] Section 4.2.4, HSL color values ...............................................8 2.1.8  [W3C-CSS3-Color] Section 4.2.5, HSLA color values .............................................9 2.1.9  [W3C-CSS3-Color] Section 4.4, 'currentColor' color keyword .................................92.2 Clarifications .........................................................................................................92.3 Error Handling .......................................................................................................92.4 Security ................................................................................................................93 Change Tracking.....................................................................................................104 Index .....................................................................................................................12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1  Introduction
+
+This document describes the level of support provided by Windows® Internet Explorer® for the CSS3 Color Module specification, published June 07, 2011.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[CSS-Level2-2009] Bos, B., Celik, T., Hickson, I., and Wium Lie, H., Eds., "Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification", W3C Candidate Recommendation 08 September 2009,  http://www.w3.org/TR/2009/CR-CSS2-20090908/
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+[W3C-CSS3-Color] W3C, "CSS Color Module Level 3", W3C Recommendation 07 June 2011,  http://www.w3.org/TR/css3-color/
+
+1.2.2 Informative References 
+
+None.
+
+1.3 Microsoft Implementations 
+
+The following Microsoft products implement some portion of the CSS specification:
+
+••Windows® Internet Explorer® 7
+••Windows® Internet Explorer® 8
+••Windows® Internet Explorer® 9
+••Windows® Internet Explorer® 10
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer.
+
+
+
+4 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Browser VersionDocument Modes SupportedInternet Explorer 7Quirks ModeStandards ModeInternet Explorer 8Quirks ModeIE7 ModeIE8 ModeInternet Explorer 9Quirks ModeIE7 ModeIE8 ModeIE9 ModeInternet Explorer 10 (Beta)Quirks ModeIE7 ModeIE8 ModeIE9 ModeIE10 Mode
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is a variation note will be listed. If the document mode is not listed, conformance to the specification can be assumed.
+
+Note "Standards mode" in Internet Explorer 7 and "IE7 mode" in Internet Explorer 8 refer to the same document mode. "IE7 mode" is the preferred way of referring to this document mode across all versions of the browser.
+
+1.4 Standards Support Requirements 
+
+To conform to  [W3C-CSS3-Color] a user agent must implement all required portions of the specification. Any optional portions that have been implemented must also be implemented as described by the specification. Normative language is usually used to define both required and optional portions. (For more information, see  [RFC2119].)
+
+1.5 Notation 
+
+The following notations are used in this document to differentiate between notes of clarification, variation from the specification, and extension points.
+
+NotationExplanationC####Identifies a clarification of ambiguity in the target specification. This includes imprecisestatements, omitted information, discrepancies, and errata. This does not include dataformatting clarifications.V####Identifies an intended point of variability in the target specification such as the use of MAY,SHOULD, or RECOMMENDED. (See  [RFC2119].) This does not include extensibility points.E####Identifies extensibility points (such as optional implementation-specific data) in the targetspecification, which can impair interoperability.
+For document mode and browser version notation, see section  1.3.
+
+
+5 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2  Standards Support Statements
+
+This section contains a full list of variations, clarifications, and extension points in the Microsoft implementation of  [CSS-Level2-2009].
+
+••Section  2.1 includes only those variations that violate a MUST requirement in the target specification.
+
+••Section  2.2 describes further variations from MAY and SHOULD requirements.
+••Section  2.3 identifies variations in error handling.
+••Section  2.4 identifies variations that impact security.
+
+2.1 Normative Variations 
+
+The following subsections detail the normative variations from MUST requirements in  [W3C-CSS3- Color].
+
+2.1.1 [W3C-CSS3-Color] Section 3.1, Foreground color: the ‘color’ property 
+
+V0001:
+
+The specification states:
+
+Name: color
+
+Value: <color> | inherit
+
+Initial: depends on user agent
+
+Applies to: all elements
+
+Inherited: yes
+
+Percentages: N/A
+
+Media: visual
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The transparent, currentColor, and inherit keywords are not supported.
+
+All Document Modes (All Versions)
+
+The color value of invert is treated like "black". invert is an invalid value.
+
+V0002:
+
+The specification states:
+
+The computed value of the keyword ‘transparent’ is the quadruplet of all zero numerical RGBA values, e.g. rgba(0,0,0,0). See the definition of the ‘currentColor’ for how its computed value is determined. For all other values, the computed value is the specified value.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The transparent keyword is not supported.
+
+
+
+
+
+6 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.2 [W3C-CSS3-Color] Section 3.2, Transparency: the ‘opacity’ property 
+
+V0003:
+
+The specification states:
+
+Name: opacity
+
+Value: <alphavalue> | inherit Initial: 1
+
+Applies to: all elements Inherited: no Percentages: N/A
+
+Media: visual
+
+Computed value: The same as the specified value after clipping the <alphavalue> to the range [0.0,1.0].
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The opacity property is not supported.
+
+2.1.3 [W3C-CSS3-Color] Section 4, Color units 
+
+V0004:
+
+The specification states:
+
+A <color> is either a keyword or a numerical specification.
+
+All Document Modes (All Versions)
+
+The color value of invert is treated like "black". invert is considered to be an invalid value.
+
+2.1.4 [W3C-CSS3-Color] Section 4.2.1, RGB color values 
+
+V0005:
+
+The specification states:
+
+The format of an RGB value in the functional notation is ‘rgb(’ followed by a comma-separated list of three numerical values (either three integer values or three percentage values) followed by ‘)’. The integer value 255 corresponds to 100%, and to F or FF in the hexadecimal notation: rgb(255,255,255) = rgb(100%,100%,100%) = #FFF. White space characters are allowed around the numerical values.
+
+Quirks Mode and IE7 Mode (All Versions)
+
+Signed RGB values are not supported.
+
+IE8 Mode (Internet Explorer 8)
+
+Signed RGB values are not supported.
+
+2.1.5 [W3C-CSS3-Color] Section 4.2.2, RGBA color values 
+
+V0006:
+
+
+7 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The specification states:
+
+The format of an RGBA value in the functional notation is ‘rgba(’ followed by a comma-separated list of three numerical values (either three integer values or three percentage values), followed by an <alphavalue>, followed by ‘)’. The integer value 255 corresponds to 100%, rgba(255,255,255,0.8) = rgba(100%,100%,100%,0.8). White space characters are allowed around the numerical values.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+RGBA color values are not supported.
+
+V0007:
+
+The specification states:
+
+Implementations must clip the red, green, and blue components of RGBA color values to the device gamut according to the rules for the RGB color value composed of those components.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+RGBA color values are not supported.
+
+2.1.6 [W3C-CSS3-Color] Section 4.2.3, ‘transparent’ color keyword 
+
+V0008:
+
+The specification states:
+
+transparent
+
+Fully transparent. This keyword can be considered a shorthand for transparent black, rgba(0,0,0,0), which is its computed value.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The transparent keyword is not supported.
+
+2.1.7 [W3C-CSS3-Color] Section 4.2.4, HSL color values 
+
+V0009:
+
+The specification states:
+
+HSL colors are encoding as a triple (hue, saturation, lightness). Hue is represented as an angle of the color circle (i.e. the rainbow represented in a circle). This angle is so typically measured in degrees that the unit is implicit in CSS; syntactically, only a <number> is given.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+HSL color values are not supported.
+
+
+
+
+
+8 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+2.1.8 [W3C-CSS3-Color] Section 4.2.5, HSLA color values 
+
+V0010:
+
+The specification states:
+
+The format of an HSLA color value in the functional notation is ‘hsla(’ followed by the hue in degrees, saturation and lightness as a percentage, and an <alphavalue>, followed by ‘)’. White space characters are allowed around the numerical values.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+HSLA color values are not supported.
+
+V0011:
+
+The specification states:
+
+Implementations must clip the hue, saturation, and lightness components of HSLA color values to the device gamut according to the rules for the HSL color value composed of those components.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+HSLA color values are not supported.
+
+2.1.9 [W3C-CSS3-Color] Section 4.4, 'currentColor' color keyword 
+
+V0012:
+
+The specification states:
+
+currentColor
+
+The value of the 'color' property. The computed value of the 'currentColor' keyword is the computed value of the 'color' property. If the 'currentColor' keyword is set on the 'color' property itself, it is treated as 'color:inherit' at parse time.
+
+Quirks Mode, IE7 Mode, and IE8 Mode (All Versions)
+
+The currentColor keyword is not supported.
+
+2.2 Clarifications 
+
+There are no additional clarifications to  [W3C-CSS3-Color].
+
+2.3 Error Handling 
+
+There are no additional considerations for error handling.
+
+2.4 Security 
+
+There are no additional security considerations.
+
+
+
+
+9 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3  Change Tracking
+
+This section identifies changes that were made to the [MS-CSS3COLR] protocol document between the February 2012 and July 2012 releases. Changes are classified as New, Major, Minor, Editorial, or No change.
+
+The revision class New means that a new document is being released.
+
+The revision class Major means that the technical content in the document was significantly revised. Major changes affect protocol interoperability or implementation. Examples of major changes are:
+
+••A document revision that incorporates changes to interoperability requirements or functionality.
+••An extensive rewrite, addition, or deletion of major portions of content.
+••The removal of a document from the documentation set.
+••Changes made for template compliance.
+
+The revision class Minor means that the meaning of the technical content was clarified. Minor changes do not affect protocol interoperability or implementation. Examples of minor changes are updates to clarify ambiguity at the sentence, paragraph, or table level.
+
+The revision class Editorial means that the language and formatting in the technical content was changed. Editorial changes apply to grammatical, formatting, and style issues.
+
+The revision class No change means that no new technical or language changes were introduced. The technical content of the document is identical to the last released version, but minor editorial and formatting changes, as well as updates to the header and footer information, and to the revision summary, may have been made.
+
+Major and minor changes can be described further using the following change types:
+
+••New content added.
+••Content updated.
+••Content removed.
+••New product behavior note added.
+••Product behavior note updated.
+••Product behavior note removed.
+••New protocol syntax added.
+••Protocol syntax updated.
+••Protocol syntax removed.
+••New content added due to protocol revision.
+••Content updated due to protocol revision.
+••Content removed due to protocol revision.
+••New protocol syntax added due to protocol revision.
+
+10 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Protocol syntax updated due to protocol revision.
+••Protocol syntax removed due to protocol revision.
+••New content added for template compliance.
+••Content updated for template compliance.
+••Content removed for template compliance.
+••Obsolete document removed.
+
+Editorial changes are always classified with the change type Editorially updated.
+
+Some important terms used in the change type descriptions are defined as follows:
+
+••Protocol syntax refers to data elements (such as packets, structures, enumerations, and methods) as well as interfaces.
+
+••Protocol revision refers to changes made to a protocol that affect the bits that are sent over the wire.
+
+The changes made to this document are listed in the following table. For more information, please contact  protocol@microsoft.com.
+
+MajorTracking number (if applicable)changeSectionand description(Y or N)Change type1Updated document to remove beta tagging.NContent updated.Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+4  Index
+
+ 'currentColor' color keyword 9
+ ‘transparent’ color keyword 8
+
+C
+
+ Change tracking 10
+ Color units 7
+
+F
+
+ Foreground color: the ‘color’ property 6
+
+G
+
+ Glossary 4
+
+H
+
+ HSL color values 8
+ HSLA color values 9
+
+I
+
+ Informative references 4
+ Introduction 4
+
+N
+
+ Normative references 4
+
+R
+
+References  informative 4  normative 4
+
+ RGB color values 7  RGBA color values 7
+
+T
+
+ Tracking changes 10
+ Transparency: the ‘opacity’ property 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12 / 12
+
+[MS-CSS3COLR] — v20120725
+
+Internet Explorer CSS Color Module Level 3 Standards Support
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
