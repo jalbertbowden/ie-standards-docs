@@ -1,0 +1,665 @@
+
+1  Introduction
+
+This document describes extensions provided by Windows® Internet Explorer® for the HTML Specification  [HTML], W3C Recommendation 24 December 1999, and Document Object Model (DOM) Level 2 HTML Specification Version 1.0  [DOM Level 2 - HTML], W3C Recommendation 09 January, 2003.
+
+Sections 1.7 and 2 of this specification are normative and can contain the terms MAY, SHOULD, MUST, MUST NOT, and SHOULD NOT as defined in RFC 2119. All other sections and examples in this specification are informative.
+
+1.1 Glossary 
+
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: These terms (in all caps) are used as described in  [RFC2119]. All statements of optional behavior use either MAY, SHOULD, or SHOULD NOT.
+
+1.2 References 
+
+References to Microsoft Open Specifications documentation do not include a publishing year because links are to the latest version of the technical documents, which are updated frequently. References to other documents include a publishing year when one is available.
+
+1.2.1 Normative References 
+
+We conduct frequent surveys of the normative references to assure their continued availability. If you have any issue with finding a normative reference, please contact  dochelp@microsoft.com. We will assist you in finding the relevant information. Please check the archive site,  http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624, as an additional source.
+
+[CSS-Level2-2009] Bos, B., Celik, T., Hickson, I., and Wium Lie, H., Eds., "Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification", W3C Candidate Recommendation 08 September 2009,  http://www.w3.org/TR/2009/CR-CSS2-20090908/
+
+[DOM Level 2 - Core] W3C, "Document Object Model (DOM) Level 2 Core Specification Version 1.0", W3C Recommendation 13 November, 2000,  http://www.w3.org/TR/DOM-Level-2-Core/
+
+[DOM Level 2 - HTML] W3C, "Document Object Model (DOM) Level 2 HTML Specification Version 1.0", W3C Recommendation, January 2003,  http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/
+
+[HTML] World Wide Web Consortium, "HTML 4.01 Specification", December 1999,  http://www.w3.org/TR/html4/
+
+[MS-DOM2CE] Microsoft Corporation, " Internet Explorer Extensions to the Document Object Model  (DOM) Level 2 Core Specification".
+
+[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997,  http://www.rfc-editor.org/rfc/rfc2119.txt
+
+
+
+
+
+
+
+
+8 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+1.2.2 Informative References 
+
+[DOM Level 2 - Style] W3C, "Document Object Model (DOM) Level 2 Style Specification Version 1.0", W3C Recommendation, November 2000,  http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/
+
+[ECMA-262/5] ECMA International, "Standard ECMA-262 ECMAScript Language Specification", 5th Edition (December 2009),  http://www.ecma-international.org/publications/files/ECMA-ST- ARCH/ECMA-262%205th%20edition%20December%202009.pdf
+
+[ECMA-262] ECMA International, "ECMAScript Language Specification" ECMA-262, December 1999,  http://www.ecma-international.org/publications/standards/Ecma-262.htm
+
+[MS-CSS21E] Microsoft Corporation, " Internet Explorer Extensions to the Cascading Style Sheets  (CSS) 2.1 Specification".
+
+[MSDN-DHTMLBehaviors] Microsoft Corporation, "Introduction to DHTML Behaviors",  http://msdn.microsoft.com/en-us/library/ms531079(v=VS.85).aspx
+
+[MS-DOM2CEX] Microsoft Corporation, " Microsoft XML Extensions to the Document Object Model  (DOM) Level 2 Core Specification".
+
+[MS-DOM2E] Microsoft Corporation, " Internet Explorer Document Object Model (DOM) Level 2  Events Standards Support Document".
+
+[MS-DOM2EE] Microsoft Corporation, " Internet Explorer Extensions to the DOM Level 2 Events  Specification".
+
+[MS-ES3EX] Microsoft Corporation, " Microsoft JScript Extensions to the ECMAScript Language  Specification 3rd Edition".
+
+[MS-ES5EX] Microsoft Corporation, " Microsoft Internet Explorer Extensions to the ECMAScript  Language Specification Fifth Edition".
+
+1.3 Extension Overview (Synopsis) 
+
+The extensions described in this document were selected for their applicability to  [HTML] and  [DOM  Level 2 - HTML].
+
+The extensions to  [HTML] and  [DOM Level 2 - HTML] are organized as follows:
+
+Elements
+
+page20 •• ?IMPORT?
+page21 •• COMMENT
+page21 •• MARQUEE
+page22 •• NOBR
+page22 •• PUBLIC:ATTACH
+page22 •• PUBLIC:COMPONENT
+page23 •• PUBLIC:DEFAULTS
+page23 •• PUBLIC:EVENT
+
+9 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page23 •• PUBLIC:METHOD
+page24 •• PUBLIC:PROPERTY
+
+Interfaces
+
+page26 •• HTCComponentElement
+page26 •• HTCElementBehaviorDefaults
+page26 •• HTCPropertyElement
+page29 •• HTMLAnchorElement
+page30 •• HTMLAreaElement
+page31 •• HTMLAreasCollection
+page26 •• HTMLBlockElement
+page31 •• HTMLBodyElement
+page32 •• HTMLButtonElement
+page32 •• HTMLCollection
+page28 •• HTMLDDElement
+page33 •• HTMLDivElement
+page33 •• HTMLDocument
+page28 •• HTMLDTElement
+page34 •• HTMLElement
+page35 •• HTMLFieldSetElement
+page36 •• HTMLFormElement
+page36 •• HTMLFrameElement
+page37 •• HTMLFrameSetElement
+page37 •• HTMLHeadingElement
+page38 •• HTMLHRElement
+page38 •• HTMLIFrameElement
+page39 •• HTMLImageElement
+page40 •• HTMLInputElement
+page41 •• HTMLIsIndexElement
+page41 •• HTMLLabelElement
+page41 •• HTMLLegendElement
+
+
+10 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page28 •• HTMLMarqueeElement
+page42 •• HTMLMetaElement
+page42 •• HTMLObjectElement
+page43 •• HTMLOptionElement
+page43 •• HTMLParagraphElement
+page44 •• HTMLSelectElement
+page44 •• HTMLSpanElement
+page44 •• HTMLStyleElement
+page45 •• HTMLTableCaptionElement
+page45 •• HTMLTableCellElement
+page45 •• HTMLTableElement
+page46 •• HTMLTableRowElement
+page47 •• HTMLTableSectionElement
+page47 •• HTMLTextAreaElement
+
+The following attributes are listed alphabetically, but indicate their type: (DOM) for DOM attribute only, and (markup) for content attribute only.
+
+Attributes
+
+page53 •• action
+page53 •• align
+page71 •• alinkColor (DOM)
+page54 •• allowTransparency
+page54 •• alt
+page71 •• altHtml (DOM)
+page81 •• application (markup)
+page81 •• atomicselection (markup)
+page54 •• background
+page55 •• BaseHref
+page55 •• behavior
+page55 •• bgColor
+page56 •• bgProperties
+page56 •• border
+
+11 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page56 •• borderColor
+page57 •• borderColorDark
+page57 •• borderColorLight
+page57 •• bottomMargin
+page58 •• canHaveHTML
+page58 •• charset
+page58 •• classid
+page58 •• clear
+page59 •• color
+page59 •• cols
+page71 •• contentWindow (DOM)
+page59 •• dataFld
+page60 •• dataFormatAs
+page60 •• dataPageSize
+page61 •• dataSrc
+page72 •• dir (DOM)
+page61 •• direction
+page62 •• dynsrc
+page72 •• encoding
+page82 •• event (markup)
+page72 •• fgColor (DOM)
+page73 •• fileCreatedDate (DOM)
+page73 •• fileModifiedDate (DOM)
+page73 •• fileSize (DOM)
+page73 •• fileUpdatedDate (DOM)
+page82 •• for (markup)
+page62 •• frameBorder
+page62 •• frameSpacing
+page82 •• get (markup)
+page73 •• hash (DOM)
+
+
+12 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page63 •• height
+page74 •• host (DOM)
+page74 •• hostname (DOM)
+page63 •• href
+page64 •• hspace
+page82 •• implementation (markup)
+page74 •• indeterminate (DOM)
+page83 •• internalName (markup)
+page75 •• isDisabled (DOM)
+page75 •• isMultiLine (DOM)
+page64 •• leftMargin
+page83 •• lightWeight (markup)
+page75 •• linkColor (DOM)
+page83 •• literalContent (markup)
+page64 •• loop
+page65 •• lowsrc
+page65 •• methods
+page75 •• mimeType (DOM)
+page65 •• name
+page75 •• nameProp (DOM)
+page84 •• namespace (markup)
+page66 •• noResize
+page66 •• noWrap
+page76 •• object (DOM)
+page86 •• onactivate
+page86 •• onafterupdate
+page87 •• onbeforeactivate
+page87 •• onbeforecopy
+page87 •• onbeforecut
+page88 •• onbeforedeactivate
+
+
+13 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page88 •• onbeforeeditfocus
+page88 •• onbeforepaste
+page89 •• onbeforeunload
+page89 •• onbeforeupdate
+page90 •• onbounce
+page90 •• oncellchange
+page91 •• oncontrolselect
+page91 •• oncopy
+page91 •• oncut
+page92 •• ondataavailable
+page92 •• ondatasetchanged
+page92 •• ondatasetcomplete
+page93 •• ondeactivate
+page93 •• onerrorupdate
+page84 •• onevent (markup)
+page94 •• onfilterchange
+page94 •• onfinish
+page94 •• onfocusin
+page95 •• onfocusout
+page95 •• onhelp
+page95 •• onlosecapture
+page95 •• onmouseenter
+page96 •• onmouseleave
+page96 •• onmove
+page96 •• onmoveend
+page97 •• onmovestart
+page97 •• onpaste
+page97 •• onpropertychange
+page98 •• onresizeend
+page98 •• onresizestart
+
+
+14 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page98 •• onrowenter
+page98 •• onrowexit
+page99 •• onrowsdelete
+page99 •• onrowsinserted
+page99 •• onselect
+page100 •• onselectstart
+page100 •• onstart
+page76 •• parentDocument (DOM)
+page76 •• pathname (DOM)
+page84 •• persist (markup)
+page76 •• port (DOM)
+page77 •• protocol (DOM)
+page77 •• protocolLong (DOM)
+page85 •• put (markup)
+page66 •• rightMargin
+page67 •• scroll
+page67 •• scrollAmount
+page67 •• scrollDelay
+page77 •• search (DOM)
+page67 •• start
+page78 •• status (DOM)
+page78 •• styleSheet (DOM)
+page85 •• supportsEditMode (markup)
+page68 •• tabStop
+page85 •• tagName (markup)
+page68 •• topMargin
+page68 •• trueSpeed
+page78 •• uniqueID (DOM)
+page79 •• uniqueNumber (DOM)
+page85 •• unselectable (markup)
+
+
+15 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+page80 •• url (DOM)
+page68 •• urn
+page69 •• vAlign
+page69 •• value
+page69 •• viewInheritStyle
+page80 •• viewLink
+page85 •• viewLinkContent (markup)
+page70 •• viewMasterTab
+page81 •• vlinkColor (DOM)
+page70 •• vspace
+page70 •• width
+page71 •• wrap
+page86 •• xmlns (markup)
+
+Methods
+
+page101 •• add()
+page101 •• item()
+page102 •• moveRow()
+page102 •• namedItem()
+page103 •• remove()
+page103 •• setActive()
+page103 •• tags()
+page104 •• urns()
+
+Collections
+
+page104 •• all
+page104 •• cells
+page104 •• frames
+
+1.3.1 Element Behaviors and HTML Components 
+
+Element behaviors allow a developer to define custom elements that can be used in the same way as normal HTML elements in a webpage. Because element behaviors are encapsulated components, they can add functionality to a webpage while improving the reusability and organization of content, script, and style elements.
+
+
+
+16 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Element behaviors are synchronously attached to elements through special style sheet rules, or an IMPORT processing instruction such as the following:
+
+<HTML xmlns:games> <HEAD>
+
+<?IMPORT namespace="games" implementation="checkers.htc" ?> </HEAD>
+
+<BODY> <games:checkers /> </BODY>
+
+</HTML>
+
+Element behaviors, which are used to define custom elements, are also called HTML Components (HTC). The implementation of the HTC is encapsulated in an .htc file.
+
+The following elements and attributes are used to define the public interface and event model of an HTC:
+
+page22 •• PUBLIC:ATTACH
+ ••event
+ ••for
+ ••onevent
+page22 •• PUBLIC:COMPONENT
+ ••lightWeight
+ ••literalContent
+ ••supportsEditMode
+ ••tagName
+ ••urn
+page23 •• PUBLIC:DEFAULTS
+ ••canHaveHTML
+ ••tabStop
+ ••viewInheritStyle
+ ••viewLinkContent
+ ••viewMasterTab
+page23 •• PUBLIC:EVENT
+page23 •• PUBLIC:METHOD
+ ••internalName
+page24 •• PUBLIC:PROPERTY
+
+
+17 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+ ••get
+••internalName
+ ••persist
+ ••put
+ ••value
+
+For more information about Element Behaviors and HTC, see Introduction to DHTML Behaviors  [MSDN-DHTMLBehaviors].
+
+1.3.2 Organization of This Documentation 
+
+This document is organized as follows:
+
+••Elements: New HTML elements are described.
+
+••Interfaces: The extensions are listed according to interface at the highest level. Interface members are described at the next levels.
+
+••Attributes: Includes all markup and DOM properties.
+••DOM and Content Attribute: Attributes that are supported by both DOM and markup.
+••DOM Attributes Only: Attributes only available through the object model.
+••Content Attributes Only: Attributes declared only in markup.
+••Event Attributes: Attributes that support events and event handlers.
+••Methods: Extends DOM functionality.
+••Collections: Objects that support array-type behavior.
+
+1.4 Relationship to Standards and Other Extensions 
+
+The following documents provide additional extensions.
+
+%5bMS-CSS21E%5d.pdf •• [MS-CSS21E]: Extensions to the  [CSS-Level2-2009] and  [DOM Level 2 - Style] specifications.
+%5bMS-DOM2CE%5d.pdf •• [MS-DOM2CE] and  [MS-DOM2CEX]: Extensions to the  [DOM Level 2 - Core] specification.
+%5bMS-DOM2EE%5d.pdf •• [MS-DOM2EE]: Extensions to the  [MS-DOM2E] specification.
+%5bMS-ES3EX%5d.pdf •• [MS-ES3EX]: Extensions to the ECMAScript  [ECMA-262] specification.
+%5bMS-ES5EX%5d.pdf •• [MS-ES5EX]: Extensions to the ECMAScript  [ECMA-262/5] specification.
+
+1.5 Applicability Statement 
+
+This document specifies a set of extensions to the  [HTML] and  [DOM Level 2 - HTML] specifications that are unique to Windows® Internet Explorer® 7, Windows® Internet Explorer® 8, Windows® Internet Explorer® 9, and Windows® Internet Explorer® 10.
+
+
+
+
+18 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+In addition, each version of Windows® Internet Explorer® implements multiple document modes, which can vary individually in their support of the standard. The following table lists the document modes available in each version of Internet Explorer.
+
+
+Browser Version
+
+
+Document Modes Supported
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Internet Explorer 7
+
+
+Quirks mode
+
+
+
+
+
+Standards mode
+
+
+
+
+
+
+Internet Explorer 8
+
+
+Quirks mode
+
+
+
+
+
+IE7 mode
+
+
+
+
+
+IE8 mode
+
+
+
+
+
+
+Internet Explorer 9
+
+
+Quirks mode
+
+
+
+
+
+IE7 mode
+
+
+
+
+
+IE8 mode
+
+
+
+
+
+IE9 mode
+
+
+
+
+
+
+Internet Explorer 10
+
+
+Quirks mode
+
+
+
+
+
+IE7 mode
+
+
+
+
+
+IE8 mode
+
+
+
+
+
+IE9 mode
+
+
+
+
+
+IE10 Mode
+
+
+
+
+
+
+
+
+
+Throughout this document, the document mode appears first followed by the browser version in parentheses. Only those document modes and versions of Internet Explorer for which there is an extension will be listed. If the document mode is not listed, it can be assumed that all document modes support the extension.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19 / 111
+
+[MS-HTML401E] — v20120725
+
+Internet Explorer Extensions to HTML 4.01 and DOM Level 2 HTML Specifications
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
