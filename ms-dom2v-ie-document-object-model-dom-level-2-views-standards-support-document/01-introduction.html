@@ -1,0 +1,2711 @@
+Introduction
+
+
+
+9.25pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:none;
+none;text-autospace:none'> 
+This
+document describes the level of support provided by Windows Internet Explorer
+for the
+
+
+2.2pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:none;
+none;punctuation-wrap:simple;text-autospace:none'><i>
+
+Document Object Model (DOM) Level 2 Views
+Specification Version 1.0 <a
+href="http://go.microsoft.com/fwlink/?LinkId=182713">
+>
+font-style:
+normal'>[DOM Level 2 - Views</a><u> 
+
+Verdana;color:#0066FF'>]line-height:
+89%;"Verdana","sans-serif";,<i> W3C<i>
+Recommendation 13 November, 2000. Internet Explorer displays webpages
+written in HTML.
+
+
+
+
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:3.0pt;margin-bottom:0in;
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:94%;mso-pagination:none;
+none;punctuation-wrap:simple;text-autospace:none'>
+line-height:94%;"Verdana","sans-serif";
+The <a
+href="http://go.microsoft.com/fwlink/?LinkId=182713">
+>
+[DOM Level
+2 - Views]specification may contain guidance for authors of
+webpages and browser users, in addition to user agents (browser applications).
+Statements found in this document apply only to normative requirements in the
+specification targeted to user agents, not those targeted to authors.
+line-height:94%;
+
+
+12.15pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:28.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+text-indent:-28.4pt;mso-pagination:none;mso-list:l13 level1 lfo2;
+tab-stops:list 28.4pt;none;punctuation-wrap:simple;
+text-autospace:none'><![if !supportLists]> 10.0pt;
+"Verdana","sans-serif";mso-fareast-
+Verdana; style='mso-list:Ignore'>1.1
+style='font:7.0pt "Times New Roman"'><![endif]>
+10.0pt;"Verdana","sans-serif";
+Glossary </o:p></p>
+
+
+
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2margin-bottom:
+0in;margin-left:38.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-13.7pt;line-height:92%;mso-pagination:none;
+
+line-height:92%;"Verdana","sans-serif";
+MAY, SHOULD, MUST, SHOULD NOT, MUST NOT: 
+line-height:92%;"Verdana","sans-serif";
+These terms (in all caps) are used as described
+in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">
+style='color:windowtext;>
+[RFC2119
+]. All statements of optional behavior use
+either MAY, SHOULD, or SHOULD NOT.
+line-height:92%;
+
+
+12
+
+
+
+margin-left:28.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+text-indent:-28.4pt;mso-pagination:none;mso-list:l6 level1 lfo3;
+tab-stops:list 28.4pt;none;punctuation-wrap:simple;
+text-autospace:none'><![if !supportLists]> 10.0pt;
+"Verdana","sans-serif";mso-fareast-
+Verdana; style='mso-list:Ignore'>1.2
+style='font:7.0pt "Times New Roman"'><![endif]>
+10.0pt;"Verdana","sans-serif";
+References </o:p></p>
+
+
+
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2.0pt;margin-bottom:0in;
+margin-left:10.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+line-height:92%;mso-pagination:none;none;punctuation-wrap:
+simple;text-autospace:none'> line-height:92%;
+"Verdana","sans-serif";References to
+Microsoft Open Specifications documentation do not include a publishing year
+because links are to the latest version of the technical documents, which are
+updated frequently. References to other documents include a publishing year
+when one is available.line-height:92%;
+
+
+
+mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:38.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+text-indent:-38.4pt;mso-pagination:none;mso-list:l11 level1 lfo4;
+tab-stops:list 38.4pt;none;punctuation-wrap:simple;
+text-autospace:none'><![if !supportLists]> 10.0pt;
+"Verdana","sans-serif";mso-fareast-
+Verdana; style='mso-list:Ignore'>1.2.1
+style='font:7.0pt "Times New Roman"'><![endif]>
+10.0pt;"Verdana","sans-serif";
+Normative References </o:p></p>
+
+
+
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:95%;mso-pagination:none;
+none;punctuation-wrap:simple;text-autospace:none'>
+line-height:95%;"Verdana","sans-serif";
+We conduct frequent surveys of the normative
+references to assure their continued availability. If you have any issue with
+finding a normative reference, please contact <a
+href="mailto:dochelp@microsoft.com">
+
+dochelp@microsoft.co style='color:
+#0066FF'>m. We will assist you in finding the relevant information.
+Please check the archive site,  <a
+href="http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624">
+>
+http://msdn2.microsoft.com/en-us/library/E4BD6494-06AD-4aed-9823-445E921C9624,
+as an additional
+source.line-height:95%;
+
+
+11.3pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:none;
+none;punctuation-wrap:simple;text-autospace:none'>
+
+[DOM Level 2 - Core] W3C, &quot;Document Object
+Model (DOM) Level 2 Core Specification Version 1.0&quot;, W3C Recommendation 13
+November, 2000, <a href="http://go.microsoft.com/fwlink/?LinkId=182703">
+style='color:windowtext;>
+http://www.w3.org/TR/DOM-Level-2-Core
+/
+
+
+
+
+
+
+
+0in;margin-left:10.4pt;margin-bottom:.0001pt;line-height:90%;mso-pagination:
+none;none;punctuation-wrap:simple;text-autospace:none'>
+line-height:90%;"Verdana","sans-serif";
+[DOM Level 2 - Views] W3C, &quot;Document Object
+Model (DOM) Level 2 Views Specification Version 1.0&quot;, W3C Recommendation
+13 November, 2000, <a href="http://go.microsoft.com/fwlink/?LinkId=182713">
+style='color:windowtext;>
+http://www.w3.org/TR/DOM-Level-2-Views
+/
+line-height:90%;
+
+
+
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:15.0pt;margin-bottom:
+0in;margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:
+none;none;punctuation-wrap:simple;text-autospace:none'>
+
+[RFC2119] Bradner, S., &quot;Key words for use in
+RFCs to Indicate Requirement Levels&quot;, BCP 14, RFC 2119, March 1997, <a
+href="http://go.microsoft.com/fwlink/?LinkId=90317">
+>
+http://www.rfc-editor.org/rfc/rfc2119.tx
+t
+
+
+
+mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:38.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+text-indent:-38.4pt;mso-pagination:none;mso-list:l10 level1 lfo5;
+tab-stops:list 38.4pt;none;punctuation-wrap:simple;
+text-autospace:none'><![if !supportLists]> 10.0pt;
+"Verdana","sans-serif";mso-fareast-
+Verdana; style='mso-list:Ignore'>1.2.2
+style='font:7.0pt "Times New Roman"'><![endif]>
+10.0pt;"Verdana","sans-serif";
+Informative References </o:p></p>
+
+
+9
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:none;
+none;text-autospace:none'> 
+None.
+
+
+
+11.95pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:28.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+text-indent:-28.4pt;mso-pagination:none;mso-list:l2 level1 lfo6;
+tab-stops:list 28.4pt;none;punctuation-wrap:simple;
+text-autospace:none'><![if !supportLists]> 10.0pt;
+"Verdana","sans-serif";mso-fareast-
+Verdana; style='mso-list:Ignore'>1.3
+style='font:7.0pt "Times New Roman"'><![endif]>
+10.0pt;"Verdana","sans-serif";
+Microsoft Implementations </o:p></p>
+
+
+9.2pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+none;none;text-autospace:none'> 
+"Verdana","sans-serif";The
+following Microsoft products implement some portion of <a
+href="http://go.microsoft.com/fwlink/?LinkId=182713">
+>
+[DOM Level
+2 - Views ]:
+
+
+
+6.45pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:none;
+none;text-autospace:none'><sup> 
+Wingdings'></sup>
+"Verdana","sans-serif";
+Windows Internet Explorer 7
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:91%;mso-pagination:none;
+none;text-autospace:none'><sup> 
+line-height:91%;Wingdings;Wingdings'></sup>
+line-height:91%;"Verdana","sans-serif";
+Windows Internet Explorer 8
+line-height:91%;
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:91%;mso-pagination:none;
+none;text-autospace:none'><sup> 
+line-height:91%;Wingdings;Wingdings'></sup>
+line-height:91%;"Verdana","sans-serif";
+Windows Internet Explorer 9
+line-height:91%;
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:90%;mso-pagination:none;
+none;text-autospace:none'><sup> 
+line-height:90%;Wingdings;Wingdings'></sup>
+line-height:90%;"Verdana","sans-serif";
+Windows Internet Explorer 10
+line-height:90%;
+
+
+19.85pt;mso-line-height-rule:exactly;mso-pagination:none;
+none;text-autospace:none'><!--[if gte vml 1]><v:shape id="Picture_x0020_9"
+ o:spid="_x0000_s1039" type="#_x0000_t75" style='position:absolute;
+ margin-left:9.35pt;margin-top:18.4pt;width:461.6pt;height:.5pt;z-index:-251651072;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;
+ mso-height-relative:page' o:allowincell="f">
+ <v:imagedata src="%5bms-dom2v%5d_files/image001.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]> style='mso-ignore:vglayout;position:
+absolute;z-index:251665386;margin-left:13px;margin-top:24px;width:615px;
+height:1px'><img width=615 height=1 src="%5bms-dom2v%5d_files/image002.jpg"
+v:shapes="Picture_x0020_9"><![endif]> 
+
+
+
+
+
+
+4 / 12
+
+
+
+
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+[MS-DOM2V]
+ v20120725
+
+
+
+
+
+
+
+margin-left:13.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Internet
+Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+
+
+
+
+
+
+margin-left:13.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Copyright
+ 2012 Microsoft Corporation.
+
+
+
+
+
+
+
+margin-left:13.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Release:
+July 25, 2012
+
+
+
+
+ 
+
+
+
+
+
+<div class=WordSection5>
+
+
+0in;margin-left:10.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph;line-height:92%;mso-pagination:none;none;
+punctuation-wrap:simple;text-autospace:none'><a name=page5></a>
+line-height:92%;"Verdana","sans-serif";
+In addition, each version of Windows Internet
+Explorer implements multiple document modes, which can vary individually in
+their support of the standard. The following table lists the document modes
+that are available in each version of Internet Explorer.
+line-height:92%;
+
+
+8
+none;text-autospace:none'><!--[if gte vml 1]><v:rect id="Rectangle_x0020_10"
+ o:spid="_x0000_s1038" style='position:absolute;margin-left:221.3pt;
+ margin-top:9.1pt;width:.95pt;height:1.9pt;z-index:-251650048;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:page;mso-height-relative:page;v-text-anchor:top' o:gfxdata="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
+" o:allowincell="f" fillcolor="black" stroked="f"/><![endif]--><![if !vml]>
+style='mso-ignore:vglayout;position:absolute;z-index:251666410;margin-left:
+295px;margin-top:12px;width:1px;height:3px'><img width=1 height=3
+src="%5bms-dom2v%5d_files/image003.png" v:shapes="Rectangle_x0020_10"><![endif]><!--[if gte vml 1]><v:rect
+ id="Rectangle_x0020_11" o:spid="_x0000_s1037" style='position:absolute;
+ margin-left:461.8pt;margin-top:9.1pt;width:1pt;height:1.9pt;z-index:-251649024;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;
+ mso-height-relative:page;v-text-anchor:top' o:gfxdata="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
+" o:allowincell="f" fillcolor="black" stroked="f"/><![endif]--><![if !vml]>
+style='mso-ignore:vglayout;position:absolute;z-index:251667434;margin-left:
+616px;margin-top:12px;width:1px;height:3px'><img width=1 height=3
+src="%5bms-dom2v%5d_files/image003.png" v:shapes="Rectangle_x0020_11"><![endif]>
+
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:12.9pt;border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:2.0pt'>
+  <td width=9 
+  border-left:solid windowtext 1.0pt;border-bottom:solid #E0E0E0 1.0pt;
+  border-right:none;background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=260 style='width:195.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid #E0E0E0 1.0pt;border-right:none;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=9 
+  border-left:none;border-bottom:solid #E0E0E0 1.0pt;border-right:none;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=9 
+  border-left:none;border-bottom:solid #E0E0E0 1.0pt;border-right:none;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=301 style='width:226.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid #E0E0E0 1.0pt;border-right:none;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=9 
+  border-left:none;border-bottom:solid #E0E0E0 1.0pt;border-right:none;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:11.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:11.7pt'>
+  
+  
+  10.0pt;
+  </td>
+  <td width=260 style='width:195.0pt;background:#E0E0E0;
+  padding:0in 0in 0in 0in;height:11.7pt'>
+  
+  
+
+  Browser version
+  
+  </td>
+  <td width=9 style='width:7.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;
+  height:11.7pt'>
+  
+  
+  10.0pt;
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:11.7pt'>
+  
+  
+  10.0pt;
+  </td>
+  <td width=9 style='width:7.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;
+  height:11.7pt'>
+  
+  
+  10.0pt;
+  </td>
+  <td width=301 style='width:226.0pt;background:#E0E0E0;
+  padding:0in 0in 0in 0in;height:11.7pt'>
+  
+  
+
+  Documents modes supported
+  
+  </td>
+  <td width=9 style='width:7.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;
+  height:11.7pt'>
+  
+  
+  10.0pt;
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:11.7pt'>
+  
+  
+  10.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:5.0pt'>
+  <td width=9
+  solid windowtext 1.0pt;border-bottom:solid #E0E0E0 1.0pt;border-right:none;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=260 style='width:195.0pt;border:none;border-bottom:
+  solid #E0E0E0 1.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid #E0E0E0 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid #E0E0E0 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=301 style='width:226.0pt;border:none;border-bottom:
+  solid #E0E0E0 1.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid #E0E0E0 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:5.0pt'>
+  
+  
+  4.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:13.7pt'>
+  <td width=269 colspan=2 style='width:202.0pt;border:none;
+  border-left:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'> 
+Internet
+  Explorer 7
+  </td>
+  <td width=9 style='width:7.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;background:black;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;border:none;
+  mso-border-top-alt:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:
+  13.7pt'>
+  
+  
+
+  Quirks Mode
+  </td>
+  <td width=1 style='width:1.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;background:black;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  Standards Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:4.4pt'>
+  <td width=269 colspan=2 style='width:202.0pt;border-top:none;
+  border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
+  border-right:none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:13.8pt'>
+  <td width=269 colspan=2 style='width:202.0pt;border:none;
+  border-left:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.8pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'> 
+Internet
+  Explorer 8
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:13.8pt'>
+  
+  
+  
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:13.8pt'>
+  
+  
+  
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:13.8pt'>
+  
+  
+  
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:13.8pt'>
+  
+  
+
+  Quirks Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:13.8pt'>
+  
+  
+  
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE7 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE8 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:4.4pt'>
+  <td width=269 colspan=2 style='width:202.0pt;border-top:none;
+  border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
+  border-right:none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:13.7pt'>
+  <td width=269 colspan=2 style='width:202.0pt;border:none;
+  border-left:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'> 
+Internet
+  Explorer 9
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+
+  Quirks Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE7 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE8 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE9 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;height:4.4pt'>
+  <td width=269 colspan=2 style='width:202.0pt;border-top:none;
+  border-left:solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;
+  border-right:none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;border:none;
+  border-bottom:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;height:13.85pt'>
+  <td width=269 colspan=2 style='width:202.0pt;border:none;
+  border-left:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.85pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'> 
+Internet
+  Explorer 10 (Beta)
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:13.85pt'>
+  
+  
+  
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:13.85pt'>
+  
+  
+  
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:13.85pt'>
+  
+  
+  
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:13.85pt'>
+  
+  
+
+  Quirks Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:13.85pt'>
+  
+  
+  
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE7 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  9.7pt;mso-line-height-rule:exactly;mso-pagination:none;
+  none;text-autospace:none'> 8.0pt;"Verdana","sans-serif";
+  IE8 Mode
+  
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE9 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;height:12.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=260 style='width:195.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=9 style='width:7.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+  <td width=311 colspan=2 style='width:233.0pt;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+
+  IE10 Mode
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.7pt'>
+  
+  
+  style='
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;mso-yfti-lastrow:yes;height:4.4pt'>
+  <td width=9
+  solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+  none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=260 style='width:195.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=301 style='width:226.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=9 style='width:7.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+ </tr>
+</table>
+
+
+
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:7.0pt;margin-bottom:0in;
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:98%;mso-pagination:none;
+none;punctuation-wrap:simple;text-autospace:none'>
+8.5pt;line-height:98%;"Verdana","sans-serif";
+Throughout this document, the document mode
+appears first followed by the browser version in parentheses. Only those
+document modes and browser versions for which there is a variation note will be
+listed. If the document mode is not listed, conformance to the specification
+can be assumed.line-height:98%;
+
+
+
+11.3pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:7.0pt;margin-bottom:0in;
+margin-left:10.4pt;margin-bottom:.0001pt;line-height:93%;mso-pagination:none;
+
+line-height:93%;"Verdana","sans-serif";
+Note 
+line-height:93%;"Verdana","sans-serif";&quot;Standards
+Mode&quot; in Internet Explorer 7 and &quot;IE7 Mode&quot; in Internet Explorer
+8 refer to the same document mode. IE7 Mode is the preferred way of
+referring to this document mode across all versions of the browser.
+line-height:93%;
+
+
+12
+
+
+
+margin-left:28.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+text-indent:-28.4pt;mso-pagination:none;mso-list:l3 level1 lfo7;
+tab-stops:list 28.4pt;none;punctuation-wrap:simple;
+text-autospace:none'><![if !supportLists]> 10.0pt;
+"Verdana","sans-serif";mso-fareast-
+Verdana; style='mso-list:Ignore'>1.4
+style='font:7.0pt "Times New Roman"'><![endif]>
+10.0pt;"Verdana","sans-serif";
+Standards Support Requirements </o:p></p>
+
+
+
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:2margin-bottom:
+0in;margin-left:10.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph;line-height:95%;mso-pagination:none;none;
+punctuation-wrap:simple;text-autospace:none'> 
+line-height:95%;"Verdana","sans-serif";To
+conform to <a href="http://go.microsoft.com/fwlink/?LinkId=182713">
+style='color:windowtext;>
+[DOM Level
+2 - Views]a user agent must implement all required portions
+of the specification. Any optional portions that have been implemented must
+also be implemented as described by the specification. Normative language is
+usually used to define both required and optional portions. (For more
+information, see <a href="http://go.microsoft.com/fwlink/?LinkId=90317">
+style='color:windowtext;>
+[RFC2119
+].)
+line-height:95%;
+
+
+
+
+
+
+0in;margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:
+none;none;punctuation-wrap:simple;text-autospace:none'>
+
+The following table lists the sections of <a
+href="http://go.microsoft.com/fwlink/?LinkId=182713">
+>
+[DOM Level
+2 - Views]and whether they are considered normative or
+informative.
+
+
+
+8
+
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:12.9pt;border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:2.0pt'>
+  <td width=223 style='width:167.0pt;border:solid windowtext 1.0pt;
+  border-bottom:none;background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=377 style='width:283.0pt;border:none;border-top:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-top:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:12.55pt'>
+  <td width=223 style='width:167.0pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:12.55pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'>
+
+  Sections
+  </td>
+  <td width=377 style='width:283.0pt;background:#E0E0E0;
+  padding:0in 0in 0in 0in;height:12.55pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'>
+
+  Normative/Informative
+  
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:12.55pt'>
+  
+  
+  10.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:5.15pt'>
+  <td width=223 style='width:167.0pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:solid #E0E0E0 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=377 style='width:283.0pt;border:none;border-bottom:
+  solid #E0E0E0 1.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:13.7pt'>
+  <td width=223 style='width:167.0pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:
+  13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:9.7pt;mso-line-height-rule:
+  exactly;mso-pagination:none;none;text-autospace:none'>
+
+  1
+  </td>
+  <td width=377 style='width:283.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:9.7pt;mso-line-height-rule:
+  exactly;mso-pagination:none;none;text-autospace:none'>
+
+  Normative
+  </td>
+  <td width=1 style='width:1.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;background:black;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:4.4pt'>
+  <td width=223 style='width:167.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=377 style='width:283.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:13.7pt'>
+  <td width=223 style='width:167.0pt;border-top:none;border-left:
+  solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:9.7pt;mso-line-height-rule:
+  exactly;mso-pagination:none;none;text-autospace:none'>
+
+  Appendix A-D
+  </td>
+  <td width=377 style='width:283.0pt;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:9.7pt;mso-line-height-rule:
+  exactly;mso-pagination:none;none;text-autospace:none'>
+
+  Informative
+  </td>
+  <td width=1 style='width:1.0pt;background:black;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;height:4.5pt'>
+  <td width=223 style='width:167.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:4.5pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=377 style='width:283.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.5pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=1 style='width:1.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  background:black;padding:0in 0in 0in 0in;height:4.5pt'>
+  
+  
+  3.5pt;
+  </td>
+ </tr>
+</table>
+
+
+11.95pt;mso-line-height-rule:exactly;mso-pagination:none;
+none;text-autospace:none'><!--[if gte vml 1]><v:rect id="Rectangle_x0020_12"
+ o:spid="_x0000_s1036" style='position:absolute;margin-left:461.8pt;
+ margin-top:-58.2pt;width:1pt;height:1.95pt;z-index:-251648000;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:page;mso-height-relative:page;v-text-anchor:top' o:gfxdata="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
+" o:allowincell="f" fillcolor="black" stroked="f"/><![endif]--><![if !vml]>
+style='mso-ignore:vglayout;position:relative;z-index:251668458'>
+style='position:absolute;left:616px;top:-78px;width:1px;height:3px'><img
+width=1 height=3 src="%5bms-dom2v%5d_files/image003.png" v:shapes="Rectangle_x0020_12"><![endif]>
+
+
+
+margin-left:28.4pt;margin-bottom:.0001pt;text-align:justify;text-justify:inter-ideograph;
+text-indent:-28.4pt;mso-pagination:none;mso-list:l8 level1 lfo8;
+tab-stops:list 28.4pt;none;punctuation-wrap:simple;
+text-autospace:none'><![if !supportLists]> 10.0pt;
+"Verdana","sans-serif";mso-fareast-
+Verdana; style='mso-list:Ignore'>1.5
+style='font:7.0pt "Times New Roman"'><![endif]>
+10.0pt;"Verdana","sans-serif";
+Notation </o:p></p>
+
+
+
+
+
+<p class=MsoNormal style='margin-top:0in;margin-right:23.0pt;margin-bottom:
+0in;margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:
+none;none;punctuation-wrap:simple;text-autospace:none'>
+
+The following notations are used in this document
+to differentiate between notes of clarification, variation from the
+specification, and extension points.
+
+
+
+
+none;text-autospace:none'><!--[if gte vml 1]><v:shape id="Picture_x0020_13"
+ o:spid="_x0000_s1035" type="#_x0000_t75" style='position:absolute;
+ margin-left:9.35pt;margin-top:40.25pt;width:461.6pt;height:.5pt;z-index:-251646976;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;
+ mso-height-relative:page' o:allowincell="f">
+ <v:imagedata src="%5bms-dom2v%5d_files/image001.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]> style='mso-ignore:vglayout;position:
+absolute;z-index:251669482;margin-left:13px;margin-top:54px;width:615px;
+height:1px'><img width=615 height=1 src="%5bms-dom2v%5d_files/image002.jpg"
+v:shapes="Picture_x0020_13"><![endif]> 
+
+
+
+
+
+
+
+
+
+
+
+11.75pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+
+
+
+5 / 12
+
+
+
+
+
+
+
+margin-left:10.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+[MS-DOM2V]
+ v20120725
+
+
+
+
+
+
+
+margin-left:13.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Internet
+Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+
+
+
+
+
+
+margin-left:13.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Copyright
+ 2012 Microsoft Corporation.
+
+
+
+
+
+
+
+margin-left:13.4pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Release:
+July 25, 2012
+
+
+
+
+ 
+
+
+
+
+
+<div class=WordSection6>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:2.5pt;border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:2.0pt'>
+  <td width=9 
+  
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'><a name=page6></a>
+  
+  
+  1.5pt;
+  </td>
+  <td width=51 style='width:38.0pt;border:none;
+  border-top:solid windowtext 1.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;
+  height:2.0pt'>
+  
+  
+
+  Notation
+  </td>
+  <td 
+  
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=8 style='width:6.0pt;border:none;border-top:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=512 style='width:384.0pt;border:none;
+  border-top:solid windowtext 1.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;
+  height:2.0pt'>
+  
+  
+
+  Explanation
+  
+  </td>
+  <td 
+  
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:2.0pt'>
+  
+  
+  1.5pt;
+  </td>
+  <td width=0
+  height:2.0pt'>
+  
+  1.0pt;mso-line-height-rule:exactly;mso-pagination:none;
+  none;text-autospace:none'> 1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:12.55pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:12.55pt'>
+  
+  
+  10.5pt;
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:12.55pt'>
+  
+  
+  10.5pt;
+  </td>
+  <td width=8 style='width:6.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;
+  height:12.55pt'>
+  
+  
+  10.5pt;
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:12.55pt'>
+  
+  
+  10.5pt;
+  </td>
+  <td width=0
+  height:12.55pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:5.15pt'>
+  <td width=9
+  solid windowtext 1.0pt;border-bottom:solid #E0E0E0 1.0pt;border-right:none;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=51 style='width:38.0pt;border:none;border-bottom:
+  solid #E0E0E0 1.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=11
+  none;border-bottom:solid #E0E0E0 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=8 style='width:6.0pt;border:none;border-bottom:solid #E0E0E0 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=512 style='width:384.0pt;border:none;border-bottom:
+  solid #E0E0E0 1.0pt;background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=11
+  none;border-bottom:solid #E0E0E0 1.0pt;border-right:solid windowtext 1.0pt;
+  background:#E0E0E0;padding:0in 0in 0in 0in;height:5.15pt'>
+  
+  
+  4.0pt;
+  </td>
+  <td width=0
+  height:5.15pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:13.7pt'>
+  <td width=71 colspan=3 style='width:53.0pt;border-top:none;
+  border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:
+  13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'> 
+C####
+  
+  </td>
+  <td width=8 style='width:6.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=512 style='width:384.0pt;border:none;mso-border-top-alt:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+
+  This identifies a clarification of ambiguity in the target
+  specification. This includes imprecise
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:
+  13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=0
+  height:13.7pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:9.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=51 style='width:38.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=8 style='width:6.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=512 style='width:384.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  9.7pt;mso-line-height-rule:exactly;mso-pagination:none;
+  none;text-autospace:none'> 8.0pt;"Verdana","sans-serif";
+  statements, omitted information, discrepancies,
+  and errata. This does not include data
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=0
+  height:9.7pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:9.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=51 style='width:38.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=8 style='width:6.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=512 style='width:384.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  9.7pt;mso-line-height-rule:exactly;mso-pagination:none;
+  none;text-autospace:none'> 8.0pt;"Verdana","sans-serif";
+  formatting clarifications.
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=0
+  height:9.7pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:4.4pt'>
+  <td width=71 colspan=3 style='width:53.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=8 style='width:6.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=512 style='width:384.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=11
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=0
+  height:4.4pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:13.7pt'>
+  <td width=71 colspan=3 style='width:53.0pt;border-top:none;
+  border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'> 
+V####
+  
+  </td>
+  <td width=8 style='width:6.0pt;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=512 style='width:384.0pt;padding:0in 0in 0in 0in;
+  height:13.7pt'>
+  
+  
+
+  This identifies an intended point of variability in the target
+  specification such as the use of
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:13.7pt'>
+  
+  
+  11.5pt;
+  </td>
+  <td width=0
+  height:13.7pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:9.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=51 style='width:38.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=8 style='width:6.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=512 style='width:384.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  9.7pt;mso-line-height-rule:exactly;mso-pagination:none;
+  none;text-autospace:none'> 8.0pt;"Verdana","sans-serif";
+  MAY, SHOULD, or RECOMMENDED. (See <a
+  href="http://go.microsoft.com/fwlink/?LinkId=90317">
+  >
+  [RFC2119
+  ].) This does not include extensibility
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=0
+  height:9.7pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:9.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=51 style='width:38.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=8 style='width:6.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=512 style='width:384.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  9.7pt;mso-line-height-rule:exactly;mso-pagination:none;
+  none;text-autospace:none'> 8.0pt;"Verdana","sans-serif";
+  points.
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=0
+  height:9.7pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:4.4pt'>
+  <td width=71 colspan=3 style='width:53.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=8 style='width:6.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=512 style='width:384.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=11
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=0
+  height:4.4pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;height:13.8pt'>
+  <td width=71 colspan=3 style='width:53.0pt;border-top:none;
+  border-left:solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:13.8pt'>
+  
+  margin-left:7.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+  none;none;text-autospace:none'> 
+E####
+  
+  </td>
+  <td width=8 style='width:6.0pt;padding:0in 0in 0in 0in;
+  height:13.8pt'>
+  
+  
+  
+  </td>
+  <td width=512 style='width:384.0pt;padding:0in 0in 0in 0in;
+  height:13.8pt'>
+  
+  
+
+  Because the use of extensibility points (such as optional
+  implementation-specific data) can
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:13.8pt'>
+  
+  
+  
+  </td>
+  <td width=0
+  height:13.8pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;height:9.7pt'>
+  <td width=9 style='width:7.0pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=51 style='width:38.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=8 style='width:6.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=512 style='width:384.0pt;padding:0in 0in 0in 0in;
+  height:9.7pt'>
+  
+  9.7pt;mso-line-height-rule:exactly;mso-pagination:none;
+  none;text-autospace:none'> 8.0pt;"Verdana","sans-serif";
+  impair interoperability, this profile
+  identifies such points in the target specification.
+  
+  </td>
+  <td width=11 style='width:8.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:9.7pt'>
+  
+  
+  8.0pt;
+  </td>
+  <td width=0
+  height:9.7pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;mso-yfti-lastrow:yes;height:4.4pt'>
+  <td width=9
+  solid windowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:
+  none;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=51 style='width:38.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=11
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=8 style='width:6.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=512 style='width:384.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=11
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in;height:4.4pt'>
+  
+  
+  3.5pt;
+  </td>
+  <td width=0
+  height:4.4pt'>
+  
+  
+  1.0pt;
+  </td>
+ </tr>
+</table>
+
+
+mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+99%;mso-pagination:none;none;text-autospace:none'>
+"Verdana","sans-serif";
+For document mode and browser version notation,
+see also section <a href="#page4">
+
+1.3. 
+
+
+
+
+none;text-autospace:none'><!--[if gte vml 1]><v:shape id="Picture_x0020_14"
+ o:spid="_x0000_s1034" type="#_x0000_t75" style='position:absolute;
+ margin-left:-1pt;margin-top:473.55pt;width:461.6pt;height:.5pt;z-index:-251645952;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;
+ mso-height-relative:page' o:allowincell="f">
+ <v:imagedata src="%5bms-dom2v%5d_files/image001.jpg" o:title=""/>
+</v:shape><![endif]--><![if !vml]> style='mso-ignore:vglayout;position:
+absolute;z-index:251670506;margin-left:-1px;margin-top:631px;width:615px;
+height:1px'><img width=615 height=1 src="%5bms-dom2v%5d_files/image002.jpg"
+v:shapes="Picture_x0020_14"><![endif]> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15.0pt;mso-line-height-rule:exactly;mso-pagination:none;
+
+
+
+
+
+
+6 / 12
+
+
+
+
+
+
+
+99%;mso-pagination:none;none;text-autospace:none'><i>
+
+[MS-DOM2V]  v20120725
+
+
+
+
+
+
+
+margin-left:3.0pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Internet
+Explorer Document Object Model (DOM) Level 2 Views Standards Support Document
+
+
+
+
+
+
+
+margin-left:3.0pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Copyright
+ 2012 Microsoft Corporation.
+
+
+
+
+
+
+
+margin-left:3.0pt;margin-bottom:.0001pt;mso-pagination:none;
+
+Release:
+July 25, 2012
+
+
+
+
+ 
+
+
+
+
+
