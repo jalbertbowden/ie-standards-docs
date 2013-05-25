@@ -1,0 +1,314 @@
+
+4  Appendix B: Cascading Style Sheets (CSS) Level 1 Conformance
+
+Statements
+
+This section describes variations from MAY and SHOULD requirements for features in the Cascading Style Sheets, level 1  [CSS-Level1-2008] specification (revised April 11, 2008). Only requirements that directly conflict with CSS 2.1 features in the  [CSS-Level2-2009] specification are included.
+
+4.1 [CSS-Level1-2008] Section 2.1, Anchor pseudo-classes 
+
+V0901:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 2.1: Anchor pseudo-classes
+
+All 'A' elements with an 'HREF' attribute will be put into one and only one of these groups.
+
+All Document Modes (All Versions)
+
+The :active pseudo-class is not mutually exclusive with the :link and :visited pseudo-classes. V0902:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 2.1: Anchor pseudo-classes
+
+In CSS1, anchor pseudo-classes have no effect on elements other than 'A'.
+
+Therefore, the element type can be omitted from the selector:
+
+A:link { color: red }
+
+:link { color: red }
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The anchor pseudo-classes can be applied to elements other than <a>.
+
+C0901:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 2.1: Anchor pseudo-classes
+
+UAs may choose to move an element from 'visited' to 'link' after a certain time.
+
+Quirks Mode and IE7 Mode (All Versions)
+
+Elements are not changed from visited to link after a certain time.
+
+4.2 [CSS-Level1-2008] Section 3.1, 'important' 
+
+V0903:
+
+232 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The  [CSS-Level1-2008] specification states:
+
+Section 3.1: A reader rule with an important declaration will override an author rule with a normal declaration. An author rule with an important declaration will override a reader rule with an important declaration.
+
+All Document Modes (All Versions)
+
+Precedence is given to !important reader rules over !important author rules.
+
+4.3 [CSS-Level1-2008] Section 4.1.2, Horizontal formatting 
+
+V0904:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 4.1.2: If exactly one of 'margin-left', 'width' or 'margin-right' is 'auto', the UA will assign that property a value that will make the sum of the seven equal to the parent's width. If none of the properties are 'auto', the value of 'margin-right' will be assigned 'auto'. If more than one of the three is 'auto', and one of them is 'width', then the others ('margin-left' and/or 'margin-right') will be set to zero and 'width' will get the value needed to make the sum of the seven equal to the parent's width. Otherwise, if both 'margin-left' and 'margin-right' are 'auto', they will be set to equal values. This will center the element inside its parent. If 'auto' is set as the value for one of the seven properties in an element that is inline or floating, it will be treated as if it were set to zero.
+
+All Document Modes (All Versions)
+
+Determining whether the margin-left property or the margin-right property is assigned to auto when neither property is set to auto depends on the writing direction of the block (RTL or LRT). This behavior is in accordance with the  [CSS-Level2-2009] specification.
+
+4.4 [CSS-Level1-2008] Section 5.2.6, font-size 
+
+V0905:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 5.2.6: On a computer screen a scaling factor of 1.5 is suggested between adjacent indexes.
+
+IE7 Mode, IE8 Mode, and IE9 Mode (All Versions)
+
+A fixed scaling factor of 1.5 is not used. A scaling factor of 1.2 is used in accordance with the  [CSS- Level2-2009] specification section 15.7.
+
+4.5 [CSS-Level1-2008] Section 5.4.7, text-indent 
+
+V0906:
+
+The  [CSS-Level1-2008] specification states:
+
+
+
+233 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Section 16.1:
+
+text-indent
+
+Value:	<length> | <percentage>
+
+Initial:	0
+
+Applies to:	block-level elements
+
+Inherited:	yes
+
+Percentage values:	refer to parent element's width
+
+Quirks Mode and IE7 Mode (All Versions)
+
+The percentage is evaluated with regards to the width of the containing block rather than the width of the parent element (which may not be a block-level element).
+
+4.6 [CSS-Level1-2008] Section 5.5.23, width 
+
+V0907:
+
+The  [CSS-Level1-2008] specification states:
+
+Width
+
+Value:	<length> | <percentage> | auto
+
+Initial:	auto
+
+Applies to:	block-level and replaced elements
+
+Inherited:	no
+
+Percentage values:	refer to parent element's width
+
+All Document Modes (All Versions)
+
+With the exception of absolutely positioned elements in quirks mode, percentage widths are calculated based on the width of the containing block.
+
+IE7 Mode, IE8 Mode, and IE9 Mode (All Versions)
+
+For absolutely positioned elements whose containing block is based on a block-level element, the percentage width is calculated with respect to the width of the padding box of the element.
+
+4.7 [CSS-Level1-2008] Section 5.5.24, height 
+
+V0908:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 5.5.24:
+
+Height
+
+Value:	<length> | auto
+
+Initial:	auto
+
+Applies to:	block-level and replaced elements
+
+Inherited:	no
+
+Percentage values:	N/A
+
+
+
+234 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE7 Mode, IE8 Mode, and IE9 Mode (All Versions)
+
+The percentage height is calculated according to the  [CSS-Level2-2009] specification, which allows for percentage values.
+
+4.8 [CSS-Level1-2008] Section 5.6.1, display 
+
+V0909:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 5.6.1:
+
+Display
+
+Value:	block | inline | list-item | none
+
+Initial:	block
+
+Applies to:	all elements
+
+Inherited:	no
+
+Percentage values:	N/A
+
+All Document Modes (All Versions)
+
+The default display value is inline, rather than block, in accordance with the  [CSS-Level2-2009] specifications.
+
+V0910:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 5.6.1:
+
+The initial value of 'display' is 'block', but a UA will typically have default values for all HTML elements according to the suggested rendering of elements in the HTML specification [2].
+
+All Document Modes (All Versions)
+
+The default value for blocks is inline, in accordance with the  [CSS-Level2-2009] specifications.
+
+4.9 [CSS-Level1-2008] Section 7.1, Forward-compatible parsing 
+
+V0911:
+
+The  [CSS-Level1-2008] specification states:
+
+Section 7.1: Selectors (element names, classes and IDs) can contain only the characters A-Z, 0-9, and Unicode characters 161-255, plus dash (-); they cannot start with a dash or a digit; they can also contain escaped characters and any Unicode character as a numeric code.
+
+All Document Modes (All Versions)
+
+Character encodings that require two bytes are allowed.
+
+
+235 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+V0912:
+
+The  [CSS-Level1-2008] specification states:
+
+The backslash followed by at most four hexadecimal digits (0..9A..F) stands for the Unicode character with that number.
+
+All Document Modes (All Versions)
+
+Character encodings that use six hexadecimal digits are allowed.
+
+4.10 [CSS-Level1-2008] Appendix B, CSS1 grammar 
+
+V0913:
+
+The  [CSS-Level1-2008] specification, Appendix B, states:
+
+nmchar [-a-z0-9]|{latin1}|{escape} name {nmchar}+
+
+"."{name}	{BEGIN(AFTER_IDENT); return CLASS;}
+
+Quirks Mode (All Versions)
+
+Class names that begin with an unescaped digit are allowed in all cases, even if it is a known dimension.
+
+Note In  [CSS-Level1-2008], a class name could start with a digit (for example, .55ft), unless it was a dimension (.55in). In  [CSS-Level2-2009], such classes are parsed as unknown dimensions (to allow for future additions of new units). To make .55ft a valid class,  [CSS-Level2-2009] requires the first digit to be escaped (for example, .\\35 5ft).
+
+V0914:
+
+IE7 Mode, IE8 Mode, and IE9 Mode (All Versions)
+
+Class names that begin with an unescaped digit are not allowed in any case.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+236 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+

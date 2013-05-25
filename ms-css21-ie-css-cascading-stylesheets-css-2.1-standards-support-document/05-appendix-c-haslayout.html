@@ -1,0 +1,476 @@
+
+5  Appendix C: hasLayout
+
+To optimize layout, elements in quirks mode and IE7 mode fall into one of the following categories:
+
+••The element is responsible for sizing and positioning all of its content and that of its child elements. It has layout by default.
+
+••The element is reliant upon an ancestor element for sizing and positioning and does not have layout.
+
+The hasLayout property is a Document Object Model (DOM) property that indicates when an element has a layout. It is used internally only in quirks mode and IE7 mode to implement CSS positioning. It is not used at all in IE8 mode or IE9 Mode.
+
+The property is true when:
+
+••An element has layout by default
+
+••The property of an element that does not have layout by default is assigned a value. Resetting the property value to the element’s default value resets the value of hasLayout to false.
+
+5.1 The hasLayout HTML Elements 
+
+The following HTML elements always have layout by default:
+
+••html, body
+••table, tr, th, td
+••img
+
+••hr
+
+••input, button, select, textarea, fieldset, legend
+••iframe, embed, object, applet
+••marquee
+
+5.2 The hasLayout Property Triggers and Resets 
+
+For elements that do not have layout by default, the following table lists the set of properties that enable or reset the hasLayout property. For example, assigning a width value to a div element gives it layout. Resetting the width to auto disables layout.
+
+
+
+
+
+Mode
+Property
+Trigger Value(s)
+Reset Values(s)
+
+
+
+
+Quirks, IE7
+width
+any
+auto
+
+
+
+
+Quirks, IE7
+height
+any
+auto
+
+
+
+
+Quirks, IE7
+zoom
+any
+normal
+
+
+
+
+Quirks, IE7
+position
+absolute
+static, relative
+
+
+
+
+Quirks, IE7
+display
+inline-block
+All other display values
+
+
+
+
+
+
+
+237 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+
+Mode
+
+
+Property
+
+
+Trigger Value(s)
+
+
+Reset Values(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quirks, IE7
+
+
+float
+
+
+left or right
+
+
+none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quirks, IE7
+
+
+writing-mode
+
+
+tb-rl
+
+
+lr-tb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+min-height
+
+
+any
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+max-height
+
+
+any
+
+
+none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+min-width
+
+
+any
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+max-width
+
+
+any
+
+
+none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+overflow
+
+
+any
+
+
+visible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+overflow-x
+
+
+any
+
+
+Visible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+overflow-y
+
+
+any
+
+
+visible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IE7
+
+
+position
+
+
+fixed
+
+
+static, relative
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.3 The hasLayout Property and CSS2.1 
+
+The hasLayout property conflicts with a number of normative CSS rules, although it is similar in concept to block formatting contexts. This section discusses those issues.
+
+••Resolving Containing Blocks
+
+In IE7 mode, only elements that have layout can be containing blocks, which conflicts with CSS2.1 normative definition (see 10.1). Not all block elements have layout by default, yet block elements should be the containing blocks of all their children that have relative or static positioning.
+
+As a result, IE7 mode may not treat the following HTML elements as containing blocks when it otherwise should:
+
+••div
+
+••p
+
+••ul
+
+••ol
+
+••pre
+••h1 through h6
+••form
+••fieldset
+••dl
+••blockquote
+
+Very often, the position property of a div element is assigned a value of relative to ensure that the absolutely positioned elements within are bound by the containing block of the div element. In
+
+
+
+238 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+quirks mode, the absolutely positioned child element escapes the boundaries of its containing block. It then is typically positioned with respect to the body element.
+
+Windows® Internet Explorer® in IE8 mode and IE9 mode has addressed the following issues. See section  2.2.26.
+
+••Collapsing Margins
+
+The  [CSS-Level2-2009] specification states that the top margin of a child element can collapse with the top margin of its parent element as long as the parent has no padding or border.
+
+In IE7 mode, these margins do not collapse when the parent element has layout. See section  2.2.16 and section  2.1.27.
+
+••Laying Out and Clearing Floats
+
+In IE7 mode, when an element has layout, its box size expands to include all floated child elements, so that clearing floats has no effect outside the float’s layout container.
+
+In addition, if a non-floated element follows a float, the content box of the element is displaced by the float and not just by its content.
+
+••Drawing Background Colors and Images
+
+All borders are drawn on top of box backgrounds, so that when the border style is not continuous (such as a dotted border), the specified background color shows.
+
+In IE7 mode, the background color shows in a non-continuous border only when the element does not have layout.
+
+Background images are positioned within the element’s padding box by default so that the background image should not bleed underneath the border. The exception is when the image is tiled and positioned at 0,0; in this instance, the image bleeds underneath the border.
+
+In IE7 mode, a tiled background image does not bleed under the border if the element has layout.
+
+••Laying Out Form Elements
+
+In IE7 mode, the horizontal margins of the input elements text and textarea in an element with layout is the sum of the horizontal margins of their containing boxes up to, but not including, the next hasLayout container.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+239 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+

@@ -1,0 +1,106 @@
+
+6  Appendix D: Almost Standards Mode
+
+Line height calculations as specified in  [CSS-Level2-2009] can sometimes result in broken page rendering. In particular, any design that involves table cells and other blocks that contain only images, such as custom buttons or controls that are a map of GIF images laid out using an invisible table, cause these broken pages. Almost standards mode was developed to fix these problems and enable these pages to render correctly.
+
+6.1 How the Almost Standards Mode is Implemented 
+
+Almost standards mode is triggered only when the DOCTYPE prolog specifies:
+
+••One of the following public identifiers:
+••"-//W3C//DTD XHTML 1.0 Transitional//EN"
+••"-//W3C//DTD XHTML 1.0 Frameset//EN"
+••One of the following public identifiers with a system identifier:
+••"-//W3C//DTD HTML 4.0 Transitional//EN"
+••"-//W3C//DTD HTML 4.0 Frameset//EN"
+••"-//W3C//DTD HTML 4.01 Transitional//EN"
+••"-//W3C//DTD HTML 4.01 Frameset//EN"
+
+These Document Type Definitions (DTDs) are the only triggers for almost standards mode. Users cannot trigger almost standards mode through the user interface of their browsers because it is not listed as an option on the developer toolbar.
+
+6.2 Line Height Calculations in Almost Standards Mode 
+
+Inline elements contribute to line height if and only if one of the following is true.
+
+If the element:
+
+••Contains text characters
+••Has a nonzero border width
+••Has a nonzero margin
+••Has a nonzero padding
+••Has a background image
+••Has vertical-align set to a value other than baseline
+
+Note that a line break is not considered a text character for this definition unless it is the only content of a line box. In that case, the line box height remains the uppermost inline box top and the lowermost inline box bottom on the line, regardless of the specified line height.
+
+If an img element is the sole content of a table cell, the line box height of the cell line box height is adjusted to zero.
+
+
+
+240 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+6.3 The Almost Standards Mode and CSS2.1 
+
+Almost standards mode conflicts with the normative statements found in Chapter 10 of the  [CSS- Level2-2009] specification:
+
+••In subsection 10.8, the specification states:
+
+4. If the resulting height is smaller than the minimal height of line boxes for this block, as specified by the 'line-height' property, the height is increased to be that minimal height.
+
+Empty inline elements generate empty inline boxes, but these boxes still have margins, padding, borders and a line height, and thus influence these calculations just like elements with content.
+
+See section  2.1.51.
+
+••In subsection 10.8.1, the specification states:
+
+On a block-level, table-cell, table-caption or inline-block element whose content is composed of inline-level elements, 'line-height' specifies the minimal height of line boxes within the element. The minimum height consists of a minimum height above the block's baseline and a minimum depth below it, exactly as if each line box starts with a zero-width inline box with the block's font and line height properties (what TEX calls a "strut").
+
+See section  2.1.53.
+
+On an inline-level element, 'line-height' specifies the height that is used in the calculation of the line box height (except for inline replaced elements, where the height of the box is given by the 'height' property).
+
+See section  2.1.5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+241 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+

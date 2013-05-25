@@ -1,0 +1,5936 @@
+﻿
+3  Appendix A: Test Suite Failures
+
+This section contains a set of test cases from W3C CSS 2.1 Conformance Test Suites that Windows® Internet Explorer®, in its default settings, does not pass. This appendix contains test cases from  [W3C-CSS2.1-TestSuite-20110323] published March 23, 2011 that apply to Windows® Internet Explorer® 8, Windows® Internet Explorer® 9, and Windows® Internet Explorer® 10.
+
+Unless otherwise specified, any test case failure from executing this set of test cases does not imply lack of conformance to the CSS specification.
+
+3.1 absolute-non-replaced-max-height-003 
+
+Expected Results
+
+The blue box should be vertically centered inside the black box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The blue box is not vertically centered inside the black box.
+
+The max-height property is ignored when position is absolute. Only the value of the height property is used in the calculation and not the max-height.
+
+Related Variation
+
+Section  2.1.51, V0089
+
+3.2 absolute-non-replaced-max-height-004 
+
+Expected Results
+
+The blue box should be vertically centered inside the black box.
+
+IE8 Mode (All Versions)
+
+The blue box is not vertically centered inside the black box.
+
+The max-height property is ignored when position is absolute. Only the value of the height property is used in the calculation and not the max-height.
+
+Related Variation
+
+Section 2.1.51, V0089
+
+3.3 absolute-non-replaced-max-height-010 
+
+Expected Results
+
+The blue box should be vertically centered inside the black box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The blue box is not vertically centered inside the black box.
+
+
+142 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The max-height property is ignored when position is absolute. Only the value of the height property is used in the calculation and not the max-height.
+
+Related Variation
+
+Section 2.1.51, V0089
+
+3.4 absolute-non-replaced-max-height-011 
+
+Expected Results
+
+The blue box should be vertically centered inside the black box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The blue box is not vertically centered inside the black box.
+
+The max-height property is ignored when position is absolute. Only the value of the height property is used in the calculation and not the max-height.
+
+Related Variation
+
+Section 2.1.51, V0089
+
+3.5 absolute-non-replaced-width-005 
+
+Expected Results
+
+The blue box should fill the upper left corner of the black box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The blue box fills the upper right corner inside the black box.
+
+The test fails because the value for the margin-left property is not recalculated and the value for margin-right is not set to 0 when the direction property is set to rtl.
+
+Related Variation
+
+Section  2.1.47, V0084
+
+3.6 absolute-non-replaced-width-017 
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears behind the horizontal stripe.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+
+143 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.7 absolute-non-replaced-width-018 
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears behind the horizontal stripe.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.8 absolute-non-replaced-width-019 
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears behind the horizontal stripe.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.9 absolute-non-replaced-width-020 
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears behind the horizontal stripe.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+
+
+144 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.10 absolute-non-replaced-width-021 
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears behind the horizontal stripe.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.11 absolute-non-replaced-width-022 
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears behind the horizontal stripe.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.12 absolute-non-replaced-width-023 
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears to the right of the green square.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.13 absolute-non-replaced-width-024 
+
+Expected Results
+
+
+
+145 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears to the right of the green square.
+
+The test fails because the shrink-to-fit calculation ignores the max-width property.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.14 abspos-non-replaced-width-margin-000 
+
+Expected Results
+
+The test passes if the test results are identical to the test reference at:
+
+ http://test.csswg.org/suites/css2.1/20110323/html4/abspos-non-replaced-width-margin-000- ref.htm
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The results are not identical to the test reference.
+
+The test fails because the max-width property is ignored by width computation when position is absolute.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.15 abspos-paged-001 
+
+Expected Results
+
+When displayed in paged media, the word PASS should appear on the first page. The next three pages should be blank.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8 and Internet Explorer 9)
+
+P appears on the first page, A appears on the second page, S appears on the third page, and S appears on the fourth page.
+
+The test fails because absolute positioning considers each page and initial containing block. However, the expected behavior is to consider the entire document as the initial containing block.
+
+3.16 abspos-replaced-width-margin-000 
+
+Expected Results
+
+The results should be identical to the test reference at:
+
+
+146 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+ http://test.csswg.org/suites/css2.1/20110323/html4/abspos-replaced-width-margin-000-ref.htm
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The results are not identical to the test reference.
+
+The test fails because the max-width property is ignored by width computation when position is absolute.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.17 active-selector-002 
+
+Expected Results
+
+The test passes if clicking the links in the test, or activating them with the keyboard, makes the links green in exactly the same way.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+Link C does not turn green and none of the links change to green when they are activated with the keyboard.
+
+The test case fails because the test assumes that the span element and the link cannot both be in the active state.
+
+For more information, see  http://lists.w3.org/Archives/Public/public-css- testsuite/2010Dec/0149.html
+
+3.18 after-content-display-003 
+
+Expected results
+
+The test passes if there are two lines of "Filler text". The second line should be preceded with a bullet list-marker (a "disc" as a small filled-in circle).
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is only one line of "Filler text" and there is no bullet list-marker that is rendered.
+
+The test case fails because the list-item value of the display property has no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+
+
+
+147 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.19 allowed-page-breaks-001a 
+
+Expected Results
+
+There should be six pages when printing out the content or when viewing the content on paged media.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There are only three pages of output when viewed on paged media.
+
+The test fails because extra pages are generated when setting page-break properties on tables.
+
+Related Variation
+
+Section  2.1.68, V0129
+
+3.20 allowed-page-breaks-001b 
+
+Expected results
+
+The test passes if six pages are displayed when printing out the content or when viewing the content on paged media.
+
+Actual results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There are nine pages when printing out the content or when viewing the content in a print preview. The test fails because extra pages are generated when setting page-break properties on tables.
+
+Related Variation
+
+Section  2.1.68, V0129
+
+3.21 allowed-page-breaks-001c 
+
+Expected Results
+
+The test passes if the blue text accurately describes the page number on which it is displayed when viewed in paged media, such as print preview.
+
+Lines A-T must appear on the 18 pages of this test. The blue text must accurately describe the page numbers.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+"Page 2 Line A" appears on the first page.
+
+The test fails because extra pages are generated when setting page-break properties on tables.
+
+Related Variation
+
+
+
+148 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Section  2.1.68, V0129
+
+3.22 allowed-page-breaks-003 
+
+Expected Results
+
+The test passes if there are two pages and lines D through F are on the second page when viewed in paged media, such as print preview.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+When viewed in paged media, the test displays four pages and lines D through F are on the third page.
+
+The test fails because page breaks are added even though the expected behavior is to add page breaks only if there is content before or after the break.
+
+3.23 at-import-008 
+
+Expected Results
+
+All text on the page should be green when viewed in paged media.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text on the page is not green when viewed in paged media.
+
+The test fails because the @import rule is ignored when the media type is specified.
+
+Related Variation
+
+Section  2.1.20, V0025
+
+3.24 at-page-rule-001 
+
+Expected Results
+
+The corner of the blue box should be centered on the page when displayed in paged media.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The corner of the blue box is horizontally centered but not vertically centered on the page when displayed in paged media.
+
+The test fails because the invalid import @-rule is the only rule that is ignored; the subsequent declarations should also be ignored.
+
+3.25 background-position-202 
+
+Expected Results
+
+The test passes if the fuchsia diamond is surrounded by a ring in all of the boxes on the page.
+
+149 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The diamond inside <div class="case negative negative3 t10"> is outside of the corresponding ring.
+
+The test fails because the comma is invalid in the CSS 2.1 background-position declaration block. The comma is valid in the CSS3 background-position declaration but CSS3 is not supported in IE8 Mode.
+
+3.26 background-root-101 
+
+Expected Results
+
+The test passes if the page background is green and the text on the page is bold.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The background of the page is red.
+
+The test fails because dynamic updates to the head element do not update styles that are already rendered.
+
+3.27 before-after-display-types-001 
+
+Expected Results
+
+The test passes if the results match the test reference at  http://test.csswg.org/suites/css2.1/20110323/html4/before-after-display-types-001-ref.htm.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The test results do not match the test reference.
+
+The test fails because border spacing is not applied correctly to generated content elements when set to display as table elements.
+
+3.28 before-after-dynamic-attr-001 
+
+Expected Results
+
+The text that appears should be "before after!".
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The only text that appears is "after!".
+
+The test fails because dynamic updates to generated content do not update styles that are applied to generated content.
+
+Related Variation
+
+
+
+150 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Section  2.1.58, V0106
+
+3.29 before-after-dynamic-restyle-001 
+
+Expected Results
+
+The test passes if there is a green box around the text "Before".
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is no green box around the text "Before".
+
+The test fails because dynamic updates to generated content do not update styles that are applied to generated content.
+
+Related Variation
+
+Section  2.1.58, V0106
+
+3.30 before-after-table-whitespace-001 
+
+Expected Results
+
+The test passes if the results match the test reference at  http://test.csswg.org/suites/css2.1/20110323/html4/before-after-table-whitespace-001-ref.htm.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The test results do not match the test reference.
+
+The test fails because whitespace is not ignored when generating anonymous table elements.
+
+3.31 before-content-display-003 
+
+Expected Results
+
+The test passes if there are two lines of "Filler text". The top "Filler text" should be preceded with a bullet marker (a "disc" as a small filled-in circle).
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+No bullets markers are rendered.
+
+The test case fails because the list-item value of the display property has no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+
+
+151 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.32 bidi-002 
+
+Expected Results
+
+The test passes if the two blocks are identical, including overflow.
+
+Actual Results
+
+The two blocks are not identical because there is no overflow on the first span element of the second block.
+
+IE8 Mode and IE9 Mode (All Versions)
+
+This test fails because the Unicode 'RIGHT-TO-LEFT-OVERRIDE' (U+202E) character changes the position of surrounding white space, thus affecting white-space collapsing.
+
+Related Variation
+
+Section  2.1.83, V0499
+
+3.33 bidi-004 
+
+Expected Results
+
+The two blocks should be identical, including overflow.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two blocks are not identical because there is no space between "lll" and "mmm" in the last span element of the second block.
+
+The test fails because Unicode 'RIGHT-TO-LEFT-OVERRIDE' (U+202E) character changes the position of surrounding white space, thus affecting white-space collapsing.
+
+Related Variation
+
+Section  2.1.83, V0499
+
+3.34 bidi-005b 
+
+Expected Results
+
+The test passes if the two blocks on the page are identical, including overflow.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two blocks are not identical. The text in the second block appears as "a  bc  de  fg  hi  jk  lm"
+
+The test fails because spacing is placed on characters following the writing direction instead of inter-character space.
+
+3.35 bidi-006b 
+
+Expected Results
+
+
+152 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test passes if the two blocks are identical, including overflow.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two blocks are not identical. The text in the second block appears as "a  bc  de  fg  hi  jk  lm"
+
+The test fails because spacing is placed on characters following the writing direction instead of inter-character space.
+
+3.36 bidi-007b 
+
+Expected Results
+
+The test passes if the two blocks are identical, including overflow.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two blocks are not identical. The text in the second block appears as "a  bc  de  fg  hi  jk  lm"
+
+The test fails because spacing is placed on characters following the writing direction instead of inter-character space.
+
+3.37 bidi-009b 
+
+Expected Results
+
+The test passes if the two blocks are identical, including overflow.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two blocks are not identical. The text in the second block appears as "a  bc  de  fg  hi  jk  lm"
+
+The test fails because spacing is placed on characters following the writing direction instead of inter-character space.
+
+3.38 bidi-010b 
+
+Expected Results
+
+The test passes if the two blocks are identical, including overflow.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two blocks are not identical. The text in the second block appears as "a  bc  de  fg  hi  jk  lm"
+
+The test fails because spacing is placed on characters following the writing direction instead of inter-character space.
+
+
+
+
+
+153 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.39 bidi-011 
+
+Expected Results
+
+The test passes if the two lines are identical.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two lines are not identical. The second line has slightly less space between the two text blocks that read TEST.
+
+The test fails because spacing is placed on characters following the writing direction instead of inter-character space.
+
+3.40 bidi-breaking-002 
+
+Expected results
+
+The test passes if in each pair of silver boxes, the two patterns are identical.
+
+Actual results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The two patterns in each pair of silver boxes are not identical because the text runs that are in the last pair of silver boxes are not identical.
+
+The test fails because the br element is treated as a line separator even though the test expects it to be treated as a paragraph separator.
+
+3.41 bidi-breaking-003 
+
+Expected results
+
+The test passes if in each pair of silver boxes, the two patterns are identical.
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The two patterns in each pair of silver boxes are not identical because the text runs that are in the last pair of silver boxes are not identical.
+
+The test fails because the br element is treated as a line separator even though the test expects it to be treated as a paragraph separator.
+
+3.42 block-in-inline-empty-001 
+
+Expected Results
+
+The test passes if there are two blue lines and an "x" appears above the first blue line.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+
+
+154 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There are no blue lines that appear on the page.
+
+The test fails because borders are not drawn for anonymous inline boxes.
+
+3.43 block-in-inline-empty-004 
+
+Expected Results
+
+The test passes if there are two blue lines and an "x" appears above the first blue line.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There are no blue lines that appear on the page.
+
+The test fails because borders are not drawn for anonymous inline boxes.
+
+3.44 block-in-inline-insert-012 
+
+Expected Results
+
+The test passes if the right side of the border appears after the inserted inline block.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The right side of the border does not appear after the inserted inline block.
+
+The test fails because borders are not drawn for anonymous inline boxes.
+
+3.45 block-in-inline-insert-015 
+
+Expected Results
+
+The test passes if the right side of the border appears after the inserted inline block.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The right side of the border does not appear after the inserted inline block.
+
+The test fails because borders are not drawn for anonymous inline boxes.
+
+3.46 block-in-inline-insert-016a 
+
+Expected Results
+
+The test passes if the right side of the border appears after the inserted inline block.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The right side of the border does not appear after the inserted inline block.
+
+
+
+155 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because borders are not drawn for anonymous inline boxes.
+
+3.47 block-in-inline-nested-002 
+
+Expected Results
+
+The test passes if there is a blue border to the left of the third line.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+A blue border does not appear to the left of the third line.
+
+When the writing direction is right-to-left, the border is not drawn for the final line of inline text.
+
+3.48 block-in-inline-whitespace-001a 
+
+Expected Results
+
+The test passes if there is a blue border and no other text on the last line on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+A blue border does not appear on the last line of the page.
+
+The test fails because borders are not drawn for anonymous inline boxes.
+
+3.49 block-in-inline-whitespace-001b 
+
+Expected Results
+
+The test passes if there is a blue border and no other text on the last line on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+A blue border does not appear on the last line of the page.
+
+The test fails because borders are not drawn for anonymous inline boxes.
+
+3.50 border-style-applies-to-016 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+
+
+156 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.51 border-style-applies-to-017 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.52 border-style-applies-to-018 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.53 border-style-applies-to-020 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+
+
+157 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.54 border-style-applies-to-022 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.55 border-style-applies-to-023 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.56 border-style-applies-to-024 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.57 border-style-applies-to-025 
+
+Expected Results
+
+
+
+158 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.58 border-style-applies-to-026 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.59 border-style-applies-to-027 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are thin red lines on the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+Related Variation
+
+Section  2.1.31, V0046
+
+3.60 border-width-011 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+159 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There is a thick, red border around the line of text.
+
+The test fails because the computed width of a border should be 0 when there is a border-width defined but no border-style defined.
+
+3.61 border-width-012 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red block that almost fits the entire width of the page.
+
+The test fails because the hidden keyword is not supported on the border-style property.
+
+3.62 case-sensitive-004 
+
+Expected Results
+
+The test passes if all sentences on the page are green.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The fifth and sixth sentences are red.
+
+The test fails because :lang() matching should apply only to ASCII characters. Unicode characters are invalid.
+
+3.63 case-sensitive-005 
+
+Expected Results
+
+The test passes if the text "99" appears below the first line of text on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "09" appears instead of "99".
+
+The test fails because counter identifiers are treated as case-insensitive.
+
+3.64 character-encoding-017 
+
+Expected results
+
+There should be a green rectangle drawn for this test.
+
+Actual results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+
+
+160 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There is a small green line at the bottom of a red rectangle but there is no green rectangle that is visible.
+
+The test case fails because the style sheet parsing is expected to stop when there is a byte-order mark (in this case, EF BB BF) that conflicts with the @charset declaration.
+
+Related Variation
+
+Section  2.1.9, V0008
+
+3.65 charset-attr-001 
+
+Expected results
+
+The text passes if the text is green.
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The text "This should be green" is red.
+
+The test case fails because the charset attribute on a link element is ignored.
+
+Related Variation
+
+Section  2.1.9, V0008
+
+3.66 clear-clearance-calculation-003 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red block on the page
+
+The test fails because elements that have the clear property applied will collapse margins when they are empty.
+
+3.67 clip-001 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red from the overlapped layer is visible.
+
+The test fails because setting the clip property dynamically does not cause an update to styles that are already rendered.
+
+
+
+161 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.68 containing-block-017 
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a small amount of red on page.
+
+The test fails because the border-width is incorrectly calculated into the width of the wrapping line of text.
+
+3.69 containing-block-024 
+
+Expected Results
+
+The test passes if there is a black box on the first page when viewed in paged media, such as print preview.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The black box appears on the second page.
+
+The @media rule is ignored when a media type is specified.
+
+3.70 content-067 
+
+Expected Results
+
+The test passes if the text "PASS PASS" appears on the first line of the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "PASS PASS" does not appear on the first line.
+
+The test fails because the content of a meta element is not displayed when its display property is set to block.
+
+3.71 content-072 
+
+Expected Results
+
+The test passes if the word "defer" appears on the first line of the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The word "defer" does not appear on the page.
+
+
+
+
+162 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because the content of a script element is not displayed when its display property is set to block.
+
+3.72 content-085 
+
+Expected Results
+
+The test passes if the text "PASS PASS" appear on the first line of the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "PASS PASS" does not appear on the page.
+
+The test fails because the content of a meta element is not displayed when its display property is set to block.
+
+3.73 content-090 
+
+Expected Results
+
+The test passes if there is a box with the word "ecmascript" in it.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is no box with the word "ecmascript" in it.
+
+The test fails because the content of a script element is not displayed when its display property is set to block.
+
+3.74 content-096 
+
+Expected Results
+
+The test passes if the word "all" appears in the top left corner of the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The word "all" does not appear on the page.
+
+The test fails because the content of a link element is not displayed when its display property is set to block.
+
+3.75 content-100 
+
+Expected Results
+
+The test passes if the text "nohref" appears in a box on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+
+163 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The text "nohref" does not appear on the page.
+
+The test fails because the content of an area element is not displayed when its display property is set to block.
+
+3.76 content-131 
+
+Expected Results
+
+The test passes if the text "PASS PASS" appears on the first line of the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "PASS PASS" does not appear on the page.
+
+The test fails because the content of a meta element is not displayed when its display property is set to block.
+
+3.77 content-138 
+
+Expected Results
+
+The test passes if only the words "PASS PASS" appear in the box on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The words "PASS PASS" does not appear on the page.
+
+The test fails because the content of a script element is not displayed when its display property is set to block.
+
+3.78 content-151 
+
+Expected Results
+
+The test passes if the word "data" appears in a box on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The word "data" does not appear on the page.
+
+The test fails because the content of a script element is not displayed when its display property is set to block.
+
+3.79 content-counter-010 
+
+Expected Results
+
+The test passes if the two lines of Armenian text are identical.
+
+Actual Results
+
+
+164 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (Internet Explorer 8)
+
+The two lines of Armenian text are not identical.  There is an extra character inserted before Ր .
+
+The test fails because the Armenian number for 7000 is incorrectly represented as "Ո Ւ " when counters are used.
+
+3.80 content-counters-010 
+
+Expected Results
+
+The test passes if the two lines of Armenian text are identical.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The two lines of Armenian text are not identical.  There is an extra character inserted before Ր .
+
+The test fails because the Armenian number for 7000 is incorrectly represented as "Ո Ւ " when counters are used.
+
+3.81 content-type-000 
+
+Expected Results
+
+The test passes if the background of the text sample is bright green. There should be no red.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The background of the text sample is red.
+
+The test fails because a stylesheet with a Content-Type of text/plain is not rejected.
+
+3.82 content-type-001 
+
+Expected Results
+
+Test passes if the background of the text sample is bright green. There should be no red.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The background of the text sample is red.
+
+The test fails because a stylesheet with a Content-Type of text/plain is not rejected.
+
+3.83 counter-reset-increment-002 
+
+Expected results
+
+The test passes if the two columns of numbers are identical.
+
+Actual results
+
+
+
+165 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The two columns of numbers are not identical.
+
+The test case fails because counters reset by a parent element are not used by the child elements when counting. The counter-increment property can be used only outside of pseudo-elements.
+
+Related Variation
+
+Section  2.1.61, V0109
+
+3.84 cursor-020 
+
+Expected Results
+
+The test passes if the cursor is rendered as a text cursor when the pointing device is hovering over the text sample.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text cursor is not rendered as a text cursor when the pointing device is hovering over the text sample.
+
+The test fails because an invalid image cursor does not fall back to the specified cursor value.
+
+3.85 cursor-021 
+
+Expected Results
+
+The test passes if the cursor is rendered as a text cursor when the pointing device is hovering over the text sample.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text cursor is rendered as the specified cursor when hovering over the text sample.
+
+The test fails because the declaration should be ignored when there is a cursor value with only an image defined and no fallback.
+
+3.86 cursor-022 
+
+Expected Results
+
+The test passes if the pointing device, when hovered over the text sample, is the text cursor (often rendered as an I-beam). The test fails if the pointing device is a crosshair (for example, short line segments resembling a "+" sign).
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The cursor is a crosshair when the pointing device is hovered over the text sample.
+
+
+
+
+166 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because the entire declaration should be ignored when there is an invalid value within the cursor value set.
+
+3.87 default-attribute-selector-005 
+
+Expected Results
+
+The test passes if there is a green stripe and no red.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red stripe instead of a green stripe.
+
+The test fails because the default values of element attributes are not expanded prior to selector matching.
+
+3.88 display-018 
+
+Expected Results
+
+The test passes if the three "Filler Text" are all on the same line.
+
+Actual Results
+
+All Document Modes (All Versions)
+
+The three "Filler Text" are on three different lines.
+
+The test fails because table elements cannot be set to display:inline.
+
+3.89 dynamic-top-change-001 
+
+Expected results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There is a red rectangle above a green square.
+
+The test case fails because the inherit keyword does not inherit from a style that has been dynamically changed.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.90 dynamic-top-change-002 
+
+Expected results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+
+167 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There is a red rectangle above a green square.
+
+The test case fails because the inherit keyword does not inherit from a style that has been dynamically changed .
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.91 dynamic-top-change-003 
+
+Expected results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There is a red rectangle above a green square.
+
+The test case fails because the inherit keyword does not inherit from a style that has been dynamically changed.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.92 dynamic-top-change-004 
+
+Expected results
+
+There should be no red.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There is a red rectangle above a green square.
+
+The test case fails because the inherit keyword does not inherit from a style that has been dynamically changed.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.93 dynamic-top-change-005 
+
+Expected results
+
+There should be no red.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+
+168 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There is a red rectangle above a green square.
+
+The test case fails because the inherit keyword does not inherit from a style that has been dynamically changed.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.94 dynamic-top-change-005a 
+
+Expected results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There is a red rectangle above a green square.
+
+The test case fails because the inherit keyword does not inherit from a style that has been dynamically changed.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.95 first-letter-dynamic-002 
+
+Expected Results
+
+The results of this test should match the results as seen in the reference test that is located at  http://test.csswg.org/suites/css2.1/20110323/html4/first-letter-dynamic-002-ref.htm .
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The text is "0" instead of the expected <1>0</1>.
+
+The test case fails because the inherit keyword does not inherit from a style that has been dynamically changed.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.96 first-letter-quote-002 
+
+Expected Results
+
+The test passes if only the first quotation mark is green.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+
+
+169 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The first quotation mark and the capital T are both green.
+
+The test fails because nested elements are ignored for the purpose of identifying the content’s first letter.
+
+3.97 first-letter-quote-005 
+
+Expected Results
+
+The test passes if only the first quotation mark is green.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The first quotation mark and the capital T are both green.
+
+The test fails because nested elements are ignored for the purpose of identifying the content’s first letter.
+
+3.98 first-line-floats-002 
+
+Expected results
+
+The test passes if the text is green.
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The text on the page is red.
+
+The test fails because elements contained within a parent of a :first-line pseudo-element incorrectly inherit from the parent element instead of the :first-line pseudo-element.
+
+Related Variation
+
+Section  2.1.16, V0018
+
+3.99 first-line-inherit-002 
+
+Expected results
+
+There should be no red.
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The background color of the two span elements is red.
+
+The test fails because elements contained within a parent of a :first-line pseudo-element incorrectly inherit from the parent element instead of the :first-line pseudo-element.
+
+Related Variation
+
+Section  2.1.16, V0018
+
+
+
+170 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.100  first-line-inherit-003
+
+Expected Results
+
+The results should match the reference test from  http://test.csswg.org/suites/css2.1/20110323/html4/first-line-inherit-003-ref.htm
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results do not match the reference test.
+
+The test fails because elements contained within a parent of a :first-line pseudo-element incorrectly inherit from the parent element instead of the :first-line pseudo-element.
+
+Related Variation
+
+Section  2.1.16, V0018
+
+3.101  first-line-pseudo-013
+
+Expected results
+
+There should be two unbroken lines of green.
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The second green line is broken with a red rectangle where the acute accent (&acute;) character is.
+
+The test fails because the É (&Eacute;) character does not align properly when vertical-align is set to anything other than baseline.
+
+Related Variation
+
+Section  2.1.53, V0090
+
+3.102  first-line-pseudo-016
+
+Expected results
+
+There should be two unbroken lines of green.
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The second green line is broken with a red rectangle where the acute accent (&acute;) character is.
+
+The test fails because the acute accent (&acute;) character does not properly align unless the vertical-align property is set to baseline.
+
+Related Variation
+
+Section  2.1.53, V0090
+
+
+
+171 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.103  first-page-selectors-003
+
+Expected Results
+
+The test passes if the text "When printed the top left corner of this box must be in the exact center of this page" is in the center of the first page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The text "When printed the top left corner of this box must be in the exact center of this page" is not in the center of the first page.
+
+The test fails because the test assumes that the page is to be matched by @page:first.
+
+For more information, see  http://lists.w3.org/Archives/Public/public-css- testsuite/2010Nov/0121.html
+
+3.104  first-page-selectors-004
+
+Expected Results
+
+The text "When printed the top left corner of this box must be in the exact center of this page" should be in the center of the first page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The text "When printed the top left corner of this box must be in the exact center of this page" is not in the center of the first page.
+
+The test fails because the test assumes that the page is to be matched by @page:first.
+
+For more information, see  http://lists.w3.org/Archives/Public/public-css- testsuite/2010Nov/0121.html
+
+3.105  float-non-replaced-width-007
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square to the right of the green square.
+
+The test fails because the max-width property is determined by the width computation of floated elements.
+
+3.106  float-non-replaced-width-008
+
+Expected Results
+
+The test fails if there is red on the page.
+
+
+172 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square to the right of the green square.
+
+The test fails because the max-width property is determined by the width computation of floated elements.
+
+3.107  float-non-replaced-width-009
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square to the right of the green square.
+
+The test fails because the max-width property is determined by the width computation of floated elements.
+
+3.108  float-non-replaced-width-011
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square to the right of the green square.
+
+The test fails because the max-width property is by the width computation of floated elements.
+
+3.109  floats-rule3-outside-left-002
+
+Expected Results
+
+The test passes if the blue line should be in the middle of the page as seen in the test reference at  http://test.csswg.org/suites/css2.1/20110323/html4/floats-rule3-outside-left-002-ref.htm
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The blue line is at the top of the page.
+
+The test fails because overlapping areas of floating elements are ignored when those floating elements are nested inside other blocks.
+
+3.110  floats-rule3-outside-right-002
+
+Expected Results
+
+
+
+173 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test results should match the test reference at  http://test.csswg.org/suites/css2.1/20110323/html4/floats-rule3-outside-right-002-ref.htm
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The blue line is at the top of the page.
+
+The test fails because overlapping areas of floats are ignored when those floats are nested inside other blocks.
+
+3.111  floats-wrap-bfc-006
+
+Expected Results
+
+The test results should match the reference test that is located at  http://test.csswg.org/suites/css2.1/20110323/html4/floats-wrap-bfc-006-ref.htm
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results do not match the test reference.
+
+The test case fails because the width and height of table boxes of table captions have no effect on the width and height of table boxes.
+
+Related Variation
+
+Section  2.2.55, V0272
+
+3.112  floats-wrap-top-below-bfc-001l
+
+Expected Results
+
+The test passes if the second blue rectangle is in contact with the left side of the containing box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The second blue rectangle is vertically aligned with the blue rectangle at the top of the box.
+
+The test fails because floated elements do not float as high as possible when BFC elements are wider than the previous floating element location that needs to be cleared.
+
+3.113  floats-wrap-top-below-bfc-001r
+
+Expected Results
+
+The test passes if the second blue rectangle is in contact with the left side of the containing box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The second blue rectangle is vertically aligned with the blue rectangle at the top of the box.
+
+
+174 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because floated elements do not float as high as possible when BFC elements are wider than the previous floating element location that needs to be cleared.
+
+3.114  floats-wrap-top-below-bfc-002l
+
+Expected Results
+
+The test passes if the second blue rectangle is in contact with the left side of the containing box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The second blue rectangle is vertically aligned with the blue rectangle at the top of the box.
+
+The test fails because floated elements do not properly float as high as possible when BFC elements are wider than the previous floating element location that needs to be cleared.
+
+3.115  floats-wrap-top-below-bfc-003l
+
+Expected Results
+
+The second blue rectangle should be in contact with the left side of the containing box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The second blue rectangle is vertically aligned with the blue rectangle at the top of the box.
+
+The test fails because floated elements do not properly float as high as possible when BFC elements are wider than the previous floating element location that needs to be cleared.
+
+3.116  focus-pseudo-class-001
+
+Expected Results
+
+The test states:
+
+Enter in the text field below with the pointing device or with the keyboard (with the tab key or with the "T" accesskey) and then enter some text into it. A message in green should then have appeared on its right-hand side indicating that such text field has received focus. In order to pass this test, the tester should not have to move the pointing device outside the text field.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The tab key does not give focus to the textarea element.
+
+The test fails because the :focus pseudo-class is not supported when followed by a combinator.
+
+Related Variation
+
+Section  2.2.12, V0194
+
+
+
+175 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.117  focus-pseudo-class-002
+
+Expected Results
+
+The test states:
+
+Enter in the text field below with the pointing device or with the keyboard (with the tab key or with the "T" accesskey) and then enter some text into it. A message in green should then have appeared on its right-hand side indicating that such text field has received focus. In order to pass this test, the tester should not have to move the pointing device outside the text field.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The tab key does not give focus to the textarea element.
+
+The test fails because the :focus pseudo-class does not match when followed by a combinator.
+
+Related Variation
+
+Section  2.2.12, V0194
+
+3.118  focus-pseudo-class-003
+
+Expected Results
+
+The test states:
+
+Enter in the text field below with the pointing device or with the keyboard (with the tab key or with the "T" accesskey) and then enter some text into it. A message in green should then have appeared on its right-hand side indicating that such text field has received focus. In order to pass this test, the tester should not have to move the pointing device outside the text field.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The tab key does not give focus to the textarea element.
+
+The test fails because the :focus pseudo-class does not match when followed by a combinator.
+
+Related Variation
+
+Section  2.2.12, V0194
+
+3.119  font-044
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+
+176 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There is red on the page.
+
+The test fails because system font keywords do not reset all font properties.
+
+Related Variation
+
+Section  2.1.75, V0645
+
+3.120  font-045
+
+Expected Results
+
+The test passes if there is a large green rectangle and no red.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red rectangle behind a green rectangle.
+
+The test fails because system font keywords do not reset all font properties.
+
+Related Variation
+
+Section  2.1.75, V0645
+
+3.121  font-046
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because system font keywords do not reset all font properties.
+
+Related Variation
+
+Section  2.1.75, V0645
+
+3.122  font-047
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because system font keywords do not reset all font properties.
+
+Related Variation
+
+177 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Section  2.1.75, V0645
+
+3.123  font-048
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because system font keywords do not reset all font properties
+
+Related Variation
+
+Section  2.1.75, V0645.
+
+3.124  font-049
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because system font keywords do not reset all font properties.
+
+Related Variation
+
+Section  2.1.75, V0645
+
+3.125  font-050
+
+Expected Results
+
+There should be no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because system font keywords do not reset all font properties.
+
+Related Variation
+
+Section  2.1.75, V0645
+
+
+
+
+
+178 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.126  font-family-008
+
+Expected Results
+
+The test passes if there are no black stripes on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are two black stripes on the page.
+
+The test fails because non-escaped parentheses within font-family names are not considered invalid values and do not invalidate the entire declaration.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.127  font-family-invalid-characters-001
+
+Expected Results
+
+The test passes if there are only numbers (1-19) on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The numbers "3", "10", and "15" are covered with black stripes.
+
+The test fails because invalid characters are allowed in font names.
+
+Related Variation
+
+Section  2.1.4, V0004
+
+3.128  font-family-invalid-characters-002
+
+Expected Results
+
+The test passes if there are only numbers (1-3) and no red visible on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The number 3 is covered with a black stripe.
+
+The test fails because invalid characters are allowed in font names.
+
+Related Variation
+
+Section  2.1.4, V0004
+
+3.129  font-family-invalid-characters-005
+
+Expected Results
+
+
+179 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Test passes if there are only numbers (1-4) and no red visible on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The numbers 2 and 4 are covered with black stripes.
+
+The test fails because invalid characters are allowed in font names.
+
+Related Variation
+
+Section  2.1.4, V0004
+
+3.130  font-family-invalid-characters-006
+
+Expected Results
+
+Test passes if there are only numbers (1-2) and no red visible on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The number 2 is covered with a black stripe.
+
+The test fails because invalid characters are allowed in font names.
+
+Related Variation
+
+Section  2.1.4, V0004
+
+3.131  font-family-name-013
+
+Expected Results
+
+The second line should be the word "PASS".
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The second line has the word "FAIL".
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.132  font-family-name-016
+
+Expected Results
+
+The second line should be the word "PASS".
+
+Actual Results
+
+
+180 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (All Versions)
+
+The second line looks like "P400SS".
+
+The test fails because full names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.133  font-family-name-017
+
+Expected Results
+
+The test passes if "PaSs" is on the second line.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+All instances of the letter "s" appear as the letter "l" on the page. The word "FAIL" is shown instead of "PaSs".
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.134  font-family-name-018
+
+Expected Results
+
+The test passes if "PaSs" is on the second line.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+All instances of the letter "s" appear as the letter "l" on the page. The word "FAIL" is shown instead of "PASS."
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.135  font-family-name-019
+
+Expected Results
+
+The test passes if "PASS" is on the second line.
+
+Actual Results
+
+
+181 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (All Versions)
+
+All instances of the letter "s" appear as the letter "l" on the page. The word "FAIL" is shown instead of "PASS."
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.136  font-family-name-020
+
+Expected Results
+
+The test passes if "PASS" is on the second line.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+All instances of the letter "s" appear as the letter "l" on the page. The word "FAIL" is shown instead of "PASS."
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.137  font-family-rule-011
+
+Expected Results
+
+The test case states:
+
+"PREREQUISITE: Operating system needs to have the 'default' font installed. Post Test: Remove test font after running the test.
+
+Test passes if there is a box above the letter "X" below."
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The letter X is not visible.
+
+The test fails because the default keyword is not treated as a reserved word.
+
+Related Variation
+
+Section  2.1.73, V0642
+
+3.138  font-family-valid-characters-002
+
+Expected Results
+
+
+182 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test passes if the word "Fail" is not visible on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The word "Fail" appears on every line except for the seventh, eighth, and tenth lines.
+
+The test fails because invalid characters are allowed in font names.
+
+Related Variation
+
+Section  2.1.4, V0004
+
+3.139  font-size-113
+
+Expected Results
+
+The test passes if the three black squares on the page have the same width and the same height.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The second square is not the same as the first and third squares.
+
+The test fails because "ex" units are not calculated based on the value defined in the font.
+
+3.140  font-weight-bolder-001
+
+Expected Results
+
+The test passes if the table at the top matches the reference image at bottom. The numbers and bolding (if present) must match to pass.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The table columns named W15, W2569, W258, and W3589 have "A" instead of numbers in the table.
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.141  font-weight-lighter-001
+
+Expected Results
+
+The test passes if the table at the top matches the reference image at bottom. The numbers and bolding (if present) must match to pass.
+
+Actual Results
+
+
+
+183 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (All Versions)
+
+The table columns named W15, W2569, W258, and W3589 have "A" instead of numbers in the table.
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.142  font-weight-normal-001
+
+Expected Results
+
+The test passes if the table at the top matches the reference image at bottom. The numbers and bolding (if present) must match to pass.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The table columns named W15, W2569, W258, and W3589 have "A" instead of numbers in the table.
+
+The test fails because full font names are incorrectly matched; only family names should be used for matching.
+
+Related Variation
+
+Section  2.1.73, V0145
+
+3.143  forced-page-breaks-000
+
+Expected Results
+
+The test case states:
+
+This test requires 7 pages.
+
+When printed, this sentence should appear by itself on page 2.
+
+This sentence should appear by itself on page 3.
+
+This sentence should appear on page 4.
+
+This sentence should also appear on page 4.
+
+This sentence should appear by itself on page 5.
+
+This sentence should appear by itself on page 7. (Page 6 must be blank.)
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+When viewed in paged media, there are only six pages. Page 6 is not blank.
+
+Breaking for left and right pages defaults to always and does not create an extra page, which is expected with left and right keywords.
+
+Related Clarification
+
+
+184 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Section  2.2.45, C0021
+
+3.144  forced-page-breaks-001
+
+Expected Results
+
+The test case states:
+
+This test requires three pages. This must be on the first page.
+
+This must be on the third page. There must be a blank page (and only one blank page) before this sentence.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+When viewed in paged media, there are only two pages. Page 2 is not blank.
+
+Breaking for left and right pages defaults to always and does not create an extra page, which is expected with left and right keywords.
+
+Related Clarification
+
+Section  2.2.45, C0021
+
+3.145  html-attribute-001
+
+Expected Results
+
+The test passes if the word "Bottom" is centered inside the black box and is below the word "Top".
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The word "Bottom" is aligned to the right edge of the box.
+
+The test fails because the text-align value of the default stylesheet does not override the align attribute.
+
+3.146  inline-block-non-replaced-width-003
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the max-width property is ignored by the width computation of inline-block elements.
+
+
+
+
+
+185 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.147  inline-block-non-replaced-width-004
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the max-width property is ignored by the width computation of inline-block elements.
+
+3.148  inline-table-valign-001
+
+Expected Results
+
+The text "abcde" should be vertically aligned inside the box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The letters "a" and "e" are not vertically aligned with "bcd".
+
+The test fails because inline-table elements do not align their content with the outer content.
+
+3.149  list-style-019
+
+Expected Results
+
+The test passes if there is "1." and no red.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears and there is no "1. " on the page.
+
+The test fails because list-style shorthand does not reset missing values to their initial value.
+
+3.150  list-style-020
+
+Expected Results
+
+The test passes if each word on the right of the orange line describes the shape on the left.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "blue circle" does not describe the shape on the left, which is a red square.
+
+The test fails because the none keyword is not considered invalid when both list-style-type and list-style-image have specified values.
+
+
+
+186 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.151  list-style-position-001
+
+Expected Results
+
+There should be a visible bullet (filled-in circle), which should appear alongside the green bar to the left, and there should not be any red on the page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is a bullet next to a red bar that is drawn above a green bar.
+
+The test fails because overflow applied to the first-child affects the position of that first-child.
+
+3.152  list-style-position-002
+
+Expected Results
+
+To pass, there must be a bullet (filled-in circle) visible, which should appear alongside the green bar to the left, and there must not be any red on the page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is a bullet next to a red bar that is drawn above a green bar.
+
+The test fails because overflow applied to the first-child affects the position of that first-child.
+
+3.153  list-style-position-008
+
+Expected Results
+
+To pass, there must be a bullet (filled-in circle) visible, which should appear alongside the green bar to the left, and there must not be any red in this page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is a bullet next to a red bar that is drawn above a green bar.
+
+The test fails because overflow applied to the first-child affects the position of that first-child .
+
+3.154  list-style-position-010
+
+Expected Results
+
+To pass, there must be a blue bullet (filled-in circle) to the left-outside edge of a grey box. Also, there must be a yellow bullet to the left-inside edge of the grey box, with a yellow letter to the right of the yellow bullet, and there must be a blue letter below the yellow bullet, within the grey box.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is no yellow bullet to the left-inside edge of the grey box.
+
+
+187 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test case fails because the list-item value of the display property should have no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+3.155  list-style-position-011
+
+Expected Results
+
+To pass, there must be a blue bullet (filled-in circle) to the inside-left edge of a grey box, below which must be a yellow letter, with a yellow bullet to the left (positioned outside of the grey box) of the yellow letter. Below the yellow letter, there must be a blue letter.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is no yellow bullet to the left (positioned outside of the grey box) of the yellow letter.
+
+The test case fails because the list-item value of the display property should have no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+3.156  list-style-position-012
+
+Expected Results
+
+To pass, there must be a blue bullet (filled-in circle) to the inside left edge of a grey box, below which must be a yellow bullet and a yellow letter to the right of that yellow bullet. Below the yellow bullet, there must be a blue letter.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There are no yellow bullets.
+
+The test case fails because the list-item value of the display property should have no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+3.157  list-style-position-013
+
+Expected Results
+
+
+188 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+To pass, there must be either a blue or yellow bullet (filled-in circle) to the outside-left edge of a grey box, with a yellow letter to the right of that bullet. There must also be a blue letter below the yellow letter.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The blue letter is not below the yellow letter.
+
+The test case fails because the list-item value of the display property should have no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+3.158  list-style-position-014
+
+Expected Results
+
+To pass, there must be blue bullet (filled-in circle) to the outside-left edge of a grey box. Inside the grey box, there must be a yellow bullet to the left of a yellow letter. There must also be a blue letter to the right of the yellow letter.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is no yellow bullet.
+
+The test case fails because the list-item value of the display property should have no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+3.159  list-style-position-015
+
+Expected Results
+
+To pass, there must a yellow bullet (filled-in circle) to the left-outside edge of a grey box. Inside the grey box, there must be a yellow letter to the left of a blue bullet, and a blue letter to the right of the blue bullet.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is no yellow bullet.
+
+The test case fails because the list-item value of the display property should have no effect on generated content.
+
+
+189 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+3.160  list-style-position-016
+
+Expected Results
+
+To pass, there must a yellow bullet (filled-in circle) to the inside-left edge of a grey box, and a yellow letter to the right of the yellow bullet. There must also be a blue bullet to the right of the yellow letter, and a blue letter to the right of the blue bullet.
+
+Actual Results.
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There is no yellow bullet.
+
+The test case fails because the list-item value of the display property should have no effect on generated content.
+
+Related Variations
+
+Section  2.1.35, V0053
+
+Section  2.1.64, V0113
+
+3.161  list-style-position-017
+
+Expected Results
+
+To pass, there must be either a blue or yellow bullet (filled-in circle) to the outside-left edge of a grey box. Also, there must be a yellow letter to the inside left edge of the grey box, and a blue letter to the right of a yellow letter.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The blue bullet is inside of the grey box.
+
+The test fails because the list-item value of the display property should have no effect on generated content.
+
+Related Variation
+
+Section  2.1.35, V0053
+
+3.162  list-style-position-019
+
+Expected Results
+
+The test passes if there are three thick horizontal black bars below, each preceded by a bright green bullet (filled-in circle). Such bullet must be located outside of and prior to each of the three thick horizontal black bars. Inside of the thick horizontal black bars, there must be a small bright green
+
+
+
+190 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+square located respectively toward the left side of the first thick horizontal black bar, in the center of the second thick horizontal black bar, and toward the right side of third thick horizontal black bar.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The test fails because text-indent should only format the indentation of the first line of text of a list-item's principal block box when the list-item's list-style-position is set to outside.
+
+3.163  ltr-span-only
+
+Expected Results
+
+The test passes if the results of the test match the results from the reference test found at  http://test.csswg.org/suites/css2.1/20110323/html4/right-ltr-ref.htm .
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The results do not match the results of the reference test.
+
+The test fails because alignment of child inline elements is incorrect when the parent and child are specified with different directions.
+
+Related Variation
+
+Section  2.1.33, V0049
+
+3.164  ltr-span-only-ib
+
+Expected Results
+
+The test passes if the results of this test match the results from the reference test found at  http://test.csswg.org/suites/css2.1/20110323/html4/right-ltr-ref.htm .
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The results do not match the results of the reference test.
+
+The test fails because alignment of child inline elements is incorrect when the parent and child are specified with different directions.
+
+Related Variation
+
+Section  2.1.33, V0049
+
+3.165  margin-collapse-025
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+
+
+191 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because max-height and min-height are ignored by margin collapsing.
+
+3.166  margin-collapse-027
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because bottom margins collapse when cleared.
+
+3.167  margin-collapse-032
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because percentage padding is not resolved before margin collapsing is applied.
+
+3.168  margin-collapse-033
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the clear property incorrectly prevents margin collapsing.
+
+3.169  margin-collapse-034
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+
+
+192 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There is red on the page.
+
+The test fails because the clear property incorrectly prevents margin collapsing.
+
+3.170  margin-collapse-035
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the clear property incorrectly prevents margin collapsing.
+
+3.171  margin-collapse-037
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the min-height property incorrectly prevents margin collapsing.
+
+3.172  margin-collapse-135
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because elements with negative margins are not cleared when the clearance occurs before the collapsing margin.
+
+3.173  margin-collapse-clear-012
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+
+193 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because the cleared element collapses its margin with the margin of the following element that has zero height.
+
+3.174  margin-collapse-clear-013
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the cleared element collapses its margin with the margin of the following element that has zero height.
+
+3.175  margin-collapse-clear-014
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because negative clearance is not handled in a situation where margins would create negative clearance.
+
+3.176  margin-collapse-clear-015
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the clear property incorrectly prevents margin collapsing.
+
+3.177  margin-collapse-clear-016
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+
+194 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because the clear property incorrectly prevents margin collapsing.
+
+3.178  margin-collapse-clear-017
+
+Expected Results
+
+The test passes if there is a vertical gap of 100 pixels between the two green bars.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The vertical gap is 200 pixels between the two green bars.
+
+The test fails because the clear property incorrectly prevents margin collapsing.
+
+3.179  margin-em-inherit-001
+
+Expected Results
+
+The test passes if there is a filled bright green rectangle and if there is no red.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There are two red rectangles inside of the bright green rectangle.
+
+The test case fails because the inherit keyword is not resolved to the computed value of the parent element.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.180  max-height-105
+
+Expected Results
+
+The test passes if there is a green square with inactive scrollbars. The test fails if there is a red square.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square on the page.
+
+The test fails because the value of the max-height property is used for the height value when positioning is absolute..
+
+3.181  max-height-106
+
+Expected Results
+
+The test passes if there is a green square with active scrollbars.
+
+Actual Results
+
+
+195 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (All Versions)
+
+The scrollbars are inactive.
+
+The test fails because the value of the max-height property is used for the height value when positioning is absolute..
+
+3.182  max-height-107
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red is visible on the page.
+
+The test fails because the scrollbar height is added to the element height.
+
+3.183  max-height-108
+
+Expected Results
+
+The test passes if there is a wide green rectangle that has inactive scrollbars. There should be no wide red rectangle.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red is visible on the page.
+
+The test fails because the value of the max-height property is used for the height value when positioning is absolute..
+
+3.184  max-height-109
+
+Expected Results
+
+The test passes if there is a wide green rectangle that has an active horizontal scrollbar. The test fails if there is a wide red rectangle on the page
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+A wide red rectangle is visible on the page.
+
+The test fails because the value of the max-height property is used for the height value.
+
+3.185  max-height-110
+
+Expected Results
+
+The test passes if there is a wide green rectangle across the page and no red.
+
+
+
+196 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears on the page.
+
+The test fails because the scrollbar height is added to the element height.
+
+3.186  max-height-111
+
+Expected Results
+
+The test passes if there is a green square that has active horizontal and vertical scrollbars. The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Red appears on the page.
+
+The test fails because the scrollbar height is added to the element height.
+
+3.187  max-height-applies-to-004
+
+Expected Results
+
+The test passes if there is a black square on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a tall black rectangle instead of a black square.
+
+The test fails because the max-height property is not supported on table-row elements.
+
+Related Variation
+
+Section  2.2.37, C0084
+
+3.188  max-width-105
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square to the right of the green square.
+
+The test fails because the value of the max-width property is used for the width value.
+
+3.189  max-width-106
+
+Expected Results
+
+
+197 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red rectangle to the right of the green square.
+
+The test fails because the value of the max-width property is used for the width value.
+
+3.190  max-width-107
+
+Expected Results
+
+There is no red on the page. Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square to the right of the green square.
+
+The test fails because the value of the max-width property is used for the width value.
+
+3.191  max-width-108
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square to the right of the green square.
+
+The test fails because the value of the max-width property is used for the width value.
+
+3.192  max-width-109
+
+Expected Results
+
+The test passes if there is a blue square on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a tall blue rectangle on the page.
+
+The test fails because image scaling for height is not handled correctly when max-width constrains the width.
+
+3.193  max-width-applies-to-005
+
+Expected Results
+
+There should be a black square on the page.
+
+
+198 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a black rectangle on the page.
+
+The test fails because the max-width property is not supported for table-column-group elements.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.194  max-width-applies-to-006
+
+Expected Results
+
+There should be a black square on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a black rectangle on the page.
+
+The test fails because the max-width property is not supported for table-column-group elements.
+
+Related Variation
+
+Section  2.2.32, V0222
+
+3.195  min-height-104
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the scrollbar height is added to the element height.
+
+3.196  min-height-105
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+
+
+199 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because the scrollbar height is added to the element height.
+
+3.197  min-height-106
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page.
+
+The test fails because the scrollbar height is added to the element height.
+
+3.198  min-width-applies-to-005
+
+Expected Results
+
+The test passes if there is a black square on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is no black square on the page.
+
+The test fails because the min-height property is not supported for table-column-group elements.
+
+3.199  min-width-applies-to-006
+
+Expected Results
+
+The test passes if there is a black square on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is no black square on the page.
+
+The test fails because the min-height property is not supported for table-column-group elements.
+
+3.200  orphans-004a
+
+Expected Results
+
+The blue text must denote accurate page numbers when viewed in paged media, such as print preview.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+
+
+
+200 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The blue text does not denote the correct page number when viewed in paged media. All lines of text with "Page 2" appear on the first page.
+
+The test fails because 0 is accepted as a valid value for the orphans property.
+
+3.201  orphans-004b
+
+Expected Results
+
+When viewing the content on paged media, this test passes if the letters 'a', 'b', and 'c' appear on the first page and the letters 'd' and 'e' appear on the second page of the paged media.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+When viewing the content on paged media, the letters 'a' and 'b' appear on the first page. The letters 'c', 'd', and 'e' appear on the second page.
+
+The test fails because negative values for the margin-bottom property are not rendered correctly on paged media. Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.2.26, V0035
+
+3.202  orphans-004c
+
+Expected Results
+
+This test requires two pages. When viewing the content on paged media, the letters 'a', 'b', and 'c' should appear on the first page. The letters 'd' and 'e' should appear on the second page of the paged media.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+When viewing the content on paged media, the letters 'a' and 'b' appear on the first page. The letters 'c', 'd', and 'e' appear on the second page.
+
+The test fails because negative values for the margin-bottom property are not rendered correctly on paged media. Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.2.26, V0035
+
+3.203  outline-019
+
+Expected Results
+
+The test fails if any of the blue rectangles protrude out of their respective orange borders.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+
+
+201 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+None of the blue rectangles are completely inside their orange borders.
+
+The outline property does not adjust correctly when text-align is set to justify.
+
+3.204  outline-020
+
+Expected Results
+
+The test fails if any of the blue rectangles protrude out of their respective orange borders, even after changing the window size.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Not all of the blue rectangles are completely inside their orange borders.
+
+The outline property does not adjust correctly when text-align is set to justify.
+
+3.205  outline-style-hidden-001
+
+Expected Results
+
+The test passes if there is an empty square with a green outline.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The green outline does not appear on the page.
+
+The test fails because the hidden keyword is supported on the outline property.
+
+3.206  outline-width-096
+
+Expected Results
+
+The test fails if red appears on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red outline around the filler text.
+
+The test fails because the outline width is not set to 0 when outline-style is set to 'none'.
+
+3.207  overflow-007
+
+Expected Results
+
+The test passes if there is the same amount of blue above and below the text.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is no blue below the text.
+
+
+202 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because margins are not accounted for scrolling when in overflow situations.
+
+3.208  overflow-008
+
+Expected Results
+
+The test passes if there is the same amount of blue above and below the text.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is no blue below the text.
+
+The test fails because margins are not accounted for scrolling when in overflow situations.
+
+3.209  padding-em-inherit-001
+
+Expected Results
+
+There is a filled bright green rectangle and no red.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There are two red rectangles inside of the bright green rectangle.
+
+The test case fails because the inherit keyword does not resolve to the computed value of the parent element.
+
+Related Variation
+
+Section  2.1.19, V0024
+
+3.210  page-box-000
+
+Expected Results
+
+This test produces one page on paged media. When viewed in a print preview or printed on a printer supporting "full bleed" (also known as "edge-to-edge" or "borderless" printing), the entire surface of the medium is a pale cyan. There is no white showing around the edges.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The entire surface of the medium is not pale cyan.
+
+The test fails because negative values for the margin property are not rendered correctly on paged media.
+
+Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.2.26, V0035
+
+
+
+203 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.211  page-break-after-009
+
+Expected Results
+
+When viewed in a print preview or printed on a printer, the letter ‘a’ is supposed to be on the first page. The letters ‘a’, ‘b’, and ‘c’ are supposed to be on the second page of the paged media.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+Four pages are presented in print preview. The letter ‘a’ is not on the first page. The letters ‘a’, ‘b’, and ‘c’ are not on the same page as the text "The letters a, b, and c follow and should appear on this page."
+
+The test case fails because negative values for the margin-bottom property are not rendered correctly on paged media.
+
+Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.2.26, V0035
+
+3.212  page-break-after-010
+
+Expected Results
+
+The test passes if four or five pages are produced when viewed in paged media, such as print preview.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There are no blank pages when viewed in paged media.
+
+Breaking for left and right pages defaults to always and does not create an extra page, which is expected with left and right keywords.
+
+Related Clarification
+
+Section  2.2.45, C0021
+
+3.213  page-break-before-003
+
+Expected Results
+
+The test passes if four or five pages are produced when viewed in paged media, such as print preview.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are no blank pages when viewed in paged media.
+
+
+
+
+204 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Page breaking for left and right pages defaults to always. The expected behavior is to create an extra page.
+
+Related Clarification
+
+Section  2.2.45, C0021
+
+3.214  page-break-before-005
+
+Expected Results
+
+The test passes if four or five pages are produced when viewed in paged media, such as print preview.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There are no blank pages when viewed in paged media.
+
+Page breaking for left and right pages defaults to always. The expected behavior is to create an extra page.
+
+Related Clarification
+
+Section  2.2.45, C0021
+
+3.215  page-break-before-009
+
+Expected Results
+
+When viewed in a print preview or printed on a printer, the letter ‘a’ is supposed to be on the first page. The letters ‘a’, ‘b’, and ‘c’ are supposed to be on the second page of the paged media.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+Four pages are presented in print preview. The letter ‘a’ is not on the first page. The letters ‘a’, ‘b’, and ‘c’ are not on the same page as the text "The letters ‘a’, ‘b’, and ‘c’ follow and should appear on this page.
+
+The test case fails because negative values for the margin-bottom property are not rendered correctly on paged media.
+
+Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.1.26, V0035
+
+3.216  page-break-before-010
+
+Expected Results
+
+This test requires two pages. When viewing the content on paged media, the letters 'a', 'b', 'c', and 'd' are supposed to be visible. The letters 'e' and 'f' are supposed to be on the second page.
+
+
+
+205 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The letter ‘c’ is not visible and only half of the letter ‘d’ can be seen.
+
+The test case fails because negative values for the margin-bottom property are not rendered correctly on paged media.
+
+Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.1.26, V0035
+
+3.217  page-break-before-020
+
+Expected Results
+
+This test produces two pages when displayed on paged media. There should be only one paragraph on the first page. On the second page, there should be a paragraph that is on the right side of the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There is only one page when displayed on paged media.
+
+The test case fails because of the attempt to apply page-break before: always to a floated element.
+
+The  [CSS-Level2-2009] specification section 13.3.1, Page break properties: 'page-break-before', 'page-break-after', 'page-break-inside', states:
+
+"User Agents must apply these properties to block-level elements in the normal flow of the root element."
+
+For more information, see  http://lists.w3.org/Archives/Public/public-css- testsuite/2011Jan/0044.html
+
+3.218  page-break-inside-002
+
+Expected Results
+
+When viewing the content on paged media, the text should break onto two pages with only the letter 'c' appearing on the second page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+When viewing the content on paged media, the letters ‘b’ and ‘c’ appear on the second page.
+
+The test case fails because negative values for the margin-top property are not rendered correctly on paged media.
+
+Content outside the page box is discarded when negative margins are used.
+
+
+206 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Related Variation
+
+Section  2.1.26, V0035
+
+3.219  page-break-inside-004
+
+Expected Results
+
+When viewed on paged media, the test produces four pages of output. The blue numbers must correspond to the page number that they appear on.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+Some numbers do not appear on correct page. A number "1" appears on the second page and a number "3" appears on the fourth page.
+
+The test case fails because negative values for the margin property are not rendered correctly on paged media.
+
+Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.1.26, V0035
+
+3.220  page-break-inside-005
+
+Expected Results
+
+When viewed on paged media, this test has two pages of output. Lines A and B must appear on the first page. Lines C and D must appear on the second page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There are three pages of output and all of the lines appear on the third page.
+
+The test case fails because negative values for the margin property are not rendered correctly on paged media.
+
+Content outside the page box is discarded when negative margins are used.
+
+Related Variation
+
+Section  2.1.26, V0035
+
+3.221  page-break-inside-006
+
+Expected Results
+
+The test passes if all three lines appear on the second page when viewed in paged media, such as print preview.
+
+Actual Results
+
+
+
+207 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (All Versions)
+
+Line A appears on the first page when viewed in paged media.
+
+Page breaking for left and right pages defaults to always. The expected behavior is to create an extra page.
+
+Related Clarification
+
+Section  2.2.45, C0021
+
+3.222  page-break-margins-001
+
+Expected Results
+
+The test passes if lines A through E appear in order on the second page when viewed in paged media such as print preview.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Line A, Line B, and Line C are not visible when viewed in paged media.
+
+The test fails because the margin is not adjusted to place the content within the page.
+
+3.223  page-container-004
+
+Expected Results
+
+When viewed on paged media, the test produces two pages of output. The text on the first page should have left, top, and right purple borders that should be entirely on the right half of the page. (There should be no bottom border.)
+
+The text on second page should have left, bottom, and right purple borders that should be entirely on the right half of the page. (There should be no top border.)
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The text is not on the right half of the page.
+
+The test fails because html element is not floated.
+
+3.224  page-grammar-001
+
+Expected Results
+
+The test passes if it produces two pages of output on paged media, such as print preview. The first paragraph must be entirely on the right side of the page. The second paragraph must be on a new page and it should be entirely on the left side of the page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The test produces three pages of output on paged media.
+
+
+208 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test case fails because the test needs to be simplified.
+
+For more information, see  http://lists.w3.org/Archives/Public/public-css- testsuite/2011Jan/0046.html
+
+3.225  page-grammar-002
+
+Expected Results
+
+The test passes if it produces two pages of output on paged media, such as print preview. The first paragraph must be entirely on the right side of the page. The second paragraph must be on a new page and it should be entirely on the left side of the page.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The test produces three pages of output on paged media.
+
+The test case fails because the test needs to be simplified.
+
+For more information, see  http://lists.w3.org/Archives/Public/public-css- testsuite/2011Jan/0046.html
+
+3.226  page-props-102
+
+Expected Results
+
+When viewed on paged media, the test produces three pages of output. Page margins should be correctly set with the @page rule for :left and :right.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+Content on the second page is overflows the page boundaries on the right side.
+
+The test case fails because page margins for :left pages are not set correctly on the right side of the page and page margins for :right pages are not set correctly on the left side of the page.
+
+3.227  quotes-035
+
+Expected Results
+
+The quotes counters should count correctly and the text that is shown should be "Isn’t it wonderful to see CSS quotes work!!!".
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The quotes counters do not count correctly and the text that is shown is "Isn't'IsnFAIL!FAIL! wonderful to wonderful to FAIL!!FAIL!!FAIL!!FAIL!!".
+
+The test case fails because the no-open-quote and no-close-quote values for the content property incorrectly change the nesting levels of counters.
+
+Related Variation
+
+209 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Section  2.1.59, V0107
+
+3.228  quotes-035a
+
+Expected Results
+
+The test passes if the quotes counters count correctly and the text displayed is "Isn’t it wonderful to see CSS quotes work!!!"
+
+Actual results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The quotes counters do not count correctly and the text that is shown is "Isn't'IsnFAIL!FAIL! wonderful to wonderful to FAIL!!FAIL!!FAIL!!FAIL!!".
+
+The test case fails because the no-open-quote and no-close-quote values for the content property incorrectly change the nesting levels of counters.
+
+Related Variation
+
+Section  2.1.59, V0107
+
+3.229  quotes-036
+
+Expected Results
+
+The quotes counters should count correctly and the text that is shown should be "Isn’t it wonderful to see CSS quotes work!!!".
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The quotes counters do not count correctly and the text that is shown is "Isn't'IsnFAIL!FAIL! wonderful to wonderful to FAIL!!FAIL!!FAIL!!FAIL!!".
+
+The test case fails because the no-open-quote and no-close-quote values for the content property incorrectly change the nesting levels of counters.
+
+Related Variation
+
+Section  2.1.59, V0107
+
+3.230  replaced-elements-001
+
+Expected Results
+
+The test passes if there are two orange boxes horizontally centered within their respective green bars.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The orange boxes are not horizontally centered in their respective green bars.
+
+The test fails because replaced elements are not positioned correctly using automatic margins.
+
+
+210 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.231  replaced-intrinsic-003
+
+Expected Results
+
+There should be a complete and unbroken yin-yang symbol (☯).
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The yin-yang symbol is fragmented.
+
+The test case fails because SVG images with an intrinsic ratio are not resized before positioning.
+
+3.232  replaced-intrinsic-ratio-001
+
+Expected Results
+
+The six blue boxes must be of the same width. There must be no red.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The first box is not the same width as the other boxes and there is red visible.
+
+The test case fails because SVG images with an intrinsic ratio are not resized before positioning.
+
+3.233  row-visibility-003
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a thin red line below the green square on the page.
+
+The test fails because the collapsed row still has full height.
+
+3.234  rtl-basic
+
+Expected Results
+
+The test passes if the borders are on the correct sides of the span elements.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The test fails because the left and right borders are rendered left-to-right when the direction property is set to rtl.
+
+3.235  rtl-borders-001
+
+Expected Results
+
+
+211 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test passes if the borders are on the correct sides of the span elements.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The borders are on opposite sides of the expected output when the direction property is set to rtl.
+
+The test fails because the left and right borders are rendered left-to-right when the direction property is set to rtl.
+
+3.236  rtl-ib
+
+Expected Results
+
+The test passes if the borders are on the correct sides of the span elements.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The borders are on opposite sides of the expected output when the direction property is set to rtl.
+
+The test fails because the left and right borders are rendered left-to-right when the direction property is set to rtl.
+
+3.237  rtl-linebreak
+
+Expected Results
+
+The test passes if the borders are on the correct sides of the span elements.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The borders are on opposite sides of the expected output when the direction property is set to rtl.
+
+The test fails because the left and right borders are rendered left-to-right when the direction property is set to rtl.
+
+3.238  rtl-span-only
+
+Expected Results
+
+The results of this test should resemble the results from the reference test found at  http://test.csswg.org/suites/css2.1/20110323/html4/left-rtl-ref.htm .
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results do not match the results of the reference test.
+
+The test case fails because alignment of child inline elements is incorrect when the parent and child are specified with different directions.
+
+Related Variation
+
+
+212 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Section  2.1.33, V0049
+
+3.239  rtl-span-only-ib
+
+Expected Results
+
+The results of this test should resemble the results from the reference test found at  http://test.csswg.org/suites/css2.1/20110323/html4/left-rtl-ref.htm .
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results do not match the results of the reference test.
+
+The test case fails because alignment of child inline elements is incorrect when the parent and child are specified with different directions.
+
+Related Variation
+
+Section  2.1.33, V0049
+
+3.240  stack-floats-003
+
+Expected Results
+
+The test fails if there is anything other than a single green square with a black border on the page.
+
+Actual Results
+
+There is red on the page.
+
+The test fails because margins on floated elements do not take into account inline elements that are split by block-level elements. The anonymous inline element that is created is ignored.
+
+3.241  table-anonymous-objects-003
+
+Expected Results
+
+There should be no red text, except for antialiasing issues.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The text "Cell 2" is drawn in red.
+
+The test fails because any content of an element that has its display property set to none is not properly collected into the correct cells and extra anonymous tables are created.
+
+Related Variation
+
+Section  2.2.53, V0262
+
+3.242  table-anonymous-objects-004
+
+Expected Results
+
+
+
+213 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There should be no red visible in the test, except for antialiasing issues.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The text "Cell 2" is in red.
+
+The test fails because any content of an element that has its display property set to none is not properly collected into the correct cells and extra anonymous tables are created.
+
+Related Variation
+
+Section  2.2.53, V0262
+
+3.243  table-anonymous-objects-134
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "Row 22, Col 1" is red.
+
+The test fails because the dynamic update of tables does not apply the correct styles for the new element.
+
+3.244  table-anonymous-objects-161
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "Col 1 Row 22, Col 2 Row 22 " is red.
+
+The test fails because the dynamic update of tables does not apply the correct styles for the new element.
+
+3.245  table-anonymous-objects-162
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "Row 22, Col 2" and "Row 22, Col 3" is red.
+
+
+
+
+214 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because the dynamic update of tables does not apply the correct styles for the new element.
+
+3.246  table-anonymous-objects-187
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+"c" and "d" are shifted to the right and therefore appear as red text.
+
+The test fails because white space is not correctly handled within anonymous table generation.
+
+3.247  table-anonymous-objects-188
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (Internet Explorer 8)
+
+"c" and "d" are shifted to the right and therefore appear as red text.
+
+The test fails because white space is not correctly handled within anonymous table generation.
+
+3.248  table-anonymous-objects-195
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (Internet Explorer 9)
+
+"c" and "d" are shifted to the right and therefore appear as red text.
+
+The test fails because white space is not correctly handled within anonymous table generation.
+
+3.249  table-anonymous-objects-196
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 9)
+
+"c" and "d" are shifted to the right and therefore appear as red text.
+
+The test fails because white space is not correctly handled within anonymous table generation.
+
+
+215 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.250  table-anonymous-objects-199
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The text "bcd" is red.
+
+The test fails because white space is not correctly handled within anonymous table generation.
+
+3.251  table-anonymous-objects-200
+
+Expected Results
+
+There is no red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The text "bcd" is red.
+
+The test fails because white space is not correctly handled within anonymous table generation.
+
+3.252  table-backgrounds-bc-colgroup-001
+
+Expected Results
+
+The cells of the first table are supposed to have an aqua background. The background of the cells in the second table is supposed to be filled with diagonal gradient with a tick at the top left corner. The background of the cells in the third table is supposed to be filled with diagonal gradient with a tick at the bottom right corner.
+
+Reference images may be found at  http://test.csswg.org/suites/css2.1/20110323/html4/table- backgrounds-bs-colgroup-001-ref.htm.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The gradients in the second and third table do not match the reference images.
+
+The test fails because positioning of the background is not based on the table element but the colgroup element itself.
+
+3.253  table-backgrounds-bc-column-001
+
+Expected Results
+
+The results of the test should be similar to the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bs-column-001-ref.htm.
+
+Actual Results
+
+
+
+216 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+The test fails because positioning of the background is not based on the table element but the colgroup element itself.
+
+3.254  table-backgrounds-bc-row-001
+
+Expected Results
+
+The results of the test should be similar to the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bc-row-001-ref.htm.
+
+Actual Results
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The test fails because positioning of the background is not based on the table element but the row element itself.
+
+3.255  table-backgrounds-bc-rowgroup-001
+
+Expected Results
+
+The results of the test should be similar to the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bc-rowgroup-001-ref.htm.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+The test fails because positioning of the background is not based on the table element but the rowgroup element itself.
+
+3.256  table-backgrounds-bc-table-001
+
+Expected Results
+
+The test passes if the results match the test reference at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bc-table-001-ref.htm.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The background position is slightly off due to not accounting for the default border width.
+
+
+
+
+
+
+217 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.257  table-backgrounds-bs-colgroup-001
+
+Expected results
+
+The test passes if the results of the test match the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bs-colgroup-001-ref.htm.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+The test fails because positioning of the background is not based on the table element but the colgroup element itself.
+
+3.258  table-backgrounds-bs-column-001
+
+Expected Results
+
+The test passes if the results of the test match the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bs-column-001-ref.htm.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+The test fails because positioning of the background is not based on the table element but the col element itself.
+
+3.259  table-backgrounds-bs-row-001
+
+Expected Results
+
+The test passes if the results of the test match the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bs-row-001-ref.htm.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+The test case fails because positioning of the background is not based on the table element but the row element itself.
+
+3.260  table-backgrounds-bs-row-002
+
+Expected Results
+
+The test passes if the results of the test match the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bs-row-002-ref.htm.
+
+
+218 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+The test fails because positioning of the background is not based on the table element but the row element itself.
+
+3.261  table-backgrounds-bs-rowgroup-001
+
+Expected Results
+
+The results of the test should be similar to the reference images at  http://test.csswg.org/suites/css2.1/20110323/html4/table-backgrounds-bs-rowgroup-001-ref.htm.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The results of the test do not appear to be similar to the reference images because the background gradient of the last table is different.
+
+The test fails because positioning of the background is not based on the table element but the rowgroup element itself.
+
+3.262  table-caption-003
+
+Expected Results
+
+There should be two lines of green text.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+There are three lines of green text.
+
+The test fails because the width and height of table boxes of table captions have no effect on the width and height of table boxes.
+
+Related Variation
+
+Section  2.2.55, V0272
+
+3.263  text-align-applies-to-003
+
+Expected Results
+
+The test passes if the "Filler Text" is aligned to the right side of the box and there is a marker bullet on the left-hand side of the box.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The marker bullet is inside the box.
+
+
+219 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+The test fails because the marker bullets incorrectly place themselves next to text instead of the principal block box.
+
+Related Variation
+
+Section  2.1.35, V0053
+
+3.264  text-align-white-space-002
+
+Expected Results
+
+There is no red visible on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red block in the top-right corner of the green block.
+
+The test fails because the value of text-align does not remain as justify when the value of white-space is set to pre-line. The value of text-align is incorrectly reset to the initial value.
+
+3.265  text-align-white-space-006
+
+Expected Results
+
+There is no red visible on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red block in the top-left corner of the green block.
+
+The test fails because the value of text-align does not remain as justify when the value of white-space is set to pre-line. The value of text-align is incorrectly reset to the initial value.
+
+3.266  text-decoration-087
+
+Expected Results
+
+There should only be one solid orange line under all of the span elements that contain the word "test".
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The orange line is not drawn under the span element with the display property set as inline-block.
+
+The test case fails because an inline element that has the text-decoration property set to underline is not underlined.
+
+Related Variation
+
+Section  2.1.78, V0152
+
+
+
+220 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.267  text-indent-014
+
+Expected Results
+
+The test passes if there is a 4-square checkerboard pattern in the orange box and no red present.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is red on the page and the checkerboard pattern has squares and rectangles inside the orange box.
+
+The test fails because anonymous block boxes are incorrectly placed when they are split by a block level element.
+
+3.268  text-indent-intrinsic-003
+
+Expected Results
+
+The test passes if it matches the test reference at:  http://test.csswg.org/suites/css2.1/20110323/html4/text-indent-intrinsic-003-ref.htm.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The third and fourth blocks do not match the same blocks from the test reference.
+
+The test fails because elements that have their height property set to 0 provide space on parent elements.
+
+3.269  text-indent-intrinsic-004
+
+Expected Results
+
+The test passes if it matches the test reference at:  http://test.csswg.org/suites/css2.1/20110323/html4/text-indent-intrinsic-004-ref.htm.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The third and fourth blocks do not match the same blocks from the test reference.
+
+The test fails because elements that have their height property set to 0 provide space on parent elements.
+
+3.270  text-transform-bicameral-003
+
+Expected Results
+
+The test passes if the right-hand character in each pair matches the left-hand one.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+
+
+221 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+"Ǳ ǲ", "Ǉ ǈ ", "S ſ", "Ǆ ǅ", and "I ı", are pairs that don't match.
+
+The test fails because characters for case changes do not support all character definitions in Unicode.
+
+3.271  text-transform-bicameral-004
+
+Expected Results
+
+The test passes if the right-hand character in each pair matches the left-hand one.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"ǅ ǆ", "ǈ ǉ ", and "ǲ ǳ" are pairs that don't match.
+
+The test fails because characters for case changes do not support all character definitions in Unicode.
+
+3.272  text-transform-bicameral-005
+
+Expected Results
+
+The test passes if the right-hand character in each pair matches the left-hand one.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"I I" and "İ I" are pairs that don't match.
+
+The test fails because characters for case changes do not support all character definitions in Unicode.
+
+3.273  text-transform-bicameral-006
+
+Expected Results
+
+The test passes if the right-hand character in each pair matches the left-hand one.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"I I" and "İ I" are pairs that do not match.
+
+The test fails because characters for case changes do not support all character definitions in Unicode.
+
+3.274  text-transform-bicameral-007
+
+Expected Results
+
+The test passes if the right-hand character in each pair matches the left-hand one.
+
+Actual Results
+
+
+
+222 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (Internet Explorer 8)
+
+"Κ ϰ ", "Ρ ϱ ", "Ε ϵ ", and "ῌ ῃ " are pairs that don't match.
+
+The test fails because characters for case changes do not support all character definitions in Unicode.
+
+3.275  text-transform-bicameral-021
+
+Expected Results
+
+The test passes if the right-hand character in each pair matches the left-hand one.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The pairs of characters do not match.
+
+The test fails because the text-transform property has no effect on the Deseret alphabet. This is discussed in section  2.1.80 "Section 16.5, Capitalization: the 'text-transform' property".
+
+3.276  text-transform-bicameral-022
+
+Expected Results
+
+The test passes if the right-hand character in each pair matches the left-hand one.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The pairs of characters do not match.
+
+The test case fails because the text-transform property has no effect on the Deseret alphabet. This is discussed in section  2.1.80 "Section 16.5, Capitalization: the 'text-transform' property".
+
+3.277  text-transform-uppercase-002
+
+Expected Results
+
+The Eszett character (ß) should be rendered as "SS" when it is capitalized.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The Eszett character (ß) is not rendered as "SS".
+
+The test case fails because the Eszett character (ß) is not rendered as SS after text-transform: capitalize is applied.
+
+This is discussed in section  2.1.80 "Section 16.5, Capitalization: the 'text-transform' property".
+
+
+
+
+
+223 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.278  uri-013
+
+Expected Results
+
+The test passes if all lines of text have a green background.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The fourteenth line of text has a red background.
+
+The test fails because parenthesis matching is not respected for the url() function.
+
+3.279  uri-017
+
+Expected Results
+
+The test passes if both sentences have green backgrounds.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+Both sentences have red backgrounds.
+
+The test fails because the end of the style sheet does not close open URL functions.
+
+3.280  uri-018
+
+Expected Results
+
+The test passes if the text "This sentence must be green" is green.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The text "This sentence must be green" is black.
+
+The test fails because the end of the style sheet does not close open URL functions.
+
+3.281  user-stylesheet-006
+
+Expected Results
+
+The test passes if the left "Green Text" is green and the right "Black Text" is black.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"Green Text" is black.
+
+The test fails because the child selector is not supported in user style sheets.
+
+
+
+
+
+224 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.282  user-stylesheet-007
+
+Expected Results
+
+The test passes if "Filler Text" is green.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"Filler Text" is black.
+
+The test fails because the adjacent sibling selector is not supported in user style sheets.
+
+3.283  user-stylesheet-008
+
+Expected Results
+
+The test passes if "Filler Text" is green.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"Filler Text" is black.
+
+The test fails because the attribute selector is not supported in user style sheets.
+
+3.284  user-stylesheet-010
+
+Expected Results
+
+The test passes if the upper "Filler Text" is green and the lower "Filler Text" is black.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The upper "Filler Text" is black.
+
+The test case fails because the :first-child selector is not supported in user style sheets.
+
+3.285  user-stylesheet-011
+
+Expected Results
+
+The test passes if the "Filler Text" is green.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+"Filler Text" is black.
+
+The test fails because :first-line selector is not supported in user style sheets.
+
+
+
+
+
+225 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.286  user-stylesheet-016
+
+Expected Results
+
+The test passes if the "Filler Text" is green.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The letter "F" in the "Filler Text" is black.
+
+The test fails because the :first-letter selector is not supported in user style sheets.
+
+3.287  user-stylesheet-017
+
+Expected Results
+
+The test passes if the words "PASS PASS" appear as the second line of text.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"PASS PASS" does not appear on the second line of text.
+
+The test fails because the :before selector is not supported in user style sheets.
+
+3.288  user-stylesheet-018
+
+Expected Results
+
+The test passes if the words "PASS PASS" appear as the second line of text.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+"PASS PASS" does not appear on the second line of text.
+
+The test fails because the :after selector is not supported in user style sheets.
+
+3.289  visibility-005
+
+Expected Results
+
+The test passes if there is a green square and no red.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is no green square on the page.
+
+The test fails because visibility: hidden does not allow child elements that are visibility: visible to display.
+
+
+
+
+226 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.290  white-space-007
+
+Expected Results
+
+The test passes if the wide orange and blue rectangles are the same width and the same height.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+The wide orange and blue rectangles are not the same width and the same height. There are spaces between orange squares.
+
+The test fails because white-space: nowrap prevents wrapping between other elements.
+
+3.291  white-space-collapsing-breaks-001
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode and IE9 Mode (All Versions)
+
+There is a red line under the green line across the entire page.
+
+The test fails because white-space: nowrap prevents wrapping between other elements.
+
+3.292  white-space-mixed-001
+
+Expected Results
+
+The test passes if the yellow and orange pattern in the first blue box matches the pattern in the second blue box. The test fails if the word PASS does not match the reference rendering below.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The patterns in the blue box do not match and the renderings of PASS do not match.
+
+The test fails because white-space: nowrap prevents wrapping between other elements.
+
+3.293  white-space-mixed-003
+
+Expected Results
+
+The test passes if the two blue boxes are identical.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+The first box is filled with a yellow and orange checker pattern but the second box is filled with orange.
+
+The test fails because white-space: nowrap prevents wrapping between other elements.
+
+
+227 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+3.294  white-space-mixed-004
+
+Expected Results
+
+The test passes if the picture below changes from a smiley face to a landscape when you hover over it.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+Part of the smiley face is shifted to the right by one space on the sixth line.
+
+The test fails because the white space character does not collapse properly when at the beginning or end of an element.
+
+3.295  widows-004a
+
+Expected Results
+
+The test passes if the blue text denotes accurate page numbers when viewed in paged media, such as print preview.
+
+Actual Results
+
+IE8 Mode, IE9 Mode, and IE10 Mode (All Versions)
+
+The blue text does not denote the correct page number when viewed in paged media. The test fails because 0 is accepted as a valid value for the widows property.
+
+3.296  z-index-003
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red square on the page.
+
+The test fails because z-index resolves large negative values (such as -2147483646) to 'auto'.
+
+Related Variation
+
+Section  2.1.45, V0080
+
+3.297  z-index-015
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+
+228 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+There is a red square on the page.
+
+The test fails because z-index accepts number values instead of only allowing integers.
+
+Related Variation
+
+Section  2.1.45, V0080
+
+3.298  z-index-016
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+There is a red square on the page.
+
+The test fails because z-index accepts number values instead of only allowing integers.
+
+Related Variation
+
+Section  2.1.45, V0080
+
+3.299  z-index-017
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red square on the page.
+
+The test fails because z-index accepts percentage values instead of only allowing integers.
+
+Related Variation
+
+Section  2.1.45, V0080
+
+3.300  z-index-018
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red square on the page.
+
+The test fails because z-index incorrectly resolves large negative values (such as -2147483646) to 'auto'.
+
+
+229 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+Related Variation
+
+Section  2.1.45, V0080
+
+3.301  z-index-019
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red square on the page.
+
+The test fails because z-index incorrectly resolves large negative values (such as -2147483646) to 'auto'.
+
+Expected Results
+
+The test fails if there is red on the page.
+
+Actual Results
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red square on the page.
+
+The test fails because z-index incorrectly resolves large negative values (such as -2147483646) to 'auto'.
+
+Related Variation
+
+Section  2.1.45, V0080
+
+3.302  z-index-abspos-009
+
+Expected Results
+
+The test passes if there is a green square and no red on the page
+
+Actual Results
+
+IE8 Mode (All Versions)
+
+The green square appears to have red borders around it.
+
+The test fails because the html element is not treated as a full stacking context. As a result, borders are painted in the wrong order.
+
+3.303  z-index-dynamic-001
+
+Expected Results
+
+The test passes if there is a green square and no red on the page
+
+Actual Results
+
+
+230 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+IE8 Mode (Internet Explorer 8)
+
+There is a red square instead of a green square.
+
+The test fails because any dynamic update to z-index does not update the painting order of the corresponding elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+231 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+

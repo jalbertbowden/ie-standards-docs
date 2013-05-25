@@ -1,0 +1,95 @@
+
+7  Appendix E: Quirks Mode Emulation
+
+In Windows® Internet Explorer® 9, when a document is displayed in IE9 Mode, the browser loads a different rendering engine than that it used in Windows® Internet Explorer® 8 and Windows® Internet Explorer® 7. Although the newer rendering engine is only used when Windows® Internet Explorer® detects that an HTML page has requested the highest level of support for standards, the same is not always true for child pages that might be loaded within frame and iframe elements. Because only one rendering engine can be active at a time, IE9 Mode also includes emulation for Quirks Mode.
+
+7.1 How to trigger Quirks Mode emulation 
+
+Quirks Mode emulation is used in the following circumstances:
+
+••A page in IE9 Mode loads a Quirks Mode HTML page in an iframe.
+••A frameset in IE9 Mode loads Quirks Mode content in a frame.
+
+Only content in child pages is rendered using Quirks Mode emulation. Windows® Internet Explorer® continues to render the containing document in IE9 Mode.
+
+Quirks Mode emulation is not used when loading child pages that specify a standard <!DOCTYPE>, or those that use the X-UA-Compatible meta tag to specify support for Windows® Internet Explorer® 8, Windows® Internet Explorer® 9, or Edge Mode. These pages are rendered with IE9 Mode instead. For more information about how Internet Explorer selects Document Mode, see  [MS- IEDOCO] section 2.1.2.
+
+7.2 The effects of quirks mode emulation 
+
+In Quirks Mode emulation, the Document Object Model (DOM) exposes the same objects, properties, and methods as IE9 Mode.
+
+When Quirks Mode emulation is triggered for a frame or iframe, Windows® Internet Explorer® 9 adjusts the rendering of the frame or iframe as follows:
+
+••Inline elements. If the width or height of an inline element is set explicitly, the inline element becomes an inline-block.
+
+••Box sizing. The default box sizing for Quirks Mode emulation is content-box. <input> and <textarea> elements are exceptions to this rule and default to box-sizing, with the exception of <input> elements of type image.
+
+••<body> sizing. By default the size of body fills the viewport minus the margin, border, and padding from the <html> and <body> elements.
+
+••Percentage height. The % height of all elements is resolved against the default <body> height, except for elements contained within a table or an absolutely positioned element, in which case % height is resolved to ‘auto’.
+
+••Percentage height and writing mode. Percentage height resolves against the logical default <body> height, subject to the rules above. That is, if a page is rendered in a top-down, right-left direction then the % height of a contained element is resolved against the default physical width of the <body> element.
+
+••Percentage table cell height. When calculating the height of a cell with a specified value of 100%, the table row height is assumed to be 100% unless otherwise specified.
+
+
+242 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
+••Default margins. Default margins are ignored at the top and bottom of <body>, <th>, and <td> elements, subject to the following restrictions:
+
+••Explicit top-margins are not ignored.
+••Only the bottom margin of the last element is ignored, and only if it is not set explicitly.
+••<form> margins The <form> element has a default bottom margin of 1 em.
+••Hover. Hover rules apply only to links.
+••Tables in paragraphs. Paragraphs are allowed to contain tables.
+
+••Table font inheritance. With the exception of font-family, by default table elements do not inherit font properties.
+
+••CSS parser. In Quirks Mode emulation, unlike in actual Quirks Mode, CSS is parsed as in IE9 Mode. The following exceptions apply:
+
+••Unitless value. Unitless values are accepted as pixels wherever a dimension is expected (for example, "width: 50;" is interpreted as "width: 50px;"). This is true except as parameters to the CSS  calc() function.
+
+••Hexadecimal color values. Unitless, hashless hex values are accepted as color values wherever a color is expected. Such hexadecimal values must be either three or six digits in length. Three-digit hexadecimal values are expanded to six digits by repeating digits (for example, #B0B becomes #BB00BB), as described  here.
+
+••Ambiguous values. In cases where a unitless value is ambiguous, preference is given to interpreting the value as a length (decimal).
+
+••Class and ID selectors. Class and ID selectors are case-insensitive.
+••compatMode property. The  compatMode property returns "BackCompat".
+
+••Almost Standards Mode. Inline elements contribute to line height only in specific circumstances. For more information, see section  Appendix D: Almost Standards Mode.
+
+••Percentage height of immediate children of table cells. The percentage height of the immediate children of table cells is resolved against the height of the row minus the cell’s vertical padding and border. In these cases the height of the row is calculated by treating percentage height applied to the immediate children of table cells as ‘auto’.
+
+••List item markers. The default value of list-style-position is "inside" if the list-item is outside a <UL> or <OL> element, and "outside" otherwise.
+
+••Default image borders. Images with the align attribute specified will get a default right margin of 3px if the value of align is "left", or a default 3px left margin if the value of align is "right".
+
+
+
+
+
+
+
+
+
+
+
+
+243 / 248
+
+[MS-CSS21] — v20120725
+
+Internet Explorer Cascading Stylesheets (CSS) 2.1 Standards Support Document
+
+Copyright © 2012 Microsoft Corporation.
+
+Release: July 25, 2012
+
